@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>我的第一个博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="我的第一个博客">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="我的第一个博客">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="我的第一个博客">
+  
+    <link rel="alternate" href="/atom.xml" title="我的第一个博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">我的第一个博客</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-spring框架学习" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/09/14/spring框架学习/" class="article-date">
+  <time datetime="2017-09-14T10:56:28.000Z" itemprop="datePublished">2017-09-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/09/14/spring框架学习/">spring框架学习</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1.spring框架定义：<br>　　是J2EE的应用程序框架，对javabean的生命周期进行管理。核心是控制反转(IOC)和依赖注入。<br>　　<br>２.IOC<br>　　IOC控制反转：对象的创建交给外部容器完成。<br>　　<br>3.依赖注入：处理对象的依赖关系。</p>
+<p>4.AOP切面编程：AOP可以理解成由很多重复代码组成的类。</p>
+<p>5.spring的开发步骤如下(我创建的是一个maven webapp项目，后来发现IDEA可以创建spring项目，两者的区别在于，创建spring项目时，IDEA会提前下载好spring开发需要的包，但是maven项目需要自己在pom.xml文件中添加依赖)：<br>　　*创建javabean<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">package cn.itcast.a_hello;</div><div class="line">public class User &#123;</div><div class="line"></div><div class="line">    private int id;</div><div class="line">    private String name;</div><div class="line"></div><div class="line">    public int getId() &#123;</div><div class="line">        return id;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public void setId(int id) &#123;</div><div class="line">        this.id = id;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public String getName() &#123;</div><div class="line">        return name;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public void setName(String name) &#123;</div><div class="line">        this.name = name;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>　　*添加依赖<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div></pre></td><td class="code"><pre><div class="line">&lt;dependencies&gt;</div><div class="line">    &lt;dependency&gt;</div><div class="line">      &lt;groupId&gt;junit&lt;/groupId&gt;</div><div class="line">      &lt;artifactId&gt;junit&lt;/artifactId&gt;</div><div class="line">      &lt;version&gt;3.8.1&lt;/version&gt;</div><div class="line">      &lt;scope&gt;test&lt;/scope&gt;</div><div class="line">    &lt;/dependency&gt;</div><div class="line"></div><div class="line"></div><div class="line">      &lt;dependency&gt;</div><div class="line">          &lt;groupId&gt;org.springframework&lt;/groupId&gt;</div><div class="line">          &lt;artifactId&gt;spring-core&lt;/artifactId&gt;</div><div class="line">          &lt;version&gt;4.2.6.RELEASE&lt;/version&gt;</div><div class="line">      &lt;/dependency&gt;</div><div class="line"></div><div class="line">      &lt;dependency&gt;</div><div class="line">          &lt;groupId&gt;org.springframework&lt;/groupId&gt;</div><div class="line">          &lt;artifactId&gt;spring-beans&lt;/artifactId&gt;</div><div class="line">          &lt;version&gt;4.2.6.RELEASE&lt;/version&gt;</div><div class="line">      &lt;/dependency&gt;</div><div class="line"></div><div class="line"></div><div class="line">      &lt;dependency&gt;</div><div class="line">          &lt;groupId&gt;org.springframework&lt;/groupId&gt;</div><div class="line">          &lt;artifactId&gt;spring-expression&lt;/artifactId&gt;</div><div class="line">          &lt;version&gt;4.2.6.RELEASE&lt;/version&gt;</div><div class="line">          &lt;classifier&gt;sources&lt;/classifier&gt;</div><div class="line">      &lt;/dependency&gt;</div><div class="line"></div><div class="line">      &lt;dependency&gt;</div><div class="line">          &lt;groupId&gt;com.fasterxml.jackson.jr&lt;/groupId&gt;</div><div class="line">          &lt;artifactId&gt;jackson-jr-all&lt;/artifactId&gt;</div><div class="line">          &lt;version&gt;2.8.8&lt;/version&gt;</div><div class="line">      &lt;/dependency&gt;</div><div class="line"></div><div class="line">      &lt;dependency&gt;</div><div class="line">          &lt;groupId&gt;org.springframework&lt;/groupId&gt;</div><div class="line">          &lt;artifactId&gt;spring-context&lt;/artifactId&gt;</div><div class="line">          &lt;version&gt;4.2.6.RELEASE&lt;/version&gt;</div><div class="line">      &lt;/dependency&gt;</div><div class="line">      &lt;dependency&gt;</div><div class="line">          &lt;groupId&gt;junit&lt;/groupId&gt;</div><div class="line">          &lt;artifactId&gt;junit&lt;/artifactId&gt;</div><div class="line">          &lt;version&gt;RELEASE&lt;/version&gt;</div><div class="line">      &lt;/dependency&gt;</div><div class="line">  &lt;/dependencies&gt;</div></pre></td></tr></table></figure></p>
+<p>　　*配置ApplicationContext.xml文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">　&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</div><div class="line">　&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;</div><div class="line">       xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</div><div class="line">       xmlns:p=&quot;http://www.springframework.org/schema/p&quot;</div><div class="line">       xmlns:context=&quot;http://www.springframework.org/schema/context&quot;</div><div class="line">       xsi:schemaLocation=&quot;</div><div class="line">        http://www.springframework.org/schema/beans</div><div class="line">        http://www.springframework.org/schema/beans/spring-beans.xsd</div><div class="line">        http://www.springframework.org/schema/context</div><div class="line">        http://www.springframework.org/schema/context/spring-context.xsd&quot;&gt;</div><div class="line">    &lt;bean id = &quot;user&quot; class=&quot;cn.itcast.a_hello.User&quot;&gt;&lt;/bean&gt;</div><div class="line">&lt;/beans&gt;</div></pre></td></tr></table></figure></p>
+<p>　　*测试类<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">public class App &#123;</div><div class="line"></div><div class="line">    @Test</div><div class="line">    public void testIOC() throws  Exception&#123;</div><div class="line">    //加载资源文件</div><div class="line">        ApplicationContext applicationContext = new ClassPathXmlApplicationContext(&quot;classpath:applicationContext.xml&quot;);</div><div class="line"></div><div class="line">       User user = (User) applicationContext.getBean(&quot;user&quot;);</div><div class="line">        System.out.println(user.getId());</div><div class="line"></div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
+<p>6.遇到的问题如下：<br><em>关于配置爱文件路径的问题：在IDEA中，文件放在resourse目录下，在引用时加：classspath,鉴于之前myeclipse开发的影响，我在开始的时候，将配置文件放在webapp目录下导致报错提示找不到ApplicationContext.xml文件。
+</em>关于项目几天之后重新打开报错的问题：找不到类，spring-core有问题<br>解决方法：将spring-core依赖的版本改成4.2.6.RELEASE.
+　　</p>
+<p>　　</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/09/14/spring框架学习/" data-id="cj7lkwv7b0000koovhyzykyps" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/spring-ioc-IntelliJ-IDEA/">spring ioc  IntelliJ IDEA</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/spring-ioc-IntelliJ-IDEA/">spring ioc  IntelliJ IDEA</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/spring-ioc-IntelliJ-IDEA/" style="font-size: 10px;">spring ioc  IntelliJ IDEA</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/09/14/spring框架学习/">spring框架学习</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 jin<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
