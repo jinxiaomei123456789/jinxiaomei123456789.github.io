@@ -4,25 +4,25 @@
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
   
-    <title>Linux Shell 脚本学习 | 小生の博客</title>
+    <title>更换电脑的博客问题 | 小生の博客</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="小生">
     
 
     
-    <meta name="description" content="Linux相关知识在大三学的，迄今为止因为工作需要以及个人心血来潮断断续续学了一部分，导致现在对Linux只知命令，其他理解都不透彻。学习原因在于目前工作发现和Linux还是要经常打交道，在客户现场询问时客户输入的命令以及展示的内容都不懂！尴尬。。。。。。现在就利用闲暇时间，系统学习一遍，参考书籍为《Linux命令行与shell脚本编程大全第三版》 @[TOC]目录 1.基本的bash she">
-<meta name="keywords" content="Linux">
+    <meta name="description" content="前言 &amp;emsp;&amp;emsp;公司新发了一台笔记本，以往我还是使用自己的笔记本，某天，钟老师说：“你怎么不带公司发的笔记本，是不是嫌弃它比你的重？”说完阴险地笑了笑。组长听了这话，和颜悦色地对我说：“下次出项目还是统一一下电脑吧。”于是，这个星期我便换了新的电脑，新电脑上很多环境都要自己配，麻烦，但也权当是一个知识的回顾过程吧。首先，便是换电脑之后hexo博客如何继续更新的问题，以下是解决步骤。">
+<meta name="keywords" content="hexo踩坑">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux Shell 脚本学习">
-<meta property="og:url" content="http://yoursite.com/2018/12/07/Linux-Shell-脚本学习/index.html">
+<meta property="og:title" content="更换电脑的博客问题">
+<meta property="og:url" content="http://yoursite.com/2019/01/09/更换电脑的博客问题/index.html">
 <meta property="og:site_name" content="小生の博客">
-<meta property="og:description" content="Linux相关知识在大三学的，迄今为止因为工作需要以及个人心血来潮断断续续学了一部分，导致现在对Linux只知命令，其他理解都不透彻。学习原因在于目前工作发现和Linux还是要经常打交道，在客户现场询问时客户输入的命令以及展示的内容都不懂！尴尬。。。。。。现在就利用闲暇时间，系统学习一遍，参考书籍为《Linux命令行与shell脚本编程大全第三版》 @[TOC]目录 1.基本的bash she">
+<meta property="og:description" content="前言 &amp;emsp;&amp;emsp;公司新发了一台笔记本，以往我还是使用自己的笔记本，某天，钟老师说：“你怎么不带公司发的笔记本，是不是嫌弃它比你的重？”说完阴险地笑了笑。组长听了这话，和颜悦色地对我说：“下次出项目还是统一一下电脑吧。”于是，这个星期我便换了新的电脑，新电脑上很多环境都要自己配，麻烦，但也权当是一个知识的回顾过程吧。首先，便是换电脑之后hexo博客如何继续更新的问题，以下是解决步骤。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-12-26T03:00:00.000Z">
+<meta property="og:updated_time" content="2019-01-09T06:22:21.051Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Linux Shell 脚本学习">
-<meta name="twitter:description" content="Linux相关知识在大三学的，迄今为止因为工作需要以及个人心血来潮断断续续学了一部分，导致现在对Linux只知命令，其他理解都不透彻。学习原因在于目前工作发现和Linux还是要经常打交道，在客户现场询问时客户输入的命令以及展示的内容都不懂！尴尬。。。。。。现在就利用闲暇时间，系统学习一遍，参考书籍为《Linux命令行与shell脚本编程大全第三版》 @[TOC]目录 1.基本的bash she">
+<meta name="twitter:title" content="更换电脑的博客问题">
+<meta name="twitter:description" content="前言 &amp;emsp;&amp;emsp;公司新发了一台笔记本，以往我还是使用自己的笔记本，某天，钟老师说：“你怎么不带公司发的笔记本，是不是嫌弃它比你的重？”说完阴险地笑了笑。组长听了这话，和颜悦色地对我说：“下次出项目还是统一一下电脑吧。”于是，这个星期我便换了新的电脑，新电脑上很多环境都要自己配，麻烦，但也权当是一个知识的回顾过程吧。首先，便是换电脑之后hexo博客如何继续更新的问题，以下是解决步骤。">
 
     
     <link rel="alternative" href="/atom.xml" title="小生の博客" type="application/atom+xml">
@@ -82,14 +82,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2018/12/07/Linux-Shell-脚本学习/" title="Linux Shell 脚本学习" itemprop="url">Linux Shell 脚本学习</a>
+      <a href="/2019/01/09/更换电脑的博客问题/" title="更换电脑的博客问题" itemprop="url">更换电脑的博客问题</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="小生" target="_blank" itemprop="author">小生</a>
 		
   </p><p class="article-time">
-    <time datetime="2018-12-07T01:21:14.000Z" itemprop="datePublished"> 发表于 2018-12-07</time>
+    <time datetime="2019-01-09T06:19:15.000Z" itemprop="datePublished"> 发表于 2019-01-09</time>
     
   </p>
 </header>
@@ -98,13 +98,22 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-基本的bash-shell命令"><span class="toc-number">1.</span> <span class="toc-text">1.基本的bash shell命令</span></a></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#工具下载"><span class="toc-number">2.</span> <span class="toc-text">工具下载</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#NodeJs下载与环境配置"><span class="toc-number">2.1.</span> <span class="toc-text">NodeJs下载与环境配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Git下载与配置"><span class="toc-number">2.2.</span> <span class="toc-text">Git下载与配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo安装"><span class="toc-number">2.3.</span> <span class="toc-text">hexo安装</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#在GitHub官网上添加新电脑产生的秘钥"><span class="toc-number">3.</span> <span class="toc-text">在GitHub官网上添加新电脑产生的秘钥</span></a></li></ol>
 		
 		</div>
 		
-		<p>　　Linux相关知识在大三学的，迄今为止因为工作需要以及个人心血来潮断断续续学了一部分，导致现在对Linux只知命令，其他理解都不透彻。学习原因在于目前工作发现和Linux还是要经常打交道，在客户现场询问时客户输入的命令以及展示的内容都不懂！尴尬。。。。。。现在就利用闲暇时间，系统学习一遍，参考书籍为《Linux命令行与shell脚本编程大全第三版》</p>
-<p><hr><br>@[TOC]目录</p>
-<h1 id="1-基本的bash-shell命令"><a href="#1-基本的bash-shell命令" class="headerlink" title="1.基本的bash shell命令"></a>1.基本的bash shell命令</h1><p>##1.1系统用户<br>/etc/passwd 文件中包含着系统中所有账户列表以及每个账户的配置信息，示例如下：</p>
+		<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p> &emsp;&emsp;公司新发了一台笔记本，以往我还是使用自己的笔记本，某天，钟老师说：“你怎么不带公司发的笔记本，是不是嫌弃它比你的重？”说完阴险地笑了笑。组长听了这话，和颜悦色地对我说：“下次出项目还是统一一下电脑吧。”于是，这个星期我便换了新的电脑，新电脑上很多环境都要自己配，麻烦，但也权当是一个知识的回顾过程吧。首先，便是换电脑之后hexo博客如何继续更新的问题，以下是解决步骤。</p>
+<h1 id="工具下载"><a href="#工具下载" class="headerlink" title="工具下载"></a>工具下载</h1><h2 id="NodeJs下载与环境配置"><a href="#NodeJs下载与环境配置" class="headerlink" title="NodeJs下载与环境配置"></a>NodeJs下载与环境配置</h2><p>&emsp;&emsp;在官网上下载NodeJs，一路next,选择安装地址时为D:\kit\node.js，完成后在cmd控制台中输入node -version提示node不是命令，这是因为在系统变量path中没有将D:\kit\node.js路径加进去，添加好之后再次输入还是无效，重新启动后成功，想来我自己的电脑是win7是不用重新启动的，而新电脑是win10，必须要重新启动。控制台中输入node -v显示如下信息说明安装成功。<br>！<a href="更换电脑的博客问题/node安装成功.jpg">node安装成功</a></p>
+<h2 id="Git下载与配置"><a href="#Git下载与配置" class="headerlink" title="Git下载与配置"></a>Git下载与配置</h2><p>&emsp;&emsp;在官网上下载Git工具，安装步骤网上有很多，安装结束后，桌面点击鼠标右键，看到有下图说明安装成功。<br> ！<a href="更换电脑的博客问题/Git安装成功.jpg">Git安装成功</a></p>
+<h2 id="hexo安装"><a href="#hexo安装" class="headerlink" title="hexo安装"></a>hexo安装</h2><p>&emsp;&emsp;在cmd窗口中输入<code>npm install hexo-cli -g</code>来安装hexo，结束后输入hexo -v可以查看安装是否成功。<br>！<a href="更换电脑的博客问题/hexo安装.jpg">hexo安装</a></p>
+<h1 id="在GitHub官网上添加新电脑产生的秘钥"><a href="#在GitHub官网上添加新电脑产生的秘钥" class="headerlink" title="在GitHub官网上添加新电脑产生的秘钥"></a>在GitHub官网上添加新电脑产生的秘钥</h1><ul>
+<li>1.首先配置Git的用户名和邮箱。<br>！<a href="更换电脑的博客问题/配置Git用户名和邮箱.jpg">配置Git用户名和邮箱</a><br>2.输入命令在电脑上生成新的SSH KEY。连续点击三次“enter”键。如果电脑上之前已经生成过SSH KEY，那么新的会覆盖旧的。<br>！<a href="更换电脑的博客问题/给电脑上生成SSH KEY.jpg">给电脑上生成SSH KEY</a></li>
+</ul>
+<ol start="3">
+<li>打开电脑，可以看到电脑上生成了两个秘钥，秘钥生成算法为RSA算法，第一个文件是私钥，自己保留，不能给旁人知道，下面一个pub文件是公钥，大家都可以知晓。<br>！<a href="更换电脑的博客问题/电脑生成公私钥.jpg">电脑生成公私钥</a></li>
+<li>打开公钥文件，复制添加到GitHub官网上。<br>！<a href="更换电脑的博客问题/github官网上添加新的SSH KEY.jpg">github官网上添加新的SSH KEY</a></li>
+<li>配置结束后，测试配置是否成功。<br>！<a href="更换电脑的博客问题/测试新的SSH KEY配置是否成功.jpg">测试新的SSH KEY配置是否成功</a></li>
+</ol>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -113,7 +122,7 @@
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/Linux/">Linux</a>
+  <span></span> <a href="/tags/hexo踩坑/">hexo踩坑</a>
   </div>
 
 </div>
@@ -122,7 +131,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://yoursite.com/2018/12/07/Linux-Shell-脚本学习/" data-title="Linux Shell 脚本学习 | 小生の博客" data-tsina="" class="share clearfix">
+	  <div data-url="http://yoursite.com/2019/01/09/更换电脑的博客问题/" data-title="更换电脑的博客问题 | 小生の博客" data-tsina="" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -135,19 +144,11 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev">
- <a href="/2018/12/14/测试图片/" title="测试图片">
-  <strong>上一篇：</strong><br>
-  <span>
-  测试图片</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2018/12/06/熊猫项目总结/" title="熊猫项目总结">
+<a href="/2019/01/08/网络/" title="网络">
  <strong>下一篇：</strong><br> 
- <span>熊猫项目总结
+ <span>网络
 </span>
 </a>
 </div>
@@ -164,7 +165,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-基本的bash-shell命令"><span class="toc-number">1.</span> <span class="toc-text">1.基本的bash shell命令</span></a></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#工具下载"><span class="toc-number">2.</span> <span class="toc-text">工具下载</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#NodeJs下载与环境配置"><span class="toc-number">2.1.</span> <span class="toc-text">NodeJs下载与环境配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Git下载与配置"><span class="toc-number">2.2.</span> <span class="toc-text">Git下载与配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo安装"><span class="toc-number">2.3.</span> <span class="toc-text">hexo安装</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#在GitHub官网上添加新电脑产生的秘钥"><span class="toc-number">3.</span> <span class="toc-text">在GitHub官网上添加新电脑产生的秘钥</span></a></li></ol>
  
   </div>
 

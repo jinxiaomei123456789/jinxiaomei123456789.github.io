@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title></title>
-    <url>%2F2019%2F01%2F09%2Fhexo%E6%9B%B4%E6%8D%A2%E7%94%B5%E8%84%91%2F</url>
+    <title><![CDATA[更换电脑的博客问题]]></title>
+    <url>%2F2019%2F01%2F09%2F%E6%9B%B4%E6%8D%A2%E7%94%B5%E8%84%91%E7%9A%84%E5%8D%9A%E5%AE%A2%E9%97%AE%E9%A2%98%2F</url>
     <content type="text"><![CDATA[前言 &emsp;&emsp;公司新发了一台笔记本，以往我还是使用自己的笔记本，某天，钟老师说：“你怎么不带公司发的笔记本，是不是嫌弃它比你的重？”说完阴险地笑了笑。组长听了这话，和颜悦色地对我说：“下次出项目还是统一一下电脑吧。”于是，这个星期我便换了新的电脑，新电脑上很多环境都要自己配，麻烦，但也权当是一个知识的回顾过程吧。首先，便是换电脑之后hexo博客如何继续更新的问题，以下是解决步骤。 工具下载NodeJs下载与环境配置&emsp;&emsp;在官网上下载NodeJs，一路next,选择安装地址时为D:\kit\node.js，完成后在cmd控制台中输入node -version提示node不是命令，这是因为在系统变量path中没有将D:\kit\node.js路径加进去，添加好之后再次输入还是无效，重新启动后成功，想来我自己的电脑是win7是不用重新启动的，而新电脑是win10，必须要重新启动。控制台中输入node -v显示如下信息说明安装成功。！node安装成功 Git下载与配置&emsp;&emsp;在官网上下载Git工具，安装步骤网上有很多，安装结束后，桌面点击鼠标右键，看到有下图说明安装成功。 ！Git安装成功 hexo安装&emsp;&emsp;在cmd窗口中输入npm install hexo-cli -g来安装hexo，结束后输入hexo -v可以查看安装是否成功。！hexo安装 在GitHub官网上添加新电脑产生的秘钥 1.首先配置Git的用户名和邮箱。！配置Git用户名和邮箱2.输入命令在电脑上生成新的SSH KEY。连续点击三次“enter”键。如果电脑上之前已经生成过SSH KEY，那么新的会覆盖旧的。！给电脑上生成SSH KEY 打开电脑，可以看到电脑上生成了两个秘钥，秘钥生成算法为RSA算法，第一个文件是私钥，自己保留，不能给旁人知道，下面一个pub文件是公钥，大家都可以知晓。！电脑生成公私钥 打开公钥文件，复制添加到GitHub官网上。！github官网上添加新的SSH KEY 配置结束后，测试配置是否成功。！测试新的SSH KEY配置是否成功]]></content>
+      <tags>
+        <tag>hexo踩坑</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[网络]]></title>
