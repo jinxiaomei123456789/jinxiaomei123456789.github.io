@@ -38,29 +38,6 @@
   </entry>
   
   <entry>
-    <title>更换电脑的博客问题</title>
-    <link href="http://yoursite.com/2019/01/09/%E6%9B%B4%E6%8D%A2%E7%94%B5%E8%84%91%E7%9A%84%E5%8D%9A%E5%AE%A2%E9%97%AE%E9%A2%981/"/>
-    <id>http://yoursite.com/2019/01/09/更换电脑的博客问题1/</id>
-    <published>2019-01-09T06:19:15.000Z</published>
-    <updated>2019-01-09T06:22:21.051Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p> &emsp;&emsp;公司新发了一台笔记本，以往我还是使用自己的笔记本，某天，钟老师说：“你怎么不带公司发的笔记本，是不是嫌弃它比你的重？”说完阴险地笑了笑。组长听了这话，和颜悦色地对我说：“下次出项目还是统一一下电脑吧。”于是，这个星期我便换了新的电脑，新电脑上很多环境都要自己配，麻烦，但也权当是一个知识的回顾过程吧。首先，便是换电脑之后hexo博客如何继续更新的问题，以下是解决步骤。</p><h1 id="工具下载"><a href="#工具下载" class="headerlink" title="工具下载"></a>工具下载</h1><h2 id="NodeJs下载与环境配置"><a href="#NodeJs下载与环境配置" class="headerlink" title="NodeJs下载与环境配置"></a>NodeJs下载与环境配置</h2><p>&emsp;&emsp;在官网上下载NodeJs，一路next,选择安装地址时为D:\kit\node.js，完成后在cmd控制台中输入node -version提示node不是命令，这是因为在系统变量path中没有将D:\kit\node.js路径加进去，添加好之后再次输入还是无效，重新启动后成功，想来我自己的电脑是win7是不用重新启动的，而新电脑是win10，必须要重新启动。控制台中输入node -v显示如下信息说明安装成功。<br>！<a href="更换电脑的博客问题/node安装成功.jpg">node安装成功</a></p><h2 id="Git下载与配置"><a href="#Git下载与配置" class="headerlink" title="Git下载与配置"></a>Git下载与配置</h2><p>&emsp;&emsp;在官网上下载Git工具，安装步骤网上有很多，安装结束后，桌面点击鼠标右键，看到有下图说明安装成功。<br> ！<a href="更换电脑的博客问题/Git安装成功.jpg">Git安装成功</a></p><h2 id="hexo安装"><a href="#hexo安装" class="headerlink" title="hexo安装"></a>hexo安装</h2><p>&emsp;&emsp;在cmd窗口中输入<code>npm install hexo-cli -g</code>来安装hexo，结束后输入hexo -v可以查看安装是否成功。<br>！<a href="更换电脑的博客问题/hexo安装.jpg">hexo安装</a></p><h1 id="在GitHub官网上添加新电脑产生的秘钥"><a href="#在GitHub官网上添加新电脑产生的秘钥" class="headerlink" title="在GitHub官网上添加新电脑产生的秘钥"></a>在GitHub官网上添加新电脑产生的秘钥</h1><ul><li>1.首先配置Git的用户名和邮箱。<br>！<a href="更换电脑的博客问题/配置Git用户名和邮箱.jpg">配置Git用户名和邮箱</a><br>2.输入命令在电脑上生成新的SSH KEY。连续点击三次“enter”键。如果电脑上之前已经生成过SSH KEY，那么新的会覆盖旧的。<br>！<a href="更换电脑的博客问题/给电脑上生成SSH KEY.jpg">给电脑上生成SSH KEY</a></li></ul><ol start="3"><li>打开电脑，可以看到电脑上生成了两个秘钥，秘钥生成算法为RSA算法，第一个文件是私钥，自己保留，不能给旁人知道，下面一个pub文件是公钥，大家都可以知晓。<br>！<a href="更换电脑的博客问题/电脑生成公私钥.jpg">电脑生成公私钥</a></li><li>打开公钥文件，复制添加到GitHub官网上。<br>！<a href="更换电脑的博客问题/github官网上添加新的SSH KEY.jpg">github官网上添加新的SSH KEY</a></li><li>配置结束后，测试配置是否成功。<br>！<a href="更换电脑的博客问题/测试新的SSH KEY配置是否成功.jpg">测试新的SSH KEY配置是否成功</a></li></ol>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt; &amp;emsp;&amp;emsp;公司新发了一台笔记本，以往我还是使用自己的笔记本，某天，钟老师说：“你怎么不带公司发的笔记本，是不是嫌弃它比你的重
-      
-    
-    </summary>
-    
-    
-      <category term="hexo踩坑" scheme="http://yoursite.com/tags/hexo%E8%B8%A9%E5%9D%91/"/>
-    
-  </entry>
-  
-  <entry>
     <title>网络</title>
     <link href="http://yoursite.com/2019/01/08/%E7%BD%91%E7%BB%9C/"/>
     <id>http://yoursite.com/2019/01/08/网络/</id>
@@ -442,6 +419,29 @@
     
     
       <category term="mybatis" scheme="http://yoursite.com/tags/mybatis/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>springMVC面试题</title>
+    <link href="http://yoursite.com/2017/10/08/springMVC%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    <id>http://yoursite.com/2017/10/08/springMVC面试题/</id>
+    <published>2017-10-08T02:56:53.000Z</published>
+    <updated>2018-12-25T01:24:52.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>1.SpringMVC工作原理：<br>　　 1.客户端发送请求到DispatcherServlet<br>　　 2.DispatcherServlet查询handlerMapping找到处理请求的Controller<br>　　 3.Controller调用业务逻辑后，返回ModelAndView<br>　　4.DispatcherServlet查询ModelAndView，找到指定视图<br>　　5.视图将结果返回到客户端<br>　　<br>２.SpringMvc的控制器是不是单例模式,如果是,有什么问题,怎么解决？<br>　　是单例模式,所以在多线程访问的时候有线程安全问题,不要用同步,会影响性能的,解决方案是在控制器里面不能写字段。<br>　　<br>３.SpingMvc中的控制器的注解一般用那个,有没有别的注解可以替代？<br>　　一般用@Conntroller注解,表示是表现层,不能用用别的注解代替.<br>　　<br>４. @RequestMapping注解用在类上面有什么作用？<br>　　 是一个用来处理请求地址映射的注解，可用于类或方法上。用于类上，表示类中的所有响应请求的方法都是以该地址作为父路径。<br>　　<br>５.怎么样把某个请求映射到特定的方法上面？<br>　　直接在方法上面加上注解@RequestMapping,并且在这个注解里面写上要拦截的路径。<br>　　<br>６.如果在拦截请求中,我想拦截get方式提交的方法,怎么配置？<br>　　可以在@RequestMapping注解里面加上method=RequestMethod.GET。<br>　　<br>７.我想在拦截的方法里面得到从前台传入的参数,怎么得到？<br>　　直接在形参里面声明这个参数就可以,但必须名字和传过来的参数一样。<br>　　<br>８.如果前台有很多个参数传入,并且这些参数都是一个对象的,那么怎么样快速得到这个对象？<br>　　直接在方法中声明这个对象,SpringMvc就自动会把属性赋值到这个对象里面。<br>　　<br>９.SpringMvc中函数的返回值是什么？<br>　　返回值可以有很多类型,有String, ModelAndView,当一般用String比较好。<br>　　<br>１０.SpringMVC怎么样设定重定向和转发的？<br>　　在返回值前面加”forward:”就可以让结果转发,譬如”forward:user.do?name=method4” 在返回值前面加”redirect:”就可以让返回值重定向,譬如”redirect:<a href="http://www.baidu.com&quot;" target="_blank" rel="noopener">http://www.baidu.com&quot;</a>　　</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;1.SpringMVC工作原理：&lt;br&gt;　　 1.客户端发送请求到DispatcherServlet&lt;br&gt;　　 2.DispatcherServlet查询handlerMapping找到处理请求的Controller&lt;br&gt;　　 3.Controller调用业务逻辑后，返
+      
+    
+    </summary>
+    
+    
+      <category term="springmvc" scheme="http://yoursite.com/tags/springmvc/"/>
     
   </entry>
   
