@@ -1,0 +1,534 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+  
+    <title>java面试基础部分 | 小生の博客</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="小生">
+    
+
+    
+    <meta name="description" content="1.String类是最基本的数据类型吗？　　不是。java中的基本数据类型只有８个：byte、short、int、long、float、double、char、boolean。String是一个类，但是被final修饰，不能被继承。 2.int和Integer的区别？　　int是基本的数据类型，而Integer是int的封装类型，Integer可以调用方法，int不可以。基本数据类型有自动拆箱和自">
+<meta name="keywords" content="java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java面试基础部分">
+<meta property="og:url" content="http://yoursite.com/2017/09/27/java面试基础1/index.html">
+<meta property="og:site_name" content="小生の博客">
+<meta property="og:description" content="1.String类是最基本的数据类型吗？　　不是。java中的基本数据类型只有８个：byte、short、int、long、float、double、char、boolean。String是一个类，但是被final修饰，不能被继承。 2.int和Integer的区别？　　int是基本的数据类型，而Integer是int的封装类型，Integer可以调用方法，int不可以。基本数据类型有自动拆箱和自">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-12-25T01:26:04.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="java面试基础部分">
+<meta name="twitter:description" content="1.String类是最基本的数据类型吗？　　不是。java中的基本数据类型只有８个：byte、short、int、long、float、double、char、boolean。String是一个类，但是被final修饰，不能被继承。 2.int和Integer的区别？　　int是基本的数据类型，而Integer是int的封装类型，Integer可以调用方法，int不可以。基本数据类型有自动拆箱和自">
+
+    
+    <link rel="alternative" href="/atom.xml" title="小生の博客" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/jacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/title.png" alt="小生の博客" title="小生の博客"></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="小生の博客">小生の博客</a></h1>
+				<h2 class="blog-motto">踏实努力地工作，踏实努力地学习</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">主页 | Home</a></li>
+					
+						<li><a href="/archives">归档 | Archives</a></li>
+					
+						<li><a href="/about">简介 | About</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索">
+						<input type="hidden" name="q" value="site:yoursite.com">
+					</form>
+					
+					</li>
+				</ul>
+			</ul></nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope="" itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2017/09/27/java面试基础1/" title="java面试基础部分" itemprop="url">java面试基础部分</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="小生" target="_blank" itemprop="author">小生</a>
+		
+  </p><p class="article-time">
+    <time datetime="2017-09-27T01:31:37.000Z" itemprop="datePublished"> 发表于 2017-09-27</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			
+		
+		</div>
+		
+		<p>1.String类是最基本的数据类型吗？<br>　　不是。java中的基本数据类型只有８个：byte、short、int、long、float、double、char、boolean。String是一个类，但是被final修饰，不能被继承。</p>
+<p>2.int和Integer的区别？<br>　　int是基本的数据类型，而Integer是int的封装类型，Integer可以调用方法，int不可以。基本数据类型有自动拆箱和自动装箱的功能，jdk1.5之后提供。<br>　　（1）当我们创建Integer对象的时候，可以这样创建：<br>　　Integer i = 100;<br>　　这里的i是一个对象，是可以调用方法的，他的创建方式并不像我们平常创建对象的方式，其实在执行这句话的时候，系统自动为我们执行了：Integer i  Integer.valueOf(100);这个就是基本数据类型的自动装箱功能。<br>　　（2）什么时候自动装箱？<br>　　像上面那条语句一样，执行Integer i = 100；系统会自动装箱Integer i  Integer.valueOf(100);<br>　　（3）什么时候自动拆箱？<br>　　Integer i = 10;//装箱<br>　　int j = i;//拆箱，实际执行了int t = i.intValue();<br>　　<br>3.String、StringBuffer、StringBuilder之间的区别。<br>　　（1）在执行速度方面Stirng BUilder&gt;StringBuffer&gt;String<br>　　（2）String速度小于其他两者的原因：<br>　　String：字符串敞亮<br>　　StringBuffer、StringBuilder字符串变量。<br>　　对于下面的语句：<br>　　Stirng s = aaa”;<br>　　s = s+1;<br>　　System.out.println(s);//aaa1<br>　　既然String是字符串常量，为什么后面还是可以改变值呢？其实，在JVM中是这样解析这段代码的：<br>　　首先创建一个对象s，然后再创建一个对象s来执行第二段代码，也就是说我们之前创建的那个String s值并没有变。基于这种机制，对String类型操作的时候，其实就是在不断的创建对象，执行效率当然会很低。而另外两者是字符串变量，当对他们执行字符操作的时候，实际都是在一个对象上操作。速度自然比较快。<br>　　一个特殊的例子：<br>　　String s = “a”+”b”+”c”;<br>　　在执行这条语句的时候速度比之前的那种方式要快,这时为什么呢？其实，这条语句的本质还是<br>　　String s = “abc”；<br>　　但是，如果a,b,c是分别创建的话，速度就没有那么快。<br>　　String  s1 = “a”;<br>　　String s2 = “b”;<br>　　String s3 = “c”;<br>　　这样的方式JVM还是会按照之前的方式去操作。<br>　　（3）StringBuilder和StringBuffer<br>　　前者是线程不安全的，后者是线程安全的。<br>　　<br>4.重载Overload和重写Override的区别。重载的方法能否根据返回类型区分？<br>　　方法重载和方法重写都是实现多态的方式。重载发生在一个类中，同名的方法有不同的参数列表（参数类型不同、参数个数不同或者两者都不同），重载的返回值类型必须相同；重写发生在子类和父类之间，子类中有和父类相同的方法。重写的规则如下：<br>　　参数列表和父类相同，返回类型相同，访问修饰符限制大于父类。<br>　　<br>4.抽象类（abstract class）和接口(interface)异同<br>　　同：（１）抽象类和接口都不能被实例化，但可以定义抽象类和接口类型的引用<br>　　　（２）一个类如果继承了某个抽象类或者实现了某个接口都需要对其中的凑向方法全部进行实现，否则该类仍然被称为抽象类。<br>　　　异：接口比抽象类更加抽象，因为抽象类可以定义构造器，可以有抽象方法和具体方法，而接口中不能定义构造器而且方法必须全部是抽象方法。<br>          抽象类中的成员变量可以是各种类型的，而接口中的成员变量只能是public static final类型的。</p>
+<p>５.阐述静态变量和实例变量的区别。<br>　　语法区别：静态变量是需要static关键字修饰的，实例变量不需要。<br>　　程序运行时区别：实例变量属于对象，必须创建实例对象其中的实例变量才会被分配空间，才能使用这个实例变量。静态变量不属于某一个实例变量，属于类，也称其为类变量，只要类被加载，不用创建任何实例对象，静态变量就会被分配空间，并可以使用。<br>　　实例变量必须创建对象后通过这个对象来引用，静态变量可以直接使用类名来引用。　</p>
+<p>６.final关键字的用法：<br>　　（１）修饰类：表示该类不能被继承；<br>　　（2）修饰方法:表示该方法不能被重写；<br>　　（3）修饰变量：表示变量只能一次赋值以后不能被修改。
+　　</p>
+<ol start="7">
+<li>Error和Exception有什么区别？<br>　　Error表示系统级的错误，不可能指望程序能处理这样的情况；Exception表示需要捕捉或者需要程序进行处理的异常，是一种设计或者实现问题，也就是说，他表示如果程序运行正常，从不会发生的情况。<br>　　<br>8.列出一些常见的运行异常？<br>　　ArithmeticException(算术异常)<br>　　ClassCastException(类转换异常)<br>　　IllegalArgumentException(非法参数异常)<br>　　InedxOutOfBoundsException(下标越界异常)<br>　　NullPointerException(空指针异常)</li>
+</ol>
+<p>９.List、set、Map是否继承自Collection接口?<br>　　List和set继承Collection接口，Map不是。Map是键值对映射容器，List是线性结构的容器，适用于按照数值索引访问元素的情形。set存贮零散的元素且不允许有重复。<br>　　<br>10.简述java的集合框架<br>　　Set、List、Map可以看做集合的三大类。Set和List继承自Collection接口。<br>　　List集合是有序集合，集合中的元素可以重复，访问集合中的元素可以根据元素的索引来访问。List集合下面有三个子类，他们的特点如下：（1）ArrayList:底层是数组，查询快，增删慢，线程不安全，效率高。（2）Vector：底层数据结构是数组，查询快，增删慢。线程安全，效率低。（3）LinkedList：底层数据结构是链表，查询慢，增删快。线程不安全，效率高。<br>　　Set集合是无序集合，集合中的元素不可以重复，访问集合中的元素只能根据元素本身来访问。<br>　　Map集合中保存key-value键值对的形式的元素，访问时只能根据没想元素的key来访问其value。<br>　　<br>11.对于List集合，为什么基于数组的增删慢，基于链表的增删快？<br>　　１.数组将元素在内存中连续存放，每个元素占用相同的内存，如果在数组中增加一个元素，需要大量移动元素，在内存中空出一个元素的空间，然后将要增加的元素放在这个空间。删同理。<br>　　２.链表在内存中是不按照顺序存放的，而是通过指针将他们联系在一起。上一个元素通过指针指向下一个元素。在删除元素时，只需要修改指针就可以。<br>　　<br>12.集合方法<br>Collection:(List、Set)<br>　　（1）add() 添加元素<br>　　（2）remove() 删除元素<br>　　（3）iterator()迭代器<br>　　（4）size() 返回此Collection中的元素数。<br>　　Iterator接口：hasNext() 如果仍有元素可以迭代，则返回true<br>　　next(): 返回迭代的下一个元素。<br>    Iterator遍历:<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">    Iterator it = coll.iterator();  </span><br><span class="line">while(it.hasNext()) &#123;  </span><br><span class="line">    System.out.print(it.next() + &quot; &quot;);  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>Map：<br>　　put(key,value);<br>　<br>13.你在那些地方使用到xml<br>数据交换和信息配置。前者目前可以被json取代，后者主要应用于框架的配置信息中。</p>
+<p>14.什么是DAO模式？<br>Date Access Object 顾名思义是一个为数据库或者其他持久化机制提供抽象接口的对象。在不暴露持久化方案实现细节的前提下提供各种数据访问操作。在实际的开发中，应该将所有对<br>数据的访问操作进行抽象后封装在一个公共的API中。用程序设计语言来说，就是建立一个接口，接口中定义了此应用程序中将会用到的所有的事务方法。在这个应用程序中，当需要和数据源进行交互的时候则使用这个接口，并且编写一个单独的类来实现这个接口，在逻辑上该类对应一个特定的数据存储。</p>
+<p>15.什么是ORM?<br>　　对象关系映射（Obejct-Relational Mapping）是一种为了解决程序的面向对象模型与数据库的关系模型互不匹配问题的技术；简单的说，ORM是通过使用描述对象和数据库之间映射的元数据（在java中可以用xml或者是注解），将程序中的对象自动持久化到关系数据库中或者将关系数据库表中的行转换成java对象，其本质就是将数据从一种形式转换成另外一种形式。<br>　　<br>16.MyBatis中使用#和<code>$</code>书写占位符有什么区别？<br> 　　  #将传入的数据都当成一个字符串，会对传入的数据自动加上引号；<code>$</code>将传入的数据直接显示生成在SQL中。注意：使用<code>$</code>占位符可能会导致SQL注射攻击，能用#的地方就不要使用$，写<code>order by</code>子句的时候应该用<code>$</code>而不是#。</p>
+<p>17.解释一下MyBatis中命名空间（namespace）的作用。<br> 　　 在大型项目中，可能存在大量的SQL语句，这时候为每个SQL语句起一个唯一的标识（ID）就变得并不容易了。为了解决这个问题，在MyBatis中，可以为每个映射文件起一个唯一的命名空间，这样定义在这个映射文件中的每个SQL语句就成了定义在这个命名空间中的一个ID。只要我们能够保证每个命名空间中这个ID是唯一的，即使在不同映射文件中的语句ID相同，也不会再产生冲突了。<br> 　　<br>18.什么是IoC和DI？DI是如何实现的?<br>　　IOC（控制反转）：全称为：Inverse of Control。从字面上理解就是控制反转了，将对在自身对象中的一个内置对象的控制反转，反转后不再由自己本身的对象进行控制这个内置对象的创建，而是由第三方系统去控制这个内置对象的创建。简单来说就是把本来在类内部控制的对象，反转到类外部进行创建后注入，不再由类本身进行控制，这就是IOC的本质。<br>　　DI（依赖注入）：全称为Dependency Injection，意思自身对象中的内置对象是通过注入的方式进行创建。<br>　　　IOC就是一种软件设计思想，DI是这种软件设计思想的一个实现。</p>
+<p>19.什么是springmvc，它与spring有什么关系<br>　　springmvc属于spring框架的后续产品，用在基于MVC的表现层开发。<br>　　<br>20.springMVC工作流程<br>　　（１）客户端发出http请求，只要请求形式符合wen.xml文件配置的*.action就由DispatcherServerlet来处理。<br>　　（2）DispatcherServerlet再将请求委托给映射器的对象来讲http请求交给对应的Action来处理。<br>　　（3）映射器根据http请求，对比springmvc.xml文件中配置的<code>&lt;bean name = &quot;/hello.action&quot; class=&quot;...&quot;&gt;</code>,如果匹配，再将http请求交给我们书写的controller方法<br>　　（4）执行controller中的方法，最终返回一个名叫ModelAndView的对象，其中封装了向视图发送的数据和视图的逻辑名。<br>　　（5）ModelAndView对象随着响应到DisPatcherServlet中。<br>　　（6）这时DispatcherServerlet接受到了ModelAndView对象，但是他并不知道视图逻辑名是何意，有得委托一个名叫视图解析器的对象去解析ModelAndView对象中的内容。<br>　　（7）将视图解析后的内容，再交由DispatcherServerlet核心控制器，DispatcherServerlet将请求转发到具体的jsp页面，取出数据，再显示给用户。</p>
+<p>21.int、byte、char各占几个位？ （注意这里说的不是字节，问的是bit位。）<br>    int占四个字节，byte一个字节，char2个字节，每个字节占8位，所以int32位，byte8<br> 位，char16位。</p>
+<p> 22.一个List集合如何不再添加重复的元素进去？<br>   在添加的时候，通过if(!lsit.contains())进行判断就行了  </p>
+<p> 23.如何判断两个对象是相同的？<br>   重写类的equals()和hashCode()方法即可，因为其底层就是通过equals()进行比较的 。<br> 重写equals()方法，为什么还要重写hashCode()方法呢？如果我们对一个对象重写了euqals，意思是只要对象的成员变量值都相等那么euqals就等于true，但不重写hashcode，那么我们再new一个新的对象，当原对象.equals（新对象）等于true时，两者的hashcode却是不一样的，由此将产生了理解的不一致，如在存储散列集合时（如Set类），将会存储了两个值一样的对象，导致混淆，因此，就也需要重写hashcode()。</p>
+<p>24.为什么需要重写hashCode()方法和equals()方法？<br>　　Java中的超类Object类中定义的equals()方法是用来比较两个引用所指向的对象的内存地址是否一致。Java的API文档对Object类的hashCode()方法做了详细的说明，这也是我们重写hashCode()方法时的原则【Object类】。<br>　　a.在java应用程序运行时，无论何时多次调用同一个对象时的hsahCode()方法，这个对象的hashCode()方法的返回值必须是相同的一个int值<br>　　b.如果两个对象equals()返回值为true,则他们的hashCode()也必须返回相同的int值<br>　　c.如果两个对象equals()返回值为false,则他们的hashCode()返回值也必须不同</p>
+<p>我们在定义类时，我们经常会希望两个不同对象的某些属性值相同时就认为他们相同，所以我们要重写equals()方法，按照原则，我们重写了equals()方法，也要重写hashCode()方法，要保证上面所述的b,c原则。</p>
+<p>当我们自定义的一个类，想要把它的实例保存在集合中时，我们就需要重写这两个方法；集合(Collection)有两个类，一个是List,一个是Set<br>List:集合中的元素是有序的，可以重复的<br>Set:无序，不可重复的<br>以HashSet来说明：<br>HashSet存放元素时，根据元素的hashCode值快速找到要存储的位置，如果这个位置有元素，两个对象通过equals()比较，如果返回值为true,则不放入；如果返回值为false,则这个时候会以链表的形式在同一个位置上存放两个元素，这会使得HashSet的性能降低，因为不能快速定位了。还有一种情况就是两个对象的hashCode()返回值不同，但是equals()返回true,这个时候HashSet会把这两个对象都存进去，这就和Set集合不重复的规则相悖了;所以，我们重写了equals()方法时，要按照b,c规则重写hashCode()方法！</p>
+  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/java/">java</a>
+  </div>
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://yoursite.com/2017/09/27/java面试基础1/" data-title="java面试基础部分 | 小生の博客" data-tsina="" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev">
+ <a href="/2017/09/28/java后端面试/" title="java后端面试">
+  <strong>上一篇：</strong><br>
+  <span>
+  java后端面试</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/2017/09/27/java中对象和对象引用/" title="java中对象和对象引用">
+ <strong>下一篇：</strong><br> 
+ <span>java中对象和对象引用
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+
+
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ 
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+
+
+  
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/ajax/" title="ajax">ajax<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/ssm/" title="ssm">ssm<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/java/" title="java">java<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Linux/" title="Linux">Linux<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/spring/" title="spring">spring<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/随笔/" title="随笔">随笔<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/bootstrap/" title="bootstrap">bootstrap<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/js/" title="js">js<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/mybatis/" title="mybatis">mybatis<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/kali/" title="kali">kali<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/ESXI/" title="ESXI">ESXI<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/springmvc/" title="springmvc">springmvc<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/无题/" title="无题">无题<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/云镜-WAF-zabbix/" title="云镜 WAF zabbix">云镜 WAF zabbix<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/测试图片/" title="测试图片">测试图片<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/毕设/" title="毕设">毕设<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/restful/" title="restful">restful<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/ssm-ajax/" title="ssm ajax">ssm ajax<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/android-系统/" title="android 系统">android 系统<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/硬件/" title="硬件">硬件<sup>1</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  
+
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer">
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Hello ,I&#39;m 小生 <br>
+			</p>
+	</section>
+	 
+	<div class="social-font">
+		
+		<a href="http://weibo.com/每日元气满满" target="_blank" class="icon-weibo" title="微博"></a>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</div>
+			
+		
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2019 
+		
+		<a href="/about" target="_blank" title="小生">小生</a>
+		
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?e6d1f421bbc9962127a50488f9ed37d1";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+  <script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"model":{"jsonPath":"live2d-widget-model-koharu"},"display":{"position":"right","width":60,"height":120},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>

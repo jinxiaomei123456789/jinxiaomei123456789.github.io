@@ -1,0 +1,526 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+  
+    <title>ssm中的ajax验证用户名并提交 | 小生の博客</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="小生">
+    
+
+    
+    <meta name="description" content="以下是代码，我已经被这个问题折腾麻木了。准备工作，关于ssm的各种配置就不用说了，之前已经配置好了额。　　注册有两个字段：username,password,表中id自增，主键。 分割线--------------------------------------------------------- 　　　　1.pojo包下建立user.java实体类。12345678910111213141">
+<meta name="keywords" content="ssm ajax">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ssm中的ajax验证用户名并提交">
+<meta property="og:url" content="http://yoursite.com/2017/09/24/ssm中的ajax验证用户名并提交/index.html">
+<meta property="og:site_name" content="小生の博客">
+<meta property="og:description" content="以下是代码，我已经被这个问题折腾麻木了。准备工作，关于ssm的各种配置就不用说了，之前已经配置好了额。　　注册有两个字段：username,password,表中id自增，主键。 分割线--------------------------------------------------------- 　　　　1.pojo包下建立user.java实体类。12345678910111213141">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-12-24T05:43:44.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ssm中的ajax验证用户名并提交">
+<meta name="twitter:description" content="以下是代码，我已经被这个问题折腾麻木了。准备工作，关于ssm的各种配置就不用说了，之前已经配置好了额。　　注册有两个字段：username,password,表中id自增，主键。 分割线--------------------------------------------------------- 　　　　1.pojo包下建立user.java实体类。12345678910111213141">
+
+    
+    <link rel="alternative" href="/atom.xml" title="小生の博客" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/jacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/title.png" alt="小生の博客" title="小生の博客"></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="小生の博客">小生の博客</a></h1>
+				<h2 class="blog-motto">踏实努力地工作，踏实努力地学习</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">主页 | Home</a></li>
+					
+						<li><a href="/archives">归档 | Archives</a></li>
+					
+						<li><a href="/about">简介 | About</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索">
+						<input type="hidden" name="q" value="site:yoursite.com">
+					</form>
+					
+					</li>
+				</ul>
+			</ul></nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope="" itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2017/09/24/ssm中的ajax验证用户名并提交/" title="ssm中的ajax验证用户名并提交" itemprop="url">ssm中的ajax验证用户名并提交</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="小生" target="_blank" itemprop="author">小生</a>
+		
+  </p><p class="article-time">
+    <time datetime="2017-09-24T02:47:50.000Z" itemprop="datePublished"> 发表于 2017-09-24</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			
+		
+		</div>
+		
+		<p>　　以下是代码，我已经被这个问题折腾麻木了。准备工作，关于ssm的各种配置就不用说了，之前已经配置好了额。<br>　　注册有两个字段：username,password,表中id自增，主键。</p>
+<pre><code>分割线---------------------------------------------------------
+</code></pre><p>　　<br>　　1.pojo包下建立user.java实体类。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">package cn.edu.aust.pojo;</span><br><span class="line"></span><br><span class="line">public class User &#123;</span><br><span class="line">    private int id;</span><br><span class="line">    private String username;</span><br><span class="line">    private String password;</span><br><span class="line"></span><br><span class="line">    public int getId() &#123;</span><br><span class="line">        return id;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void setId(int id) &#123;</span><br><span class="line">        this.id = id;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public String getUsername() &#123;</span><br><span class="line">        return username;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void setUsername(String username) &#123;</span><br><span class="line">        this.username = username;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public String getPassword() &#123;</span><br><span class="line">        return password;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void setPassword(String password) &#123;</span><br><span class="line">        this.password = password;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>　　２.接口mapper包下建立UserMapper.java接口<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">package cn.edu.aust.mapper;</span><br><span class="line"></span><br><span class="line">import cn.edu.aust.pojo.User;</span><br><span class="line">import org.apache.ibatis.annotations.Param;</span><br><span class="line"></span><br><span class="line">public interface UserMapper &#123;</span><br><span class="line">    /*</span><br><span class="line">    *</span><br><span class="line">    * 登录使用到的查询用户名是否被占用功能*/</span><br><span class="line">    int selectUsername(String username);</span><br><span class="line"></span><br><span class="line">    /*</span><br><span class="line">    * 用户名没有被占用，则将注册的username和password插入数据库</span><br><span class="line">    * */</span><br><span class="line">    void userAdd(@Param(&quot;username&quot;) String username, @Param(&quot;password&quot;) String password);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>　　３.service包下面建立业务逻辑层的UserService<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">package cn.edu.aust.service;</span><br><span class="line"></span><br><span class="line">import cn.edu.aust.pojo.User;</span><br><span class="line"></span><br><span class="line">public interface UserService &#123;</span><br><span class="line"></span><br><span class="line">    /*</span><br><span class="line">  * 登录使用到的查询用户名是否被占用功能</span><br><span class="line">  * */</span><br><span class="line">    int selectUsername(String username);</span><br><span class="line"></span><br><span class="line">    /*</span><br><span class="line">   * 用户名没有被占用，则将注册的username和password插入数据库</span><br><span class="line">    */</span><br><span class="line">    void userAdd(String username,String password);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>　　４.service.impl包下建立业务逻辑层的实现类：UserServiceImpl.java<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">package cn.edu.aust.service.impl;</span><br><span class="line"></span><br><span class="line">import cn.edu.aust.mapper.UserMapper;</span><br><span class="line">import cn.edu.aust.pojo.User;</span><br><span class="line">import cn.edu.aust.service.UserService;</span><br><span class="line">import org.springframework.beans.factory.annotation.Autowired;</span><br><span class="line">import org.springframework.stereotype.Service;</span><br><span class="line"></span><br><span class="line">@Service</span><br><span class="line">public class UserServiceImpl implements UserService &#123;</span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    private UserMapper userMapper;</span><br><span class="line">    public int selectUsername(String username) &#123;</span><br><span class="line">           return userMapper.selectUsername(username);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void userAdd(String username, String password) &#123;</span><br><span class="line">             userMapper.userAdd(username,password);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>在service 的实现类中，我们要注入service和接口mapper。</p>
+<p>　　５.controller包下面建立UserController.java<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">package cn.edu.aust.controller;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">import cn.edu.aust.pojo.User;</span><br><span class="line">import cn.edu.aust.service.UserService;</span><br><span class="line">import org.springframework.beans.factory.annotation.Autowired;</span><br><span class="line">import org.springframework.stereotype.Controller;</span><br><span class="line">import org.springframework.web.bind.annotation.RequestMapping;</span><br><span class="line">import org.springframework.web.bind.annotation.RequestMethod;</span><br><span class="line">import org.springframework.web.servlet.ModelAndView;</span><br><span class="line"></span><br><span class="line">import javax.servlet.http.HttpServletRequest;</span><br><span class="line">import javax.servlet.http.HttpServletResponse;</span><br><span class="line">import java.io.IOException;</span><br><span class="line"></span><br><span class="line">@Controller</span><br><span class="line">@RequestMapping(&quot;&quot;)</span><br><span class="line">public class UserController &#123;</span><br><span class="line">    @Autowired</span><br><span class="line">    private UserService userService;</span><br><span class="line"></span><br><span class="line">    @RequestMapping(value=&quot;selectUsername&quot;)</span><br><span class="line">   public void selectUsername(HttpServletRequest request, HttpServletResponse response) throws IOException &#123;</span><br><span class="line">        String username = request.getParameter(&quot;username&quot;);</span><br><span class="line">        response.setContentType(&quot;text/html;charset=UTF-8&quot;);</span><br><span class="line">        if(userService.selectUsername(username)!=0)&#123;</span><br><span class="line">            response.getWriter().write(&quot;&lt;font color=&apos;red&apos;&gt;用户名不可用&lt;/font&gt;&quot;);</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">            response.getWriter().write(&quot;&lt;font color=&apos;green&apos;&gt;用户名可用&lt;/font&gt;&quot;);</span><br><span class="line">           /* while(password!=null)&#123;</span><br><span class="line">                userService.userAdd(username,password);</span><br><span class="line">            &#125;*/</span><br><span class="line">        &#125;</span><br><span class="line">        response.getWriter().flush();</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    @RequestMapping(value=&quot;userAdd&quot;)</span><br><span class="line">    public void userAdd(HttpServletRequest request, HttpServletResponse response) throws IOException &#123;</span><br><span class="line">        String username = request.getParameter(&quot;username&quot;);</span><br><span class="line">        String password = request.getParameter(&quot;password&quot;);</span><br><span class="line">        System.out.println(username+password);</span><br><span class="line">        response.setContentType(&quot;text/html;charset=UTF-8&quot;);</span><br><span class="line">            userService.userAdd(username,password);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>6.展示一下我的jsp页面<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;signinpanel&quot;&gt;</span><br><span class="line">        &lt;div class=&quot;row&quot;&gt;</span><br><span class="line">            &lt;div class=&quot;col-sm-7&quot;&gt;</span><br><span class="line">                &lt;div class=&quot;signin-info&quot;&gt;</span><br><span class="line">                    &lt;div class=&quot;logopanel m-b&quot;&gt;</span><br><span class="line">                    &lt;/div&gt;</span><br><span class="line">                    &lt;div class=&quot;m-b&quot;&gt;&lt;/div&gt;</span><br><span class="line">                &lt;/div&gt;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">            &lt;div class=&quot;col-sm-5&quot;&gt;</span><br><span class="line">                &lt;form method=&quot;post&quot;  action=&quot;$&#123;pageContext.request.contextPath&#125;/#&quot;&gt;</span><br><span class="line">                    &lt;p class=&quot;m-t-md&quot;&gt;注册图书管理系统&lt;/p&gt;</span><br><span class="line">                      &lt;input type=&quot;text&quot; class=&quot;form-control uname&quot; id=&quot;username&quot; id=&quot;accountName&quot;  onblur=&quot;checkUserName()&quot;  placeholder=&quot;用户名&quot;/&gt;&lt;span id=&quot;userspan&quot;&gt;&lt;/span&gt;</span><br><span class="line">                      &lt;input type=&quot;text&quot; class=&quot;form-control pword m-b&quot; id=&quot;password&quot; onblur=&quot;userAdd()&quot; placeholder=&quot;密码&quot;/&gt;</span><br><span class="line">                    &lt;button class=&quot;btn btn-success btn-block&quot;&gt;注册&lt;/button&gt;&lt;br/&gt;</span><br><span class="line">                    &lt;strong&gt;已有账号？ &lt;a href=&quot;login.jsp&quot;&gt;立即登录&amp;raquo;&lt;/a&gt;&lt;/strong&gt;</span><br><span class="line">                &lt;/form&gt;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">        &lt;div class=&quot;signup-footer&quot;&gt;</span><br><span class="line">            &lt;div class=&quot;pull-left&quot;&gt;</span><br><span class="line">                &amp;copy;jin</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">    function checkUserName()&#123;</span><br><span class="line">        if(this.value==&quot;&quot;)</span><br><span class="line">        &#123;</span><br><span class="line">            alert(&quot;请输入用户名!&quot;);</span><br><span class="line">            this.focus();</span><br><span class="line">        &#125;</span><br><span class="line">        var username = document.getElementById(&quot;username&quot;).value;</span><br><span class="line"></span><br><span class="line">        //发出已补请求</span><br><span class="line">        //1/得到xhr对象</span><br><span class="line">        var xhr = new XMLHttpRequest();</span><br><span class="line">        //2.注册状态变化监听器</span><br><span class="line">        xhr.onreadystatechange = function() &#123;</span><br><span class="line">            if (xhr.readyState == 4) &#123;</span><br><span class="line">                if (xhr.status == 200) &#123;</span><br><span class="line">                    document.getElementById(&quot;userspan&quot;).innerHTML = xhr.responseText;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        //3.建立与服务器的连接</span><br><span class="line">        xhr.open(&quot;GET&quot;,&quot;$&#123;pageContext.request.contextPath&#125;/selectUsername.action?time=&quot;+new Date().getTime+&quot;&amp;username=&quot;+username+&quot;&amp;password=&quot;+password,true);                        //4.向服务器发出请求</span><br><span class="line">        xhr.send(null);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    function userAdd() &#123;</span><br><span class="line">        var username = document.getElementById(&quot;username&quot;).value;</span><br><span class="line">        var password = document.getElementById(&quot;password&quot;).value;</span><br><span class="line">        alert(username+password);</span><br><span class="line">        var xhr = new XMLHttpRequest();</span><br><span class="line">        //2.注册状态变化监听器</span><br><span class="line"></span><br><span class="line">        xhr.onreadystatechange = function() &#123;</span><br><span class="line">            if (xhr.readyState == 4) &#123;</span><br><span class="line">                if (xhr.status == 200) &#123;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        //3.建立与服务器的连接</span><br><span class="line">        xhr.open(&quot;GET&quot;,&quot;$&#123;pageContext.request.contextPath&#125;/userAdd.action?&amp;username=&quot;+username+&quot;&amp;password=&quot;+password,true);                        //4.向服务器发出请求</span><br><span class="line">        xhr.send(null);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure></p>
+<p>　　７.UserMapper.xml文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span><br><span class="line">&lt;!DOCTYPE mapper PUBLIC &quot;-//mybatis.org//DTD Mapper 3.0//EN&quot; &quot;http://mybatis.org/dtd/mybatis-3-mapper.dtd&quot; &gt;</span><br><span class="line"></span><br><span class="line">&lt;mapper namespace=&quot;cn.edu.aust.mapper.UserMapper&quot;&gt;</span><br><span class="line">    &lt;resultMap id=&quot;userMap&quot; type=&quot;cn.edu.aust.pojo.User&quot;&gt;</span><br><span class="line">        &lt;id property=&quot;id&quot; column=&quot;id&quot;/&gt;</span><br><span class="line">        &lt;result property=&quot;username&quot; column=&quot;username&quot;/&gt;</span><br><span class="line">        &lt;result property=&quot;password&quot;  column=&quot;password&quot; /&gt;</span><br><span class="line">    &lt;/resultMap&gt;</span><br><span class="line"></span><br><span class="line">    &lt;!--注册验证用户名是否被占用--&gt;</span><br><span class="line">    &lt;select id=&quot;selectUsername&quot; resultType=&quot;int&quot;&gt;</span><br><span class="line">        select count(*) from user where username= #&#123;username&#125;</span><br><span class="line">    &lt;/select&gt;</span><br><span class="line"></span><br><span class="line">    &lt;!--注册时用户名可以使用，则往数据库插入一条记录--&gt;</span><br><span class="line">    &lt;insert id=&quot;userAdd&quot;  parameterType=&quot;String&quot;&gt;</span><br><span class="line">        insert into user(username,password) values(#&#123;username&#125;,#&#123;password&#125;)</span><br><span class="line">    &lt;/insert&gt;</span><br><span class="line"></span><br><span class="line">&lt;/mapper&gt;</span><br></pre></td></tr></table></figure></p>
+<p>　　在写验证的过程中，第一个问题查询问题:查询用户名是否存在：Invalid bound statement (not found)：自己对mybatis知识点了解不熟，在这个问题上我之前也遇到同样的问题，原因是我的select的id名称和方法名不一致。</p>
+<p>　　在验证成功后，用户名可以注册，那么如何插入到数据库中呢，我的下意识是在验证成功后直接插入，get请求传递参数时，将用户填写的password参数也一起传递过来，然而没有用，password值为null,于是我为 password框也添加了一个onnlur事件，函数名和username的一样，这次插入的时候仅仅只能插入uesrname，controller方法中可以接受到password,password不能插入，这是为什么呢？后来一想，当我输入完username 的时候，onblur事件立即就执行了，同时执行插入操作。这个时候password 还，有接受到。<br>　　<br>　　修改后的代码如上所示，首先为username添加onblur事件执行验证操作，在password输入完成后添加onblur事件执行插入操作。成功。</p>
+  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/ssm-ajax/">ssm ajax</a>
+  </div>
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://yoursite.com/2017/09/24/ssm中的ajax验证用户名并提交/" data-title="ssm中的ajax验证用户名并提交 | 小生の博客" data-tsina="" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev">
+ <a href="/2017/09/25/问题及解决方法/" title="问题及解决方法">
+  <strong>上一篇：</strong><br>
+  <span>
+  问题及解决方法</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/2017/09/24/数据库中如何保存图片/" title="数据库中如何保存图片">
+ <strong>下一篇：</strong><br> 
+ <span>数据库中如何保存图片
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+
+
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ 
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+
+
+  
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/ajax/" title="ajax">ajax<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/ssm/" title="ssm">ssm<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/java/" title="java">java<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Linux/" title="Linux">Linux<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/spring/" title="spring">spring<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/随笔/" title="随笔">随笔<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/bootstrap/" title="bootstrap">bootstrap<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/js/" title="js">js<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/mybatis/" title="mybatis">mybatis<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/kali/" title="kali">kali<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/ESXI/" title="ESXI">ESXI<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/springmvc/" title="springmvc">springmvc<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/无题/" title="无题">无题<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/云镜-WAF-zabbix/" title="云镜 WAF zabbix">云镜 WAF zabbix<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/测试图片/" title="测试图片">测试图片<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/毕设/" title="毕设">毕设<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/restful/" title="restful">restful<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/ssm-ajax/" title="ssm ajax">ssm ajax<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/android-系统/" title="android 系统">android 系统<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/硬件/" title="硬件">硬件<sup>1</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  
+
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer">
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Hello ,I&#39;m 小生 <br>
+			</p>
+	</section>
+	 
+	<div class="social-font">
+		
+		<a href="http://weibo.com/每日元气满满" target="_blank" class="icon-weibo" title="微博"></a>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</div>
+			
+		
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2019 
+		
+		<a href="/about" target="_blank" title="小生">小生</a>
+		
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?e6d1f421bbc9962127a50488f9ed37d1";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+  <script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"model":{"jsonPath":"live2d-widget-model-koharu"},"display":{"position":"right","width":60,"height":120},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>

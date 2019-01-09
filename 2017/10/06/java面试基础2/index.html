@@ -1,0 +1,534 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+  
+    <title>java面试基础2 | 小生の博客</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="小生">
+    
+
+    
+    <meta name="description" content="1、面向对象的特征有哪些方面　　1.抽象：　　抽象就是忽略一个主题中与当前目标无关的那些方面，以便更充分地注意与当前目标有关的方面。抽象并不打算了解全部问题，而只是选择其中的一部分，暂时不用部分细节。抽象包括两个方面，一是过程抽象，二是数据抽象。　　2.继承：　　继承是一种联结类的层次模型，并且允许和鼓励类的重用，它提供了一种明确表述共性的方法。对象的一个新类可以从现有的类中派生，这个过程称为类继">
+<meta name="keywords" content="java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java面试基础2">
+<meta property="og:url" content="http://yoursite.com/2017/10/06/java面试基础2/index.html">
+<meta property="og:site_name" content="小生の博客">
+<meta property="og:description" content="1、面向对象的特征有哪些方面　　1.抽象：　　抽象就是忽略一个主题中与当前目标无关的那些方面，以便更充分地注意与当前目标有关的方面。抽象并不打算了解全部问题，而只是选择其中的一部分，暂时不用部分细节。抽象包括两个方面，一是过程抽象，二是数据抽象。　　2.继承：　　继承是一种联结类的层次模型，并且允许和鼓励类的重用，它提供了一种明确表述共性的方法。对象的一个新类可以从现有的类中派生，这个过程称为类继">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-12-24T03:21:08.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="java面试基础2">
+<meta name="twitter:description" content="1、面向对象的特征有哪些方面　　1.抽象：　　抽象就是忽略一个主题中与当前目标无关的那些方面，以便更充分地注意与当前目标有关的方面。抽象并不打算了解全部问题，而只是选择其中的一部分，暂时不用部分细节。抽象包括两个方面，一是过程抽象，二是数据抽象。　　2.继承：　　继承是一种联结类的层次模型，并且允许和鼓励类的重用，它提供了一种明确表述共性的方法。对象的一个新类可以从现有的类中派生，这个过程称为类继">
+
+    
+    <link rel="alternative" href="/atom.xml" title="小生の博客" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/jacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/title.png" alt="小生の博客" title="小生の博客"></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="小生の博客">小生の博客</a></h1>
+				<h2 class="blog-motto">踏实努力地工作，踏实努力地学习</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">主页 | Home</a></li>
+					
+						<li><a href="/archives">归档 | Archives</a></li>
+					
+						<li><a href="/about">简介 | About</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索">
+						<input type="hidden" name="q" value="site:yoursite.com">
+					</form>
+					
+					</li>
+				</ul>
+			</ul></nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope="" itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2017/10/06/java面试基础2/" title="java面试基础2" itemprop="url">java面试基础2</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="小生" target="_blank" itemprop="author">小生</a>
+		
+  </p><p class="article-time">
+    <time datetime="2017-10-06T08:46:44.000Z" itemprop="datePublished"> 发表于 2017-10-06</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			
+		
+		</div>
+		
+		<p>1、面向对象的特征有哪些方面<br>　　1.抽象：<br>　　抽象就是忽略一个主题中与当前目标无关的那些方面，以便更充分地注意与当前目标有关的方面。抽象并不打算了解全部问题，而只是选择其中的一部分，暂时不用部分细节。抽象包括两个方面，一是过程抽象，二是数据抽象。<br>　　2.继承：<br>　　继承是一种联结类的层次模型，并且允许和鼓励类的重用，它提供了一种明确表述共性的方法。对象的一个新类可以从现有的类中派生，这个过程称为类继承。新类继承了原始类的特性，新类称为原始类的派生类（子类），而原始类称为新类的基类（父类）。派生类可以从它的基类那里继承方法和实例变量，并且类可以修改或增加新的方法使之更适合特殊的需要。<br>　　3.封装：<br>　　封装是把过程和数据包围起来，对数据的访问只能通过已定义的界面。面向对象计算始于这个基本概念，即现实世界可以被描绘成一系列完全自治、封装的对象，这些对象通过一个受保护的接口访问其他对象。<br>　　4. 多态性：<br>　　多态性是指允许不同类的对象对同一消息作出响应。多态性包括参数化多态性和包含多态性。多态性语言具有灵活、抽象、行为共享、代码共享的优势，很好的解决了应用程序函数同名问题。</p>
+<p>２.一个”.java”源文件中是否可以包括多个类（不是内部类）？有什么限制？<br>　　可以有多个类，但只能有一个public的类，并且public的类名必须与文件名相一致。<br>　　<br>３.JDK是什么？JRE是什么？<br> 　　JDK：java开发工具包。JRE：java运行时环境。<br> 　　<br>４. 什么是java的平台无关性？<br>　　Java源文件被编译成字节码的形式，无论在什么系统环境下，只要有java虚<br>拟机就能运行这个字节码文件。也就是一处编写，处处运行。这就是java的跨平台性。</p>
+<p>５. 在一台电脑上配置java环境，path起什么作用？如何配置？<br>　　path的作用是在DOS环境下，能在任意位置使用JDK目录中bin文件夹中的<br>可执行程序，来编译执行java程序。</p>
+<p>６. &amp;&amp;和&amp;区别，||和|区别？<br> &amp;&amp;和||是短路与，短路或，当左边的表达式能判断当前结果，则不判断右边的表表达式。 而&amp; 和|则将两边的表达式都运算完毕后，再算结果</p>
+<p>７.break与continue,return结束循环区别？<br>　　break语句使用场合主要是switch语句和循环结构。switch中，直接退出循环，执行循环结构下面的第一条语句。在多重嵌套循环中使用break语句，当执行break语句时，退出的是它所在的循环结构，对外层循环没有影响。<br>　　continue语句可以理解为继续循环不执行下面的语句。continue语句并没有真的退出循环，而是只结束本次循环的执行。<br>　　 return跳出整个函数体，函数体后面的部分不再执行。</p>
+<ol start="8">
+<li>解释什么是类的成员变量，局部变量，实例成员变量，类成员变量？<br>　　类的变量定义部分所定义的变量被称为类的成员变量。类中方法外。<br>　　在方法体中定义的变量和方法的参数被称为局部变量。<br>　　成员变量又分为实例成员变量和类成员变量（static修饰）。</li>
+</ol>
+<p>９.this和super关键字用法。<br>  　　在Java中，this通常指当前对象，super则指父类的。当想要引用当前对象的某种东西，比如当前对象的某个方法，或当前对象的某个成员，便可以利用this来实现这个目的，当然，this的另一个用途是调用当前对象的另一个构造函数。如果想引用父类的某种东西，则非super莫属。<br>  　　１.在一般方法中<br>  　　最普遍的情况就是，在我们的方法中的某个形参名与当前对象的某个成员有相同的名字，这时为了不至于混淆，我们便需要明确使用this关键字来指明你要使用某 个成员，使用方法是“this.成员名”，而不带this的那个便是形参。另外，还可以用“this.方法名”来引用当前对象的某个方法，但这时this就不是必须的了，我们可以直接用方法名来访问那个方法，编译器会知道我们要调用的是那一个。<br>  　　２.在构造函数中<br>  　　在构造函数中，super后加参数的是用来调用父类中具有相同形式的构造函数，this后加参数则调用的是当前具有相同参数的构造函数。<br>  　　总之，this通常指代当前对象，super通常指代父类。<br>  　　<br>10.什么是构造方法？<br>　　 构造方法是一种特殊方法，它的名字必须与它所在的类的名字完全相同，作用是对类进行初始化。
+　　 </p>
+<ol start="11">
+<li><p>系统什么情况下会为类提供构造方法，提供什么样的构造方法？<br>　　如果类中没有构造方法，系统会提供一个默认的构造方法，默认的构造方法是无参的。</p>
+</li>
+<li><p>类变量有什么特点？<br>　　一个类的所有对象共享同一个类变量。</p>
+</li>
+<li><p>类方法有什么特点？<br>　　同一类中，类方法只能调用类变量和类方法。</p>
+</li>
+<li><p>简述super关键字作用？<br>　　使用super调用父类的构造方法。</p>
+</li>
+</ol>
+  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/java/">java</a>
+  </div>
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://yoursite.com/2017/10/06/java面试基础2/" data-title="java面试基础2 | 小生の博客" data-tsina="" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev">
+ <a href="/2017/10/08/spring面试题/" title="spring面试题">
+  <strong>上一篇：</strong><br>
+  <span>
+  spring面试题</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/2017/09/28/java反射/" title="java反射">
+ <strong>下一篇：</strong><br> 
+ <span>java反射
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+
+
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ 
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+
+
+  
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/ajax/" title="ajax">ajax<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/ssm/" title="ssm">ssm<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/java/" title="java">java<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Linux/" title="Linux">Linux<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/spring/" title="spring">spring<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/随笔/" title="随笔">随笔<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/bootstrap/" title="bootstrap">bootstrap<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/js/" title="js">js<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/mybatis/" title="mybatis">mybatis<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/kali/" title="kali">kali<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/ESXI/" title="ESXI">ESXI<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/springmvc/" title="springmvc">springmvc<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/无题/" title="无题">无题<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/云镜-WAF-zabbix/" title="云镜 WAF zabbix">云镜 WAF zabbix<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/测试图片/" title="测试图片">测试图片<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/毕设/" title="毕设">毕设<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/restful/" title="restful">restful<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/ssm-ajax/" title="ssm ajax">ssm ajax<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/android-系统/" title="android 系统">android 系统<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/硬件/" title="硬件">硬件<sup>1</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  
+
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer">
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Hello ,I&#39;m 小生 <br>
+			</p>
+	</section>
+	 
+	<div class="social-font">
+		
+		<a href="http://weibo.com/每日元气满满" target="_blank" class="icon-weibo" title="微博"></a>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</div>
+			
+		
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2019 
+		
+		<a href="/about" target="_blank" title="小生">小生</a>
+		
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?e6d1f421bbc9962127a50488f9ed37d1";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+  <script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"model":{"jsonPath":"live2d-widget-model-koharu"},"display":{"position":"right","width":60,"height":120},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>

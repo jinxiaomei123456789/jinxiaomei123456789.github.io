@@ -1,0 +1,516 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+  
+    <title>springMVC面试题 | 小生の博客</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="小生">
+    
+
+    
+    <meta name="description" content="1.SpringMVC工作原理：　　 1.客户端发送请求到DispatcherServlet　　 2.DispatcherServlet查询handlerMapping找到处理请求的Controller　　 3.Controller调用业务逻辑后，返回ModelAndView　　4.DispatcherServlet查询ModelAndView，找到指定视图　　5.视图将结果返回到客户端　　２.S">
+<meta name="keywords" content="springmvc">
+<meta property="og:type" content="article">
+<meta property="og:title" content="springMVC面试题">
+<meta property="og:url" content="http://yoursite.com/2017/10/08/springMVC面试题/index.html">
+<meta property="og:site_name" content="小生の博客">
+<meta property="og:description" content="1.SpringMVC工作原理：　　 1.客户端发送请求到DispatcherServlet　　 2.DispatcherServlet查询handlerMapping找到处理请求的Controller　　 3.Controller调用业务逻辑后，返回ModelAndView　　4.DispatcherServlet查询ModelAndView，找到指定视图　　5.视图将结果返回到客户端　　２.S">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-12-25T01:24:52.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="springMVC面试题">
+<meta name="twitter:description" content="1.SpringMVC工作原理：　　 1.客户端发送请求到DispatcherServlet　　 2.DispatcherServlet查询handlerMapping找到处理请求的Controller　　 3.Controller调用业务逻辑后，返回ModelAndView　　4.DispatcherServlet查询ModelAndView，找到指定视图　　5.视图将结果返回到客户端　　２.S">
+
+    
+    <link rel="alternative" href="/atom.xml" title="小生の博客" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/jacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/title.png" alt="小生の博客" title="小生の博客"></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="小生の博客">小生の博客</a></h1>
+				<h2 class="blog-motto">踏实努力地工作，踏实努力地学习</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">主页 | Home</a></li>
+					
+						<li><a href="/archives">归档 | Archives</a></li>
+					
+						<li><a href="/about">简介 | About</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索">
+						<input type="hidden" name="q" value="site:yoursite.com">
+					</form>
+					
+					</li>
+				</ul>
+			</ul></nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope="" itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2017/10/08/springMVC面试题/" title="springMVC面试题" itemprop="url">springMVC面试题</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="小生" target="_blank" itemprop="author">小生</a>
+		
+  </p><p class="article-time">
+    <time datetime="2017-10-08T02:56:53.000Z" itemprop="datePublished"> 发表于 2017-10-08</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			
+		
+		</div>
+		
+		<p>1.SpringMVC工作原理：<br>　　 1.客户端发送请求到DispatcherServlet<br>　　 2.DispatcherServlet查询handlerMapping找到处理请求的Controller<br>　　 3.Controller调用业务逻辑后，返回ModelAndView<br>　　4.DispatcherServlet查询ModelAndView，找到指定视图<br>　　5.视图将结果返回到客户端<br>　　<br>２.SpringMvc的控制器是不是单例模式,如果是,有什么问题,怎么解决？<br>　　是单例模式,所以在多线程访问的时候有线程安全问题,不要用同步,会影响性能的,解决方案是在控制器里面不能写字段。<br>　　<br>３.SpingMvc中的控制器的注解一般用那个,有没有别的注解可以替代？<br>　　一般用@Conntroller注解,表示是表现层,不能用用别的注解代替.<br>　　<br>４. @RequestMapping注解用在类上面有什么作用？<br>　　 是一个用来处理请求地址映射的注解，可用于类或方法上。用于类上，表示类中的所有响应请求的方法都是以该地址作为父路径。<br>　　<br>５.怎么样把某个请求映射到特定的方法上面？<br>　　直接在方法上面加上注解@RequestMapping,并且在这个注解里面写上要拦截的路径。<br>　　<br>６.如果在拦截请求中,我想拦截get方式提交的方法,怎么配置？<br>　　可以在@RequestMapping注解里面加上method=RequestMethod.GET。<br>　　<br>７.我想在拦截的方法里面得到从前台传入的参数,怎么得到？<br>　　直接在形参里面声明这个参数就可以,但必须名字和传过来的参数一样。<br>　　<br>８.如果前台有很多个参数传入,并且这些参数都是一个对象的,那么怎么样快速得到这个对象？<br>　　直接在方法中声明这个对象,SpringMvc就自动会把属性赋值到这个对象里面。<br>　　<br>９.SpringMvc中函数的返回值是什么？<br>　　返回值可以有很多类型,有String, ModelAndView,当一般用String比较好。<br>　　<br>１０.SpringMVC怎么样设定重定向和转发的？<br>　　在返回值前面加”forward:”就可以让结果转发,譬如”forward:user.do?name=method4” 在返回值前面加”redirect:”就可以让返回值重定向,譬如”redirect:<a href="http://www.baidu.com&quot;" target="_blank" rel="noopener">http://www.baidu.com&quot;</a>
+　　</p>
+  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/springmvc/">springmvc</a>
+  </div>
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://yoursite.com/2017/10/08/springMVC面试题/" data-title="springMVC面试题 | 小生の博客" data-tsina="" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev">
+ <a href="/2017/10/08/mybatis面试题/" title="mybatis面试题">
+  <strong>上一篇：</strong><br>
+  <span>
+  mybatis面试题</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/2017/10/08/spring面试题/" title="spring面试题">
+ <strong>下一篇：</strong><br> 
+ <span>spring面试题
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+
+
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ 
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+
+
+  
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/ajax/" title="ajax">ajax<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/ssm/" title="ssm">ssm<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/java/" title="java">java<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Linux/" title="Linux">Linux<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/spring/" title="spring">spring<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/随笔/" title="随笔">随笔<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/bootstrap/" title="bootstrap">bootstrap<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/js/" title="js">js<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/mybatis/" title="mybatis">mybatis<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/kali/" title="kali">kali<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/ESXI/" title="ESXI">ESXI<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/springmvc/" title="springmvc">springmvc<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/无题/" title="无题">无题<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/云镜-WAF-zabbix/" title="云镜 WAF zabbix">云镜 WAF zabbix<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/测试图片/" title="测试图片">测试图片<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/毕设/" title="毕设">毕设<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/restful/" title="restful">restful<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/ssm-ajax/" title="ssm ajax">ssm ajax<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/android-系统/" title="android 系统">android 系统<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/硬件/" title="硬件">硬件<sup>1</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  
+
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer">
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Hello ,I&#39;m 小生 <br>
+			</p>
+	</section>
+	 
+	<div class="social-font">
+		
+		<a href="http://weibo.com/每日元气满满" target="_blank" class="icon-weibo" title="微博"></a>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</div>
+			
+		
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2019 
+		
+		<a href="/about" target="_blank" title="小生">小生</a>
+		
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?e6d1f421bbc9962127a50488f9ed37d1";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+  <script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"model":{"jsonPath":"live2d-widget-model-koharu"},"display":{"position":"right","width":60,"height":120},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>
