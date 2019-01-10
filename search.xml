@@ -112,9 +112,9 @@
   <entry>
     <title><![CDATA[无题]]></title>
     <url>%2F2017%2F10%2F24%2F%E6%97%A0%E9%A2%98%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[&emsp;&emsp;我一直这样烦恼，你有像我这样忧愁过吗]]></content>
       <tags>
-        <tag>无题</tag>
+        <tag>杂谈</tag>
       </tags>
   </entry>
   <entry>
@@ -265,11 +265,6 @@
       <tags>
         <tag>ajax</tag>
       </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[关于换电脑问题]]></title>
-    <url>%2F2017%2F09%2F17%2F%E5%85%B3%E4%BA%8E%E6%8D%A2%E7%94%B5%E8%84%91%E9%97%AE%E9%A2%98%2F</url>
-    <content type="text"><![CDATA[尝试用别人的电脑看不同环境下github博客会遇到什么问题，结果一折腾，之前的博客都没有了，等待后期解决，折腾一下午都没有搞好。不过还是学会了一点东西，为什么双分支管理要好一点，是因为当我们创建一个hexo分支时，可以把hexo的环境push到hexo分支上，这样我们在任何电脑上都可以操作我们的博客。大概就是因为之前没有这样做，致使我的博客除了问题。]]></content>
   </entry>
   <entry>
     <title><![CDATA[学习ajax一]]></title>
