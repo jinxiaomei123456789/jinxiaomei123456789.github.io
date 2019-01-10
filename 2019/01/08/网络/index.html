@@ -22,7 +22,7 @@
 <meta property="og:image" content="http://yoursite.com/2019/01/08/网络/OSI模型图.jpg">
 <meta property="og:image" content="http://yoursite.com/2019/01/08/网络/五层协议模型.jpg">
 <meta property="og:image" content="http://yoursite.com/2019/01/08/网络/TCP三次握手.jpg">
-<meta property="og:updated_time" content="2019-01-10T06:50:01.274Z">
+<meta property="og:updated_time" content="2019-01-10T06:54:08.415Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="网络">
 <meta name="twitter:description" content="前言&amp;emsp;&amp;emsp;网络方面很多知识在大三学习的，计算机网络与网络安全这两门都是信息安全系主任葛斌老师授课，我们习惯叫他葛大爷。葛大爷苦口婆心教导每一个知识点，每次上课前随机点名抽取上一堂课的问题让学生回答，问题长达十个都有，在他教授这两门课的过程是我们大学时代最最黑暗的时光了，每次他上课的前两天宿舍就开始不分昼夜地背书，问问题，问原理，他上的每一次课，提前十分钟教室就坐满了人，教室里笼罩">
@@ -102,7 +102,7 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#什么是计算机网络"><span class="toc-number">2.</span> <span class="toc-text">什么是计算机网络</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#计算机之间如何进行通信"><span class="toc-number">3.</span> <span class="toc-text">计算机之间如何进行通信</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#网络模型"><span class="toc-number">4.</span> <span class="toc-text">网络模型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#OSI七层模型"><span class="toc-number">4.1.</span> <span class="toc-text">OSI七层模型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#TCP-IP模型"><span class="toc-number">4.2.</span> <span class="toc-text">TCP/IP模型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#TCP的三次握手"><span class="toc-number">4.2.1.</span> <span class="toc-text">TCP的三次握手</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#TCP的四次挥手"><span class="toc-number">4.2.2.</span> <span class="toc-text">TCP的四次挥手</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#为什么建立连接协议是三次握手，而关闭连接却是四次握手呢？"><span class="toc-number">4.2.2.1.</span> <span class="toc-text">为什么建立连接协议是三次握手，而关闭连接却是四次握手呢？</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#TCP与UDP的区别"><span class="toc-number">4.2.3.</span> <span class="toc-text">TCP与UDP的区别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#为什么UDP有时比TCP更有优势？"><span class="toc-number">4.2.4.</span> <span class="toc-text">为什么UDP有时比TCP更有优势？</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#IP地址相关"><span class="toc-number">5.</span> <span class="toc-text">IP地址相关</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#IP地址计算"><span class="toc-number">5.1.</span> <span class="toc-text">IP地址计算</span></a></li></ol></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#什么是计算机网络"><span class="toc-number">2.</span> <span class="toc-text">什么是计算机网络</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#计算机之间如何进行通信"><span class="toc-number">3.</span> <span class="toc-text">计算机之间如何进行通信</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#网络模型"><span class="toc-number">4.</span> <span class="toc-text">网络模型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#OSI七层模型"><span class="toc-number">4.1.</span> <span class="toc-text">OSI七层模型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#TCP-IP模型"><span class="toc-number">4.2.</span> <span class="toc-text">TCP/IP模型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#TCP的三次握手"><span class="toc-number">4.2.1.</span> <span class="toc-text">TCP的三次握手</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#TCP的四次挥手"><span class="toc-number">4.2.2.</span> <span class="toc-text">TCP的四次挥手</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#问题"><span class="toc-number">4.2.2.1.</span> <span class="toc-text">问题</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#TCP与UDP的区别"><span class="toc-number">4.2.3.</span> <span class="toc-text">TCP与UDP的区别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#UDP优势"><span class="toc-number">4.2.4.</span> <span class="toc-text">UDP优势</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#IP地址相关"><span class="toc-number">5.</span> <span class="toc-text">IP地址相关</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#IP地址计算"><span class="toc-number">5.1.</span> <span class="toc-text">IP地址计算</span></a></li></ol></li></ol>
 		
 		</div>
 		
@@ -116,9 +116,9 @@
 <p>&emsp;&emsp;TCP(Transmission Control Protocol)　传输控制协议，是主机对主机层的传输控制协议，提供可靠的连接服务，采用三次握手确认建立一个连接，TCP的标志位又称为位码，在三次握手过程中有6种标示：<br>&emsp;&emsp;SYN(synchronous建立联机)：建立连接，设置为1，SYN这个标志位只有在TCP建产连接时才会被置1，握手完成后SYN标志位被置0。<br>&emsp;&emsp;ACK(acknowledgement确认) ：占1位，仅当ACK=1时，确认号字段才有效。ACK=0时，确认号无效 。<br>&emsp;&emsp;PSH(push传送)：提示接收端应用程序立即从TCP缓冲区把数据读走。<br>&emsp;&emsp;FIN(finish结束)：用来释放一个连接。FIN=1表示：此报文段的发送方的数据已经发送完毕，并要求释放运输连接<br>&emsp;&emsp;RST(rest重置)：对方要求重新建立连接，复位。<br>&emsp;&emsp;URG(uegent紧急)：紧急指针是否有效。为1，表示某一位需要被优先处理 。<br>&emsp;&emsp;seq(Sequence number序列号码)：序列号seq就是这个报文段中的第一个字节的数据编号，随机产生。<br>&emsp;&emsp;ack(Acknowledge numbe确认号码)：期待收到对方下一个报文段的第一个数据字节的序号，值为seq+1.<br>&emsp;&emsp;在建立连接过程中客户端TCP状态变化如下：<br>&emsp;&emsp;CLOSED-&gt;SYN_SENT-&gt;ESTABLISHED-&gt;FIN_WAIT_1-&gt;FIN_WAIT_2-&gt;TIME_WAIT-&gt;CLOSED<br>&emsp;&emsp;在建立连接的过程中服务器端TCP状态变化如下：<br>&emsp;&emsp;CLOSED-&gt;LISTEN-&gt;SYN-RECEIVED-&gt;ESTABLISHED-&gt;CLOSE_WAIT-&gt;LAST_ACK-&gt;CLOSED<br>&emsp;&emsp;TCP建立连接的三次握手过程文字描述如下：<br>&emsp;&emsp;第一次握手：客户端A发送位码为SYN＝1,随机产生seq number=1234567的数据包到服务器B，服务器B由SYN=1知道，客户机A要求建立联机；<br>&emsp;&emsp;第二次握手：服务器B收到请求后要确认联机信息，向客户机A发送ack number=(主机A的seq+1),syn=1,ack=1,随机产生seq=7654321的包。<br>&emsp;&emsp;第三次握手：客户机A收到服务器B发来的数据包后检查ack number是否等于客户机A第一次发送的seq number+1,以及位码ack是否为1，若正确，客户机A会再发送ack number=(服务器B的seq+1),SYN=0，ack=1的数据包给服务器B，服务器B收到后确认seq值与ack=1则连接建立成功。<br>&emsp;&emsp;TCP的三次握手模型图如下所示：<br> <img src="/2019/01/08/网络/TCP三次握手.jpg" alt="TCP三次握手"> </p>
 <hr>
 <h3 id="TCP的四次挥手"><a href="#TCP的四次挥手" class="headerlink" title="TCP的四次挥手"></a>TCP的四次挥手</h3><p>&emsp;&emsp;TCP的连接断开需要发送四个包，因此称为四次挥手(four-way handshake)。客户端或服务器均可主动发起挥手动作，在socket编程中，任何一方执行close()操作即可产生挥手操作。<br>&emsp;&emsp;客户端进程发出连接释放报文，并且停止发送数据。释放数据报文首部，FIN=1，其序列号为seq=u（等于前面已经传送过来的数据的最后一个字节的序号加1），此时，客户端进入FIN-WAIT-1（终止等待1）状态。<br>&emsp;&emsp;服务器收到连接释放报文，发出确认报文，ACK=1，ack=u+1，并且带上自己的序列号seq=v。<br>&emsp;&emsp;服务器B关闭与客户端A的连接，发送一个FIN给客户端A。<br>&emsp;&emsp;客户端A发回ACK报文确认，并将确认序号设置为收到序号加1。  </p>
-<h4 id="为什么建立连接协议是三次握手，而关闭连接却是四次握手呢？"><a href="#为什么建立连接协议是三次握手，而关闭连接却是四次握手呢？" class="headerlink" title="为什么建立连接协议是三次握手，而关闭连接却是四次握手呢？"></a>为什么建立连接协议是三次握手，而关闭连接却是四次握手呢？</h4><p>&emsp;&emsp;这是因为服务端的LISTEN状态下的SOCKET当收到SYN报文的连接请求后，它可以把ACK和SYN(ACK起应答作用，而SYN起同步作用)放在一个报文里来发送。但关闭连接时，当收到对方的FIN报文通知时，它仅仅表示对方没有数据发送给你了；但未必你所有的数据都全部发送给对方了，所以你可能未必会马上会关闭SOCKET,也即你可能还需要发送一些数据给对方之后，再发送FIN报文给对方来表示你同意现在可以关闭连接了，所以它这里的ACK报文和FIN报文多数情况下都是分开发送的。</p>
+<h4 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h4><p>&emsp;&emsp;为什么建立连接协议是三次握手，而关闭连接却是四次握手呢？<br>&emsp;&emsp;这是因为服务端的LISTEN状态下的SOCKET当收到SYN报文的连接请求后，它可以把ACK和SYN(ACK起应答作用，而SYN起同步作用)放在一个报文里来发送。但关闭连接时，当收到对方的FIN报文通知时，它仅仅表示对方没有数据发送给你了；但未必你所有的数据都全部发送给对方了，所以你可能未必会马上会关闭SOCKET,也即你可能还需要发送一些数据给对方之后，再发送FIN报文给对方来表示你同意现在可以关闭连接了，所以它这里的ACK报文和FIN报文多数情况下都是分开发送的。</p>
 <h3 id="TCP与UDP的区别"><a href="#TCP与UDP的区别" class="headerlink" title="TCP与UDP的区别"></a>TCP与UDP的区别</h3><p>&emsp;&emsp;1、TCP面向连接（如打电话要先拨号建立连接）;UDP是无连接的，即发送数据之前不需要建立连接。<br>&emsp;&emsp; 2、TCP提供可靠的服务。也就是说，通过TCP连接传送的数据，无差错，不丢失，不重复，且按序到达;UDP尽最大努力交付，即不保证可靠交付。Tcp通过校验和，重传控制，序号标识，滑动窗口、确认应答实现可靠传输。如丢包时的重发控制，还可以对次序乱掉的分包进行顺序控制。<br>&emsp;&emsp; 3、UDP具有较好的实时性，工作效率比TCP高，适用于对高速传输和实时性有较高的通信或广播通信。<br>&emsp;&emsp; 4.每一条TCP连接只能是点到点的;UDP支持一对一，一对多，多对一和多对多的交互通信。<br>&emsp;&emsp; 5、TCP对系统资源要求较多，UDP对系统资源要求较少。</p>
-<h3 id="为什么UDP有时比TCP更有优势？"><a href="#为什么UDP有时比TCP更有优势？" class="headerlink" title="为什么UDP有时比TCP更有优势？"></a>为什么UDP有时比TCP更有优势？</h3><p>&emsp;&emsp;UDP以其简单、传输快的优势，在越来越多场景下取代了TCP,如实时游戏，原因如下。<br>&emsp;&emsp;1.网速的提升给UDP的稳定性提供可靠网络保障，丢包率很低，如果使用应用层重传，能够确保传输的可靠性。<br>&emsp;&emsp;2.TCP为了实现网络通信的可靠性，使用了复杂的拥塞控制算法，建立了繁琐的握手过程，由于TCP内置的系统协议栈中，极难对其进行改进。<br>&emsp;&emsp;3.采用TCP，一旦发生丢包，TCP会将后续的包缓存起来，等前面的包重传并接收到后再继续发送，延时会越来越大，基于UDP对实时性要求较为严格的情况下，采用自定义重传机制，能够把丢包产生的延迟降到最低，尽量减少网络问题对游戏性造成影响。</p>
+<h3 id="UDP优势"><a href="#UDP优势" class="headerlink" title="UDP优势"></a>UDP优势</h3><p>&emsp;&emsp;UDP以其简单、传输快的优势，在越来越多场景下取代了TCP,如实时游戏，原因如下。<br>&emsp;&emsp;1.网速的提升给UDP的稳定性提供可靠网络保障，丢包率很低，如果使用应用层重传，能够确保传输的可靠性。<br>&emsp;&emsp;2.TCP为了实现网络通信的可靠性，使用了复杂的拥塞控制算法，建立了繁琐的握手过程，由于TCP内置的系统协议栈中，极难对其进行改进。<br>&emsp;&emsp;3.采用TCP，一旦发生丢包，TCP会将后续的包缓存起来，等前面的包重传并接收到后再继续发送，延时会越来越大，基于UDP对实时性要求较为严格的情况下，采用自定义重传机制，能够把丢包产生的延迟降到最低，尽量减少网络问题对游戏性造成影响。</p>
 <h1 id="IP地址相关"><a href="#IP地址相关" class="headerlink" title="IP地址相关"></a>IP地址相关</h1><h2 id="IP地址计算"><a href="#IP地址计算" class="headerlink" title="IP地址计算"></a>IP地址计算</h2><p>&emsp;&emsp;例题：子网掩码是255.255.255.0，能容纳多少台电脑？</p>
   
 	</div>
@@ -179,7 +179,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#什么是计算机网络"><span class="toc-number">2.</span> <span class="toc-text">什么是计算机网络</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#计算机之间如何进行通信"><span class="toc-number">3.</span> <span class="toc-text">计算机之间如何进行通信</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#网络模型"><span class="toc-number">4.</span> <span class="toc-text">网络模型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#OSI七层模型"><span class="toc-number">4.1.</span> <span class="toc-text">OSI七层模型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#TCP-IP模型"><span class="toc-number">4.2.</span> <span class="toc-text">TCP/IP模型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#TCP的三次握手"><span class="toc-number">4.2.1.</span> <span class="toc-text">TCP的三次握手</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#TCP的四次挥手"><span class="toc-number">4.2.2.</span> <span class="toc-text">TCP的四次挥手</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#为什么建立连接协议是三次握手，而关闭连接却是四次握手呢？"><span class="toc-number">4.2.2.1.</span> <span class="toc-text">为什么建立连接协议是三次握手，而关闭连接却是四次握手呢？</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#TCP与UDP的区别"><span class="toc-number">4.2.3.</span> <span class="toc-text">TCP与UDP的区别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#为什么UDP有时比TCP更有优势？"><span class="toc-number">4.2.4.</span> <span class="toc-text">为什么UDP有时比TCP更有优势？</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#IP地址相关"><span class="toc-number">5.</span> <span class="toc-text">IP地址相关</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#IP地址计算"><span class="toc-number">5.1.</span> <span class="toc-text">IP地址计算</span></a></li></ol></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#什么是计算机网络"><span class="toc-number">2.</span> <span class="toc-text">什么是计算机网络</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#计算机之间如何进行通信"><span class="toc-number">3.</span> <span class="toc-text">计算机之间如何进行通信</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#网络模型"><span class="toc-number">4.</span> <span class="toc-text">网络模型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#OSI七层模型"><span class="toc-number">4.1.</span> <span class="toc-text">OSI七层模型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#TCP-IP模型"><span class="toc-number">4.2.</span> <span class="toc-text">TCP/IP模型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#TCP的三次握手"><span class="toc-number">4.2.1.</span> <span class="toc-text">TCP的三次握手</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#TCP的四次挥手"><span class="toc-number">4.2.2.</span> <span class="toc-text">TCP的四次挥手</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#问题"><span class="toc-number">4.2.2.1.</span> <span class="toc-text">问题</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#TCP与UDP的区别"><span class="toc-number">4.2.3.</span> <span class="toc-text">TCP与UDP的区别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#UDP优势"><span class="toc-number">4.2.4.</span> <span class="toc-text">UDP优势</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#IP地址相关"><span class="toc-number">5.</span> <span class="toc-text">IP地址相关</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#IP地址计算"><span class="toc-number">5.1.</span> <span class="toc-text">IP地址计算</span></a></li></ol></li></ol>
  
   </div>
 
@@ -202,11 +202,11 @@
 			
 		
 			
-				<li><a href="/tags/ssm/" title="ssm">ssm<sup>4</sup></a></li>
+				<li><a href="/tags/java/" title="java">java<sup>4</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/java/" title="java">java<sup>4</sup></a></li>
+				<li><a href="/tags/ssm/" title="ssm">ssm<sup>4</sup></a></li>
 			
 		
 			
@@ -218,11 +218,15 @@
 			
 		
 			
+				<li><a href="/tags/随笔/" title="随笔">随笔<sup>1</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/bootstrap/" title="bootstrap">bootstrap<sup>1</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/随笔/" title="随笔">随笔<sup>1</sup></a></li>
+				<li><a href="/tags/kali/" title="kali">kali<sup>1</sup></a></li>
 			
 		
 			
@@ -234,10 +238,6 @@
 			
 		
 			
-				<li><a href="/tags/kali/" title="kali">kali<sup>1</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/springmvc/" title="springmvc">springmvc<sup>1</sup></a></li>
 			
 		
@@ -246,11 +246,11 @@
 			
 		
 			
-				<li><a href="/tags/无题/" title="无题">无题<sup>1</sup></a></li>
+				<li><a href="/tags/云镜-WAF-zabbix/" title="云镜 WAF zabbix">云镜 WAF zabbix<sup>1</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/云镜-WAF-zabbix/" title="云镜 WAF zabbix">云镜 WAF zabbix<sup>1</sup></a></li>
+				<li><a href="/tags/无题/" title="无题">无题<sup>1</sup></a></li>
 			
 		
 			
@@ -258,11 +258,11 @@
 			
 		
 			
-				<li><a href="/tags/毕设/" title="毕设">毕设<sup>1</sup></a></li>
+				<li><a href="/tags/测试图片/" title="测试图片">测试图片<sup>1</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/测试图片/" title="测试图片">测试图片<sup>1</sup></a></li>
+				<li><a href="/tags/毕设/" title="毕设">毕设<sup>1</sup></a></li>
 			
 		
 			
@@ -274,7 +274,7 @@
 			
 		
 			
-				<li><a href="/tags/android-系统/" title="android 系统">android 系统<sup>1</sup></a></li>
+				<li><a href="/tags/ssm-ajax/" title="ssm ajax">ssm ajax<sup>1</sup></a></li>
 			
 		
 		</ul>
