@@ -4,25 +4,25 @@
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
   
-    <title>springMVC面试题 | 小生の博客</title>
+    <title>php环境 | 小生の博客</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="小生">
     
 
     
-    <meta name="description" content="1.SpringMVC工作原理：　　 1.客户端发送请求到DispatcherServlet　　 2.DispatcherServlet查询handlerMapping找到处理请求的Controller　　 3.Controller调用业务逻辑后，返回ModelAndView　　4.DispatcherServlet查询ModelAndView，找到指定视图　　5.视图将结果返回到客户端　　２.S">
-<meta name="keywords" content="springmvc">
+    <meta name="description" content="大二一段时间开始学习PHP，搭建环境用了一个多月，失败了，当时归结于三个软件版本下的不对有冲突，一个多月后最终使用了PHP的集成环境wamp，使用起来可以，但总觉得自己走的不是正儿八经的道路，最近学习渗透，教程里使用的也是PHP环境，一想都是痛苦的回忆，虽不想再捡起，但狠狠心还是撸起袖子加油干吧。1.管理员模式打开dos。2.卸载apache服务: sc delete Apache2.43.安装a">
+<meta name="keywords" content="php">
 <meta property="og:type" content="article">
-<meta property="og:title" content="springMVC面试题">
-<meta property="og:url" content="http://yoursite.com/2017/10/08/springMVC面试题/index.html">
+<meta property="og:title" content="php环境">
+<meta property="og:url" content="http://yoursite.com/2019/01/18/php环境/index.html">
 <meta property="og:site_name" content="小生の博客">
-<meta property="og:description" content="1.SpringMVC工作原理：　　 1.客户端发送请求到DispatcherServlet　　 2.DispatcherServlet查询handlerMapping找到处理请求的Controller　　 3.Controller调用业务逻辑后，返回ModelAndView　　4.DispatcherServlet查询ModelAndView，找到指定视图　　5.视图将结果返回到客户端　　２.S">
+<meta property="og:description" content="大二一段时间开始学习PHP，搭建环境用了一个多月，失败了，当时归结于三个软件版本下的不对有冲突，一个多月后最终使用了PHP的集成环境wamp，使用起来可以，但总觉得自己走的不是正儿八经的道路，最近学习渗透，教程里使用的也是PHP环境，一想都是痛苦的回忆，虽不想再捡起，但狠狠心还是撸起袖子加油干吧。1.管理员模式打开dos。2.卸载apache服务: sc delete Apache2.43.安装a">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-12-25T01:24:52.000Z">
+<meta property="og:updated_time" content="2019-01-18T07:38:55.643Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="springMVC面试题">
-<meta name="twitter:description" content="1.SpringMVC工作原理：　　 1.客户端发送请求到DispatcherServlet　　 2.DispatcherServlet查询handlerMapping找到处理请求的Controller　　 3.Controller调用业务逻辑后，返回ModelAndView　　4.DispatcherServlet查询ModelAndView，找到指定视图　　5.视图将结果返回到客户端　　２.S">
+<meta name="twitter:title" content="php环境">
+<meta name="twitter:description" content="大二一段时间开始学习PHP，搭建环境用了一个多月，失败了，当时归结于三个软件版本下的不对有冲突，一个多月后最终使用了PHP的集成环境wamp，使用起来可以，但总觉得自己走的不是正儿八经的道路，最近学习渗透，教程里使用的也是PHP环境，一想都是痛苦的回忆，虽不想再捡起，但狠狠心还是撸起袖子加油干吧。1.管理员模式打开dos。2.卸载apache服务: sc delete Apache2.43.安装a">
 
     
     <link rel="alternative" href="/atom.xml" title="小生の博客" type="application/atom+xml">
@@ -82,14 +82,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2017/10/08/springMVC面试题/" title="springMVC面试题" itemprop="url">springMVC面试题</a>
+      <a href="/2019/01/18/php环境/" title="php环境" itemprop="url">php环境</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="小生" target="_blank" itemprop="author">小生</a>
 		
   </p><p class="article-time">
-    <time datetime="2017-10-08T02:56:53.000Z" itemprop="datePublished"> 发表于 2017-10-08</time>
+    <time datetime="2019-01-18T07:27:01.000Z" itemprop="datePublished"> 发表于 2019-01-18</time>
     
   </p>
 </header>
@@ -102,8 +102,8 @@
 		
 		</div>
 		
-		<p>1.SpringMVC工作原理：<br>　　 1.客户端发送请求到DispatcherServlet<br>　　 2.DispatcherServlet查询handlerMapping找到处理请求的Controller<br>　　 3.Controller调用业务逻辑后，返回ModelAndView<br>　　4.DispatcherServlet查询ModelAndView，找到指定视图<br>　　5.视图将结果返回到客户端<br>　　<br>２.SpringMvc的控制器是不是单例模式,如果是,有什么问题,怎么解决？<br>　　是单例模式,所以在多线程访问的时候有线程安全问题,不要用同步,会影响性能的,解决方案是在控制器里面不能写字段。<br>　　<br>３.SpingMvc中的控制器的注解一般用那个,有没有别的注解可以替代？<br>　　一般用@Conntroller注解,表示是表现层,不能用用别的注解代替.<br>　　<br>４. @RequestMapping注解用在类上面有什么作用？<br>　　 是一个用来处理请求地址映射的注解，可用于类或方法上。用于类上，表示类中的所有响应请求的方法都是以该地址作为父路径。<br>　　<br>５.怎么样把某个请求映射到特定的方法上面？<br>　　直接在方法上面加上注解@RequestMapping,并且在这个注解里面写上要拦截的路径。<br>　　<br>６.如果在拦截请求中,我想拦截get方式提交的方法,怎么配置？<br>　　可以在@RequestMapping注解里面加上method=RequestMethod.GET。<br>　　<br>７.我想在拦截的方法里面得到从前台传入的参数,怎么得到？<br>　　直接在形参里面声明这个参数就可以,但必须名字和传过来的参数一样。<br>　　<br>８.如果前台有很多个参数传入,并且这些参数都是一个对象的,那么怎么样快速得到这个对象？<br>　　直接在方法中声明这个对象,SpringMvc就自动会把属性赋值到这个对象里面。<br>　　<br>９.SpringMvc中函数的返回值是什么？<br>　　返回值可以有很多类型,有String, ModelAndView,当一般用String比较好。<br>　　<br>１０.SpringMVC怎么样设定重定向和转发的？<br>　　在返回值前面加”forward:”就可以让结果转发,譬如”forward:user.do?name=method4” 在返回值前面加”redirect:”就可以让返回值重定向,譬如”redirect:<a href="http://www.baidu.com&quot;" target="_blank" rel="noopener">http://www.baidu.com&quot;</a>
-　　</p>
+		<p>大二一段时间开始学习PHP，搭建环境用了一个多月，失败了，当时归结于三个软件版本下的不对有冲突，一个多月后最终使用了PHP的集成环境wamp，使用起来可以，但总觉得自己走的不是正儿八经的道路，最近学习渗透，教程里使用的也是PHP环境，一想都是痛苦的回忆，虽不想再捡起，但狠狠心还是撸起袖子加油干吧。<br>1.管理员模式打开dos。<br>2.卸载apache服务: sc delete Apache2.4<br>3.安装apache服务：httpd.exe -k install<br>4.开启apache服务：net start Apache2.4<br>5.停止apache服务：net stop Apache2.4</p>
+<p>6.php语法中，代码里出现mysql执行出错，改为mysqli即可。</p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -112,7 +112,7 @@
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/springmvc/">springmvc</a>
+  <span></span> <a href="/tags/php/">php</a>
   </div>
 
 </div>
@@ -121,7 +121,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://yoursite.com/2017/10/08/springMVC面试题/" data-title="springMVC面试题 | 小生の博客" data-tsina="" class="share clearfix">
+	  <div data-url="http://yoursite.com/2019/01/18/php环境/" data-title="php环境 | 小生の博客" data-tsina="" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -134,19 +134,11 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev">
- <a href="/2017/10/08/mybatis面试题/" title="mybatis面试题">
-  <strong>上一篇：</strong><br>
-  <span>
-  mybatis面试题</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2017/10/08/spring面试题/" title="spring面试题">
+<a href="/2019/01/09/更换电脑的博客问题/" title="更换电脑的博客问题">
  <strong>下一篇：</strong><br> 
- <span>spring面试题
+ <span>更换电脑的博客问题
 </span>
 </a>
 </div>
