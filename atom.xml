@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-02-11T06:58:51.765Z</updated>
+  <updated>2019-02-12T02:51:24.088Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,54 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>记录</title>
+    <link href="http://yoursite.com/2019/02/11/%E8%AE%B0%E5%BD%95/"/>
+    <id>http://yoursite.com/2019/02/11/记录/</id>
+    <published>2019-02-11T08:45:46.000Z</published>
+    <updated>2019-02-12T02:51:24.088Z</updated>
+    
+    <content type="html"><![CDATA[<p>1.胡靓   SliSIeLVqut0GBI61b81g72dHJR4/soUKZVUvyoKSL5jnoAjpEdBpg==</p><h1 id="写报告注意事项"><a href="#写报告注意事项" class="headerlink" title="写报告注意事项"></a>写报告注意事项</h1><p>1.双击高危项，整改记录结果写详细，不能只写整改的那一部分，重新打分。<br>2.整改后不合格的需要和客户沟通，是否进行二次整改。<br>3.二级系统复核一般远程。<br>4.项目概述中的（DJCP2017310073）删除，右边的基本测评指标中-XXX不要勾选，其他保留。<br>5.简介中的第一行时间注意修改，项目启动为调研第一天，末次会议正常情况是进场的最后一天（末次会议时间一定要在渗透测试之后），复核日期按照实际来写（不要在用户提交整改情况后过久，用户提交整改材料时间后一周内）。<br>6.详细过程中的每个测评项的天数看情况完善后预览，预览中的4.分析与报告时间在复核时间确认之后，3中的现场实施结束时间在渗透测试之后，一般在进场的最后一天，方案编制过程为调研第二天，总时间为3天，最后一天不能在休息日，不合理的手动修改。<br>7.被测系统信息和承载业务情况在备案材料中找。<br>8.被测信息系统情况下的前次测评情况，如果是首次测评写：本次测评为首次测评。<br>9业务承载情况中的承载业务情况相关图片可以放也可以不放。<br>10.网络结构中的系统边界不用写。<br>11.安全服务商在系统建设最后一个测评项中找，安全服务名称例如：云服务。<br>12.测评对象选择方法中的“XX”删除，测评工具可以勾选也可以不选，具体的按照指定的模板。<br>13.整体测评第一页不改，第二页从例如开始全部删除，加上一句：经综合分析，，，，，，。<br>14.06总体评价中的内容全部删除，需要自己写。<br>15.ACDE文件，出具报告申请文件，必须在报告生成后生成，。A文件点击高级-》项目——》一键归档-》测评结论报告——》点击下载模板。文件中的每一项都是一票否决项，每一项描述文字不能超过500字，不能有图片。A文件的最后时间下一行加上参入测评人员（有证人员）<br>16.C文件是安全问题汇总，导出即可。<br>17.D文件不在工具中导，拿模板修改。<br>18.E文件导出整改状态调整。导出后表格中首句有句号，删掉加上未整改。文件末尾时间是复核时间。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;1.胡靓   SliSIeLVqut0GBI61b81g72dHJR4/soUKZVUvyoKSL5jnoAjpEdBpg==&lt;/p&gt;
+&lt;h1 id=&quot;写报告注意事项&quot;&gt;&lt;a href=&quot;#写报告注意事项&quot; class=&quot;headerlink&quot; title=&quot;写报告注意事项
+      
+    
+    </summary>
+    
+    
+      <category term="记录" scheme="http://yoursite.com/tags/%E8%AE%B0%E5%BD%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>初级考试-应用</title>
+    <link href="http://yoursite.com/2019/02/11/%E5%88%9D%E7%BA%A7%E8%80%83%E8%AF%95-%E5%BA%94%E7%94%A8/"/>
+    <id>http://yoursite.com/2019/02/11/初级考试-应用/</id>
+    <published>2019-02-11T07:04:55.000Z</published>
+    <updated>2019-02-11T09:30:34.304Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>  应用安全包括：身份鉴别、访问控制、安全审计、剩余信息保护、通信完整性、通信保密性、抗抵赖、软件容错和资源控制。</p><h2 id="身份鉴别"><a href="#身份鉴别" class="headerlink" title="身份鉴别"></a>身份鉴别</h2><p>1.应提供专用的登录控制模块对登录用户进行身份标识和鉴别。<br>2.应对同一用户采用两种或两种以上组合的鉴别技术实现用户身份鉴别。<br>3.应提供用户身份标识唯一和鉴别信息复杂度检查功能，保证应用系统中不存在重复用户身份标识，身份鉴别信息不易被冒用。<br>4.应提供登录失败处理功能，可采取结束会话、限制非法登录次数和自动退出等措施。<br>5.应启用身份鉴别、用户身份标识唯一性检查、用户身份鉴别信息复杂度检查，以及登录失败处理功能，并根据安全策略配置相关参数。</p><h2 id="访问控制"><a href="#访问控制" class="headerlink" title="访问控制"></a>访问控制</h2><p>1.应提供访问控制功能，依据安全策略控制用户对文件、数据库表等客体的访问。<br>2.访问控制的覆盖范围应包括与资源访问相关的主体、客体及它们之间的操作。<br>3.应由授权主体配置访问控制策略，并严格限制默认账户的访问权限。<br>4.应授予不同账户为完成各自承担任务所需的最小权限，并在它们之间形成相互制约关系。<br>5.应具有对重要信息资源设置敏感标记的功能。<br>6.应依据安全策略严格控制用户对有敏感标记重要信息资源的操作。</p><h2 id="安全审计"><a href="#安全审计" class="headerlink" title="安全审计"></a>安全审计</h2><p>1.应提供覆盖到每个用户的安全审计功能，对应用系统重要安全事件进行审计。<br>2.应保证无法单独中断审计进程，无法删除、修改或覆盖审计记录。<br>3.审计记录的内容至少应包括事件的日期、时间、发起者信息、类型、描述和结果等。<br>4.应提供对审计记录数据进行统计、查询、分析及生成审计报表的功能。</p><h2 id="剩余信息保护"><a href="#剩余信息保护" class="headerlink" title="剩余信息保护"></a>剩余信息保护</h2><p>1.应保证用户鉴别信息所在的存储空间被释放或再分配给其他用户前被完全清除，无论这些信息是存放在硬盘上还是在内存中。<br>2.应保证系统内的文件、目录和数据库记录等资源所在的存储空间被释放或重新分配给其他用户前得到完全清除。</p><h2 id="通信完整性"><a href="#通信完整性" class="headerlink" title="通信完整性"></a>通信完整性</h2><p>1.应采用密码技术保证通信过程中数据的完整性。</p><h2 id="通信保密性"><a href="#通信保密性" class="headerlink" title="通信保密性"></a>通信保密性</h2><p>1.在通信双方建立连接之前，应用系统应利用密码技术进行会话初始化验证。<br>2.应对通信过程中的整个报文或会话过程进行加密。</p><h2 id="抗抵赖"><a href="#抗抵赖" class="headerlink" title="抗抵赖"></a>抗抵赖</h2><p>1.应具有在请求的情况下为数据原发者或接受者提供数据原发证据的功能。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;  应用安全包括：身份鉴别、访问控制、安全审计、剩余信息保护、通信完整性、通信保密性、抗抵赖、软件容错和资源控制。&lt;/p&gt;
+&lt;h2 id=&quot;
+      
+    
+    </summary>
+    
+    
+      <category term="考试" scheme="http://yoursite.com/tags/%E8%80%83%E8%AF%95/"/>
+    
+  </entry>
   
   <entry>
     <title>初级考试</title>
@@ -422,43 +470,6 @@
     
     
       <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>用户登录注册模块</title>
-    <link href="http://yoursite.com/2018/03/18/%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E6%B3%A8%E5%86%8C%E6%A8%A1%E5%9D%97/"/>
-    <id>http://yoursite.com/2018/03/18/用户登录注册模块/</id>
-    <published>2018-03-18T12:24:43.000Z</published>
-    <updated>2018-03-18T12:24:44.000Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>毕业设计——day01</title>
-    <link href="http://yoursite.com/2018/03/18/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/"/>
-    <id>http://yoursite.com/2018/03/18/毕业设计/</id>
-    <published>2018-03-18T11:48:44.000Z</published>
-    <updated>2018-12-25T01:33:06.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>计划</strong><br>　　１.任务：用户登录及注册<br>　　２.时间：2018.3.18-2018.3.24<br>　　<br><strong>步骤</strong><br>　　１.很长时间没有接触到做网站的知识，好多操作都忘记了，重新开始学习。４月２０号要交代码啊！！！烦人！！！！！！不想这么快就打开电脑，为了生活还是好好敲吧。<br>　　我追崇成功之后的成就感，却对失败时无力的自己深恶痛绝。</p><p>2.先做了学生登录这一模块，在一般的学校中，学生只要入学账号自动存在，所以对于学生来说他们不需要去注册，只需要登录账号和修改密码，这里对应的数据库操作是select和update。学生登录模块，如何将学生输入的数据提交到后台controller中，之前我的方法是使用ajax提交，这个好处是可以在输入用户名的时候就可以检验出用户名是否被占用，但是在后台返回页面时，由于form表单的提交固定，所以两个页面会覆盖，故舍弃了使用ajax同步验证的方法，用了普通的表单提交，action=”${pageContext.request.contextPath}/StudentLogin”，controller中代码：<br> @RequestMapping(value = “StudentLogin”,method = RequestMethod.POST)<br>    public ModelAndView StudentLogin(HttpServletRequest request, HttpSession session, STU_PASSWD stu_passwd) throws IOException{<br>        String STU_NUM = stu_passwd.getSTU_NUM();<br>        String PASSWD = stu_passwd.getPASSWD();<br>        System.out.println(studentPdService.StudentLogin(STU_NUM,PASSWD));</p><pre><code>System.out.println(STU_NUM+PASSWD);ModelAndView mav1 = new ModelAndView();if(studentPdService.StudentLogin(STU_NUM,PASSWD)!=0){    System.out.println(&quot;成功&quot;);    mav1.setViewName(&quot;FirstPageForStudent&quot;);}else{    System.out.println(&quot;失败&quot;);    mav1.setViewName(&quot;StudentLoginFailed&quot;);}System.out.println(mav1);return mav1;</code></pre><p>   controller参数是一个学生用户名密码对象，使用getter方法获得参数。注意的一点是，在form表单的input中，name的属性要和javabean中的保持一致，否则获取的参数值是null.</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;strong&gt;计划&lt;/strong&gt;&lt;br&gt;　　１.任务：用户登录及注册&lt;br&gt;　　２.时间：2018.3.18-2018.3.24&lt;br&gt;　　&lt;br&gt;&lt;strong&gt;步骤&lt;/strong&gt;&lt;br&gt;　　１.很长时间没有接触到做网站的知识，好多操作都忘记了，重新开始学习。４
-      
-    
-    </summary>
-    
-    
-      <category term="毕设" scheme="http://yoursite.com/tags/%E6%AF%95%E8%AE%BE/"/>
     
   </entry>
   
