@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-02-12T02:51:24.088Z</updated>
+  <updated>2019-02-19T06:50:02.324Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,13 +17,71 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>SQL注入</title>
+    <link href="http://yoursite.com/2019/02/19/SQL%E6%B3%A8%E5%85%A5/"/>
+    <id>http://yoursite.com/2019/02/19/SQL注入/</id>
+    <published>2019-02-19T06:50:02.000Z</published>
+    <updated>2019-02-19T06:50:02.324Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>工作</title>
+    <link href="http://yoursite.com/2019/02/19/%E5%B7%A5%E4%BD%9C/"/>
+    <id>http://yoursite.com/2019/02/19/工作/</id>
+    <published>2019-02-19T06:03:44.000Z</published>
+    <updated>2019-02-19T06:08:46.163Z</updated>
+    
+    <content type="html"><![CDATA[<p>1.中风险：未启用登录失败处理功能。服务器登录需要通过腾讯运维平台、跳板机连接登录，提供登录失败处理功能；但服务器本身未设置登录失败处理功能。<br>  需要明确测评对象是服务器，即使通过其他运维平台登录的，最后一个步骤也需要有输入服务器的用户名、密码过程。否则，在一个子网内，登录上去的某一台服务器，也可以直接连接其他服务器，这样的方式是不允许的，可以通过查看防火墙配置，了解是否有允许其他方式登录的可能。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;1.中风险：未启用登录失败处理功能。服务器登录需要通过腾讯运维平台、跳板机连接登录，提供登录失败处理功能；但服务器本身未设置登录失败处理功能。&lt;br&gt;  需要明确测评对象是服务器，即使通过其他运维平台登录的，最后一个步骤也需要有输入服务器的用户名、密码过程。否则，在一个子网
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>报告学习1</title>
+    <link href="http://yoursite.com/2019/02/13/%E6%8A%A5%E5%91%8A%E5%AD%A6%E4%B9%A01/"/>
+    <id>http://yoursite.com/2019/02/13/报告学习1/</id>
+    <published>2019-02-13T06:34:00.000Z</published>
+    <updated>2019-02-13T06:42:37.620Z</updated>
+    
+    <content type="html"><![CDATA[<p>1.腾讯云VPC<br>2.腾讯云web应用防火墙：对网络边界的恶意代码检测和清除，<br>3.腾讯云web应用防火墙、主机防入侵产品云镜对攻击行为的记录内容、报警方式。<br>4.腾讯云BGP带宽：BGP（Border Gateway Protocol，边界网关协议）</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;1.腾讯云VPC&lt;br&gt;2.腾讯云web应用防火墙：对网络边界的恶意代码检测和清除，&lt;br&gt;3.腾讯云web应用防火墙、主机防入侵产品云镜对攻击行为的记录内容、报警方式。&lt;br&gt;4.腾讯云BGP带宽：BGP（Border Gateway Protocol，边界网关协议）&lt;/
+      
+    
+    </summary>
+    
+    
+      <category term="报告" scheme="http://yoursite.com/tags/%E6%8A%A5%E5%91%8A/"/>
+    
+  </entry>
+  
+  <entry>
     <title>记录</title>
     <link href="http://yoursite.com/2019/02/11/%E8%AE%B0%E5%BD%95/"/>
     <id>http://yoursite.com/2019/02/11/记录/</id>
     <published>2019-02-11T08:45:46.000Z</published>
-    <updated>2019-02-12T02:51:24.088Z</updated>
+    <updated>2019-02-26T02:58:22.358Z</updated>
     
-    <content type="html"><![CDATA[<p>1.胡靓   SliSIeLVqut0GBI61b81g72dHJR4/soUKZVUvyoKSL5jnoAjpEdBpg==</p><h1 id="写报告注意事项"><a href="#写报告注意事项" class="headerlink" title="写报告注意事项"></a>写报告注意事项</h1><p>1.双击高危项，整改记录结果写详细，不能只写整改的那一部分，重新打分。<br>2.整改后不合格的需要和客户沟通，是否进行二次整改。<br>3.二级系统复核一般远程。<br>4.项目概述中的（DJCP2017310073）删除，右边的基本测评指标中-XXX不要勾选，其他保留。<br>5.简介中的第一行时间注意修改，项目启动为调研第一天，末次会议正常情况是进场的最后一天（末次会议时间一定要在渗透测试之后），复核日期按照实际来写（不要在用户提交整改情况后过久，用户提交整改材料时间后一周内）。<br>6.详细过程中的每个测评项的天数看情况完善后预览，预览中的4.分析与报告时间在复核时间确认之后，3中的现场实施结束时间在渗透测试之后，一般在进场的最后一天，方案编制过程为调研第二天，总时间为3天，最后一天不能在休息日，不合理的手动修改。<br>7.被测系统信息和承载业务情况在备案材料中找。<br>8.被测信息系统情况下的前次测评情况，如果是首次测评写：本次测评为首次测评。<br>9业务承载情况中的承载业务情况相关图片可以放也可以不放。<br>10.网络结构中的系统边界不用写。<br>11.安全服务商在系统建设最后一个测评项中找，安全服务名称例如：云服务。<br>12.测评对象选择方法中的“XX”删除，测评工具可以勾选也可以不选，具体的按照指定的模板。<br>13.整体测评第一页不改，第二页从例如开始全部删除，加上一句：经综合分析，，，，，，。<br>14.06总体评价中的内容全部删除，需要自己写。<br>15.ACDE文件，出具报告申请文件，必须在报告生成后生成，。A文件点击高级-》项目——》一键归档-》测评结论报告——》点击下载模板。文件中的每一项都是一票否决项，每一项描述文字不能超过500字，不能有图片。A文件的最后时间下一行加上参入测评人员（有证人员）<br>16.C文件是安全问题汇总，导出即可。<br>17.D文件不在工具中导，拿模板修改。<br>18.E文件导出整改状态调整。导出后表格中首句有句号，删掉加上未整改。文件末尾时间是复核时间。</p>]]></content>
+    <content type="html"><![CDATA[<p>1.胡靓   SliSIeLVqut0GBI61b81g72dHJR4/soUKZVUvyoKSL5jnoAjpEdBpg==</p><h1 id="写报告注意事项"><a href="#写报告注意事项" class="headerlink" title="写报告注意事项"></a>写报告注意事项</h1><p>1.双击高危项，整改记录结果写详细，不能只写整改的那一部分，重新打分。<br>2.整改后不合格的需要和客户沟通，是否进行二次整改。<br>3.二级系统复核一般远程。<br>4.项目概述中的（DJCP2017310073）删除，右边的基本测评指标中-XXX不要勾选，其他保留。<br>5.简介中的第一行时间注意修改，项目启动为调研第一天，末次会议正常情况是进场的最后一天（末次会议时间一定要在渗透测试之后），复核日期按照实际来写（不要在用户提交整改情况后过久，用户提交整改材料时间后一周内）。<br>6.详细过程中的每个测评项的天数看情况完善后预览，预览中的4.分析与报告时间在复核时间确认之后，3中的现场实施结束时间在渗透测试之后，一般在进场的最后一天，方案编制过程为调研第二天，总时间为3天，最后一天不能在休息日，不合理的手动修改。<br>7.被测系统信息和承载业务情况在备案材料中找。<br>8.被测信息系统情况下的前次测评情况，如果是首次测评写：本次测评为首次测评。<br>9业务承载情况中的承载业务情况相关图片可以放也可以不放。<br>10.网络结构中的系统边界不用写。<br>11.安全服务商在系统建设最后一个测评项中找，安全服务名称例如：云服务。<br>12.测评对象选择方法中的“XX”删除，测评工具可以勾选也可以不选，具体的按照指定的模板。<br>13.整体测评第一页不改，第二页从例如开始全部删除，加上一句：经综合分析，，，，，，。<br>14.06总体评价中的内容全部删除，需要自己写。<br>15.ACDE文件，出具报告申请文件，必须在报告生成后生成，。A文件点击高级-》项目——》一键归档-》测评结论报告——》点击下载模板。文件中的每一项都是一票否决项，每一项描述文字不能超过500字，不能有图片。A文件的最后时间下一行加上参入测评人员（有证人员）<br>16.C文件是安全问题汇总，导出即可。<br>17.D文件不在工具中导，拿模板修改。<br>18.E文件导出整改状态调整。导出后表格中首句有句号，删掉加上未整改，或者直接删除。文件末尾时间是复核时间。<br>19.方案编制的最后一天不能是休息日，必须在工作日。<br>20.表格中一行内容都没有的，写“无”，合并单元格并居中。</p><h1 id="首次报告检测注意事项"><a href="#首次报告检测注意事项" class="headerlink" title="首次报告检测注意事项"></a>首次报告检测注意事项</h1><p>1.基于云平台的，在附上A13云平台的等级备案，更新目录时，将目录中的”A13XXX”删除，文本中依然以标题的形式存放。<br>2.报告中A12的漏扫中，如果有两份漏扫报告，这两份报告中的漏洞名称可能有一样的，需要将这两个合并，然后在地址栏中写两个漏洞地址。</p>]]></content>
     
     <summary type="html">
     
@@ -292,9 +350,9 @@
     <link href="http://yoursite.com/2018/12/29/2019%E5%B9%B4%E8%AE%A1%E5%88%92/"/>
     <id>http://yoursite.com/2018/12/29/2019年计划/</id>
     <published>2018-12-29T02:06:22.000Z</published>
-    <updated>2018-12-29T02:49:26.000Z</updated>
+    <updated>2019-02-19T06:55:12.621Z</updated>
     
-    <content type="html"><![CDATA[<p>　　转眼间已到了2018年的最后第三天，回首过去的一年，基本处于颠沛流离的状态。17年十月份找了一份安卓系统开发的工作，12月进部门之后几乎就没有了自己的生活，每天早上六点多起床，晚上几乎都在十点左右到家，一两点到家的也有几次，加班于当时的我来说是常事，时间全部奉献给了无数的客户需求、bug和版本维护，以及无休无止的patch。<br>　　以为这样的生活会锻炼出我在专业领域愈加丰富的经验，然而并没有达到预想的效果。跳槽的想法在公司开始产业转移时产生，手机已不是公司的新宠，人工智能才是未来社会发展的大方向。其次，伴随着产业转移带来的一系列矛盾渐渐浮出水面，员工人事调整以及财务危机渐渐摧垮了大家对工作的积极性，于是，在一个夜黑风高的时刻，我离职了。<br>　　11月份我来到了新公司，一家事业单位，新工作要求知识面广，需要和客户交流，这样的工作正好给我一个锻炼社交的机会，于是我决定在这里脚踏实地的干下去。<br>　　19年我的计划是考等级保护证书，元旦之后每天晚上回家有空了就去学习关于渗透的内容，计划明年年底将渗透学熟练。</p>]]></content>
+    <content type="html"><![CDATA[<p>　　转眼间已到了2018年的最后第三天，回首过去的一年，基本处于颠沛流离的状态。17年十月份找了一份安卓系统开发的工作，12月进部门之后几乎就没有了自己的生活，每天早上六点多起床，晚上几乎都在十点左右到家，一两点到家的也有几次，加班于当时的我来说是常事，时间全部奉献给了无数的客户需求、bug和版本维护，以及无休无止的patch。<br>　　以为这样的生活会锻炼出我在专业领域愈加丰富的经验，然而并没有达到预想的效果。跳槽的想法在公司开始产业转移时产生，手机已不是公司的新宠，人工智能才是未来社会发展的大方向。其次，伴随着产业转移带来的一系列矛盾渐渐浮出水面，员工人事调整以及财务危机渐渐摧垮了大家对工作的积极性，于是，在一个夜黑风高的时刻，我离职了。<br>　　11月份我来到了新公司，一家事业单位，新工作要求知识面广，需要和客户交流，这样的工作正好给我一个锻炼社交的机会，于是我决定在这里脚踏实地的干下去。<br>　　19年我的计划是考等级保护证书，元旦之后每天晚上回家有空了就去学习关于渗透的内容，计划明年年底将渗透学熟练。   </p><pre><code>学习计划如下：js-&gt;jquery-&gt;nodejs-&gt;php基础-&gt;php进阶-&gt;SQL注入等。</code></pre>]]></content>
     
     <summary type="html">
     
@@ -400,76 +458,6 @@
     
     
       <category term="测试图片" scheme="http://yoursite.com/tags/%E6%B5%8B%E8%AF%95%E5%9B%BE%E7%89%87/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux Shell 脚本学习</title>
-    <link href="http://yoursite.com/2018/12/07/Linux-Shell-%E8%84%9A%E6%9C%AC%E5%AD%A6%E4%B9%A0/"/>
-    <id>http://yoursite.com/2018/12/07/Linux-Shell-脚本学习/</id>
-    <published>2018-12-07T01:21:14.000Z</published>
-    <updated>2019-01-23T07:56:34.308Z</updated>
-    
-    <content type="html"><![CDATA[<p>　　Linux相关知识在大三学的，迄今为止因为工作需要以及个人心血来潮断断续续学了一部分，导致现在对Linux只知命令，其他理解都不透彻。学习原因在于目前工作发现和Linux还是要经常打交道，在客户现场询问时客户输入的命令以及展示的内容都不懂！尴尬。。。。。。现在就利用闲暇时间，系统学习一遍，参考书籍为《Linux命令行与shell脚本编程大全第三版》</p><p><hr><br>@[TOC]目录</p><h1 id="1-基本的bash-shell命令"><a href="#1-基本的bash-shell命令" class="headerlink" title="1.基本的bash shell命令"></a>1.基本的bash shell命令</h1><p>##1.1系统用户<br>/etc/passwd 文件中包含着系统中所有账户列表以及每个账户的配置信息，示例如下：</p><p>2.tail -f显示文件变化</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;　　Linux相关知识在大三学的，迄今为止因为工作需要以及个人心血来潮断断续续学了一部分，导致现在对Linux只知命令，其他理解都不透彻。学习原因在于目前工作发现和Linux还是要经常打交道，在客户现场询问时客户输入的命令以及展示的内容都不懂！尴尬。。。。。。现在就利用闲暇
-      
-    
-    </summary>
-    
-    
-      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>熊猫项目总结</title>
-    <link href="http://yoursite.com/2018/12/06/%E7%86%8A%E7%8C%AB%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/"/>
-    <id>http://yoursite.com/2018/12/06/熊猫项目总结/</id>
-    <published>2018-12-06T01:08:51.000Z</published>
-    <updated>2018-12-24T05:42:34.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>1.Linux普通用户切换到超级用户root:su - root接着会提示输入root的密码，正确即可进入。<br>同样，切换到普通用户:su - jin(用户名)</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;1.Linux普通用户切换到超级用户root:su - root接着会提示输入root的密码，正确即可进入。&lt;br&gt;同样，切换到普通用户:su - jin(用户名)&lt;/p&gt;
-
-      
-    
-    </summary>
-    
-    
-      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>信息安全之主机测评过程中遇到的linux命令</title>
-    <link href="http://yoursite.com/2018/11/30/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E4%B9%8B%E4%B8%BB%E6%9C%BA%E6%B5%8B%E8%AF%84%E8%BF%87%E7%A8%8B%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84linux%E5%91%BD%E4%BB%A4/"/>
-    <id>http://yoursite.com/2018/11/30/信息安全之主机测评过程中遇到的linux命令/</id>
-    <published>2018-11-30T07:36:15.000Z</published>
-    <updated>2018-12-24T05:42:12.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>Linux主机</strong><br>1.查看linux密码文件内容<br>（1）cat /etc/passwd  此命令输出的口令是“x”，已被映射到/etc/shadow文件中。若没有X则表明没有设置密码。<br>（2）cat /etc/shadow<br>此命令能查看详细的密码。密码已被加密。<br>综合上面两个命令，我在kali系统中设置密码为空时依然存在”x”,所以还是直接使用cat /etc/shadow更加直观看出有没有密码存在。</p><p>2.hexo创建新博客：hexo new “新文章”<br>提交步骤：hexo g、hexo s、hexo d</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;strong&gt;Linux主机&lt;/strong&gt;&lt;br&gt;1.查看linux密码文件内容&lt;br&gt;（1）cat /etc/passwd  此命令输出的口令是“x”，已被映射到/etc/shadow文件中。若没有X则表明没有设置密码。&lt;br&gt;（2）cat /etc/shadow&lt;
-      
-    
-    </summary>
-    
-    
-      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
     
   </entry>
   
