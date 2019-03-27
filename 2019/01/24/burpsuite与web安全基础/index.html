@@ -11,17 +11,20 @@
     
 
     
-    <meta name="description" content="jinxiaomei">
+    <meta name="description" content="前言  已在本地电脑虚拟机上配置好Java环境，运行burpsuite命令：java -Xbootclasspath/p:burp-loader-keygen.jar -jar burpsuite_pro_v1.7.11.jar 或者先启动buro-loader-keygen.jar然后直接点击run就可以运行burpsuite的主程序。 简介  1.burpsuite是由Java语言编写而成，它">
+<meta name="keywords" content="burpsuite">
 <meta property="og:type" content="article">
 <meta property="og:title" content="burpsuite与web安全基础">
 <meta property="og:url" content="http://yoursite.com/2019/01/24/burpsuite与web安全基础/index.html">
 <meta property="og:site_name" content="小生の博客">
-<meta property="og:description" content="jinxiaomei">
+<meta property="og:description" content="前言  已在本地电脑虚拟机上配置好Java环境，运行burpsuite命令：java -Xbootclasspath/p:burp-loader-keygen.jar -jar burpsuite_pro_v1.7.11.jar 或者先启动buro-loader-keygen.jar然后直接点击run就可以运行burpsuite的主程序。 简介  1.burpsuite是由Java语言编写而成，它">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-01-24T02:38:59.790Z">
+<meta property="og:image" content="http://yoursite.com/2019/01/24/burpsuite与web安全基础/burpsuite与web安全基础/拦截https协议.jpg">
+<meta property="og:updated_time" content="2019-03-19T13:12:29.781Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="burpsuite与web安全基础">
-<meta name="twitter:description" content="jinxiaomei">
+<meta name="twitter:description" content="前言  已在本地电脑虚拟机上配置好Java环境，运行burpsuite命令：java -Xbootclasspath/p:burp-loader-keygen.jar -jar burpsuite_pro_v1.7.11.jar 或者先启动buro-loader-keygen.jar然后直接点击run就可以运行burpsuite的主程序。 简介  1.burpsuite是由Java语言编写而成，它">
+<meta name="twitter:image" content="http://yoursite.com/2019/01/24/burpsuite与web安全基础/burpsuite与web安全基础/拦截https协议.jpg">
 
     
     <link rel="alternative" href="/atom.xml" title="小生の博客" type="application/atom+xml">
@@ -97,15 +100,28 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#简介"><span class="toc-number">2.</span> <span class="toc-text">简介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#安装DVWA"><span class="toc-number">3.</span> <span class="toc-text">安装DVWA</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#命令攻击"><span class="toc-number">4.</span> <span class="toc-text">命令攻击</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#常见命令符"><span class="toc-number">4.1.</span> <span class="toc-text">常见命令符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#命令攻击漏洞危害"><span class="toc-number">4.2.</span> <span class="toc-text">命令攻击漏洞危害</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#文件包含"><span class="toc-number">5.</span> <span class="toc-text">文件包含</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#防御文件包含"><span class="toc-number">5.1.</span> <span class="toc-text">防御文件包含</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#文件上传"><span class="toc-number">6.</span> <span class="toc-text">文件上传</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#一句话木马"><span class="toc-number">7.</span> <span class="toc-text">一句话木马</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#nmap"><span class="toc-number">8.</span> <span class="toc-text">nmap</span></a></li></ol>
 		
 		</div>
 		
-		  
+		<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>  已在本地电脑虚拟机上配置好Java环境，运行burpsuite命令：java -Xbootclasspath/p:burp-loader-keygen.jar -jar burpsuite_pro_v1.7.11.jar 或者先启动buro-loader-keygen.jar然后直接点击run就可以运行burpsuite的主程序。</p>
+<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>  1.burpsuite是由Java语言编写而成，它的可执行程序是Java文件类型的jar文件。<br>2.burpsuite代理工具是以拦截代理的方式，拦截所有通过代理的网络流量，如客户端的请求数据、服务器端的返回信息等。burpsuite主要拦截http和https协议的流量。<br>  浏览器将数据请求发给burpsuite，burpsuite发给web服务器，web服务器返回的数据被burpsuite拦截后返回给浏览器。<br>3.安装好burpsuite之后，设置了本地代理也安装了证书，但是依然无法拦截https请求，这是因为在设置本地代理时，下面的ssl代理没有打开，应设置成如下：<br>  <img src="burpsuite与web安全基础/拦截https协议.jpg" alt="拦截https"><br>4.抓取数据包时，先关闭intercept，然后打开intercept，输入网址。<br>5.http返回码<br>1XX  提供信息<br>200 请求成功提交了<br>3XX 客户端被服务器把资源定位于其他 301浏览器永久重定向到其他位置，302临时重定向<br>4XX 请求是有错误的，客户端提交了一个无效的http<br>请求，比如请求了一个不存在的资源，如404错误<br>5XX 服务器出问题。</p>
+<p>6.https加密流程</p>
+<h1 id="安装DVWA"><a href="#安装DVWA" class="headerlink" title="安装DVWA"></a>安装DVWA</h1><p>详细过程百度，DVWA复制到了html文件夹下。</p>
+<h1 id="命令攻击"><a href="#命令攻击" class="headerlink" title="命令攻击"></a>命令攻击</h1><h2 id="常见命令符"><a href="#常见命令符" class="headerlink" title="常见命令符"></a>常见命令符</h2><p>  常见命令符”|”,”;”,”&amp;&amp;”。ping 127.0.0.1本地回环地址时，在后面输入命令符跟上命令后浏览器将两条一起执行。<br> 在shell中,”;”标识先执行前面的命令后执行后面的命令。<br>  验证发现，漏洞等级为低时，三个命令符均生效，漏洞等级为中等或高时，只有”|”命令符生效。</p>
+<h2 id="命令攻击漏洞危害"><a href="#命令攻击漏洞危害" class="headerlink" title="命令攻击漏洞危害"></a>命令攻击漏洞危害</h2><p>  举例：在Linux系统中，浏览器中输入127.0.0.1|cat /etc/passwd，会直接看到Linux系统的用户表，知晓用户表可被用来做SSH爆破，猜测邮箱等，非常不安全。其他命令如下载、安装、新建文件等都可以被执行。</p>
+<h1 id="文件包含"><a href="#文件包含" class="headerlink" title="文件包含"></a>文件包含</h1><h2 id="防御文件包含"><a href="#防御文件包含" class="headerlink" title="防御文件包含"></a>防御文件包含</h2><p>1.避免由外界指定文件名。<br>2.文件名中不可包含目录名。<br>3.限定文件名中仅包含字母和数字。<br>4.指定可以访问的白名单。</p>
+<h1 id="文件上传"><a href="#文件上传" class="headerlink" title="文件上传"></a>文件上传</h1><h1 id="一句话木马"><a href="#一句话木马" class="headerlink" title="一句话木马"></a>一句话木马</h1><h1 id="nmap"><a href="#nmap" class="headerlink" title="nmap"></a>nmap</h1><p>网络发现和安全审计的网络安全工具<br>官方站点：<a href="http://nmap.org/" target="_blank" rel="noopener">http://nmap.org/</a><br>nmap的主要功能如下：<br>1.检测活在网络上的主机（主机发现）<br>2.检测主机上开放的端口（端口发现或枚举）<br>3.检测相应的端口（服务发现）的软件和版本<br>4.检测操作系统，硬件地址，以及软件版本。</p>
+  
 	</div>
 		<footer class="article-footer clearfix">
 <div class="article-catetags">
 
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/burpsuite/">burpsuite</a>
+  </div>
 
 </div>
 
@@ -155,7 +171,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- 
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#简介"><span class="toc-number">2.</span> <span class="toc-text">简介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#安装DVWA"><span class="toc-number">3.</span> <span class="toc-text">安装DVWA</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#命令攻击"><span class="toc-number">4.</span> <span class="toc-text">命令攻击</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#常见命令符"><span class="toc-number">4.1.</span> <span class="toc-text">常见命令符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#命令攻击漏洞危害"><span class="toc-number">4.2.</span> <span class="toc-text">命令攻击漏洞危害</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#文件包含"><span class="toc-number">5.</span> <span class="toc-text">文件包含</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#防御文件包含"><span class="toc-number">5.1.</span> <span class="toc-text">防御文件包含</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#文件上传"><span class="toc-number">6.</span> <span class="toc-text">文件上传</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#一句话木马"><span class="toc-number">7.</span> <span class="toc-text">一句话木马</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#nmap"><span class="toc-number">8.</span> <span class="toc-text">nmap</span></a></li></ol>
  
   </div>
 
@@ -178,15 +194,11 @@
 			
 		
 			
-				<li><a href="/tags/ssm/" title="ssm">ssm<sup>4</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/java/" title="java">java<sup>4</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Linux/" title="Linux">Linux<sup>3</sup></a></li>
+				<li><a href="/tags/ssm/" title="ssm">ssm<sup>4</sup></a></li>
 			
 		
 			
@@ -194,19 +206,15 @@
 			
 		
 			
+				<li><a href="/tags/Linux/" title="Linux">Linux<sup>3</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/考试/" title="考试">考试<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/windows/" title="windows">windows<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/kali/" title="kali">kali<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/mybatis/" title="mybatis">mybatis<sup>1</sup></a></li>
+				<li><a href="/tags/ESXI/" title="ESXI">ESXI<sup>1</sup></a></li>
 			
 		
 			
@@ -214,7 +222,15 @@
 			
 		
 			
-				<li><a href="/tags/js/" title="js">js<sup>1</sup></a></li>
+				<li><a href="/tags/kali/" title="kali">kali<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/bootstrap/" title="bootstrap">bootstrap<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/mybatis/" title="mybatis">mybatis<sup>1</sup></a></li>
 			
 		
 			
@@ -226,15 +242,15 @@
 			
 		
 			
-				<li><a href="/tags/ESXI/" title="ESXI">ESXI<sup>1</sup></a></li>
+				<li><a href="/tags/windows/" title="windows">windows<sup>1</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/报告/" title="报告">报告<sup>1</sup></a></li>
+				<li><a href="/tags/xss/" title="xss">xss<sup>1</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/bootstrap/" title="bootstrap">bootstrap<sup>1</sup></a></li>
+				<li><a href="/tags/burpsuite/" title="burpsuite">burpsuite<sup>1</sup></a></li>
 			
 		
 			
@@ -242,7 +258,7 @@
 			
 		
 			
-				<li><a href="/tags/杂谈/" title="杂谈">杂谈<sup>1</sup></a></li>
+				<li><a href="/tags/报告/" title="报告">报告<sup>1</sup></a></li>
 			
 		
 			
