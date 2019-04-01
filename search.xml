@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[ubuntu16.04下安装sqlmap]]></title>
+    <url>%2F2019%2F04%2F01%2Fubuntu16-04%E4%B8%8B%E5%AE%89%E8%A3%85sqlmap%2F</url>
+    <content type="text"><![CDATA[1.首先安装git，但报错如下：2.给报错文件赋777权限。3.安装sqlmap。4.配置环境变量。在home/jin目录下执行ls -a，打开bashrc文件，文件末尾加入一下环境变量，同样，打开/etc/profile文件，在全局环境变量中也加入。5.安装结束后在终端输入sqlmap，发现无反应。6.查阅资料，由于加入的环境变量不生效导致，分别执行source .bashrc和source /etc/profile使加入的环境变量生效。7.输入sqlmap可以看到已生效。]]></content>
+      <tags>
+        <tag>sqlmap</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[随笔]]></title>
+    <url>%2F2019%2F03%2F27%2F%E9%9A%8F%E7%AC%94%2F</url>
+    <content type="text"><![CDATA[2019.3.27&emsp;&emsp;从今晚起 赏月 饮茶 品露水]]></content>
+      <tags>
+        <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[渗透测试流程]]></title>
     <url>%2F2019%2F03%2F11%2F%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E6%B5%81%E7%A8%8B%2F</url>
     <content type="text"><![CDATA[一、信息收集 1.对网站进行简单的识别 看请求头：Server: nginx/1.12.2 2.对网站进行爬虫：使用工具webroot、AWVS 3.对网站目录进行爆破扫描（为了对网站目录有了解）：工具预见、dirbrute 4.对目标服务器进行端口扫描 nmap、御剑2014 5.查询目标网站的WEB程序 wordpress、ghost、discuz等 6.查询目标网站的旁站及C段 旁站是指同一个服务器上的不同网站二、漏洞发现 1.文件上传漏洞 2.SQL注入漏洞 3.命令执行漏洞（比如：whoami、rm等） 4.代码执行漏洞（比如phpinfo(),system()） 5.XSS脚本跨站漏洞（有时要结合cookie，jsonp，session等） 6.csrf操作劫持 7.信息泄露（这一步漏洞发现主要是在信息收集时完成的。如phpinfo.php、config.php的数据库连接文件） 8.一些第三方程序漏洞（ISS短文件名漏洞等） 9.ssrf内网探测 10.致命的漏洞（弱口令） 在信息收集时如果已经明确了是某个CMS，可以尝试去漏洞库搜索该CMS对应的漏洞。三、权限提升 拿到WEB权限=getshell 系统权限：windows的administrator，Linux的root权限 提权操作：1.能执行系统命令，看系统版本，安装了哪些补丁，然后找该版本漏洞四、后门维持 win：远控 Linux：远控、root双密码后门]]></content>

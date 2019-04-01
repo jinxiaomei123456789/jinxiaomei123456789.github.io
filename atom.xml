@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-03-11T09:23:36.463Z</updated>
+  <updated>2019-04-01T05:58:58.044Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,53 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ubuntu16.04下安装sqlmap</title>
+    <link href="http://yoursite.com/2019/04/01/ubuntu16-04%E4%B8%8B%E5%AE%89%E8%A3%85sqlmap/"/>
+    <id>http://yoursite.com/2019/04/01/ubuntu16-04下安装sqlmap/</id>
+    <published>2019-04-01T02:28:18.000Z</published>
+    <updated>2019-04-01T05:58:58.044Z</updated>
+    
+    <content type="html"><![CDATA[<p>1.首先安装git，但报错如下：<br><img src="/2019/04/01/ubuntu16-04下安装sqlmap/无法安装git.jpg" alt="git安装报错"><br>2.给报错文件赋777权限。<br><img src="/2019/04/01/ubuntu16-04下安装sqlmap/解决无法安装git.jpg" alt="解决无法安装git"><br>3.安装sqlmap。<br><img src="/2019/04/01/ubuntu16-04下安装sqlmap/安装完成.jpg" alt="安装完成"><br>4.配置环境变量。在<code>home/jin</code>目录下执行<code>ls -a</code>，打开bashrc文件，文件末尾加入一下环境变量，同样，打开<code>/etc/profile</code>文件，在全局环境变量中也加入。<br><img src="/2019/04/01/ubuntu16-04下安装sqlmap/环境变量.jpg" alt="环境变量"><br>5.安装结束后在终端输入sqlmap，发现无反应。<br><img src="/2019/04/01/ubuntu16-04下安装sqlmap/不生效.jpg" alt="安装失败"><br>6.查阅资料，由于加入的环境变量不生效导致，分别执行<code>source .bashrc</code>和<code>source /etc/profile</code>使加入的环境变量生效。<br>7.输入sqlmap可以看到已生效。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;1.首先安装git，但报错如下：&lt;br&gt;&lt;img src=&quot;/2019/04/01/ubuntu16-04下安装sqlmap/无法安装git.jpg&quot; alt=&quot;git安装报错&quot;&gt;&lt;br&gt;2.给报错文件赋777权限。&lt;br&gt;&lt;img src=&quot;/2019/04/01/ubu
+      
+    
+    </summary>
+    
+    
+      <category term="sqlmap" scheme="http://yoursite.com/tags/sqlmap/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>随笔</title>
+    <link href="http://yoursite.com/2019/03/27/%E9%9A%8F%E7%AC%94/"/>
+    <id>http://yoursite.com/2019/03/27/随笔/</id>
+    <published>2019-03-27T08:47:52.000Z</published>
+    <updated>2019-03-27T08:50:50.841Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="2019-3-27"><a href="#2019-3-27" class="headerlink" title="2019.3.27"></a>2019.3.27</h1><p>&emsp;&emsp;从今晚起 赏月 饮茶 品露水</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;2019-3-27&quot;&gt;&lt;a href=&quot;#2019-3-27&quot; class=&quot;headerlink&quot; title=&quot;2019.3.27&quot;&gt;&lt;/a&gt;2019.3.27&lt;/h1&gt;&lt;p&gt;&amp;emsp;&amp;emsp;从今晚起 赏月 饮茶 品露水&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+      <category term="随笔" scheme="http://yoursite.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
   
   <entry>
     <title>渗透测试流程</title>
@@ -422,53 +469,6 @@
     
     
       <category term="随笔" scheme="http://yoursite.com/tags/%E9%9A%8F%E7%AC%94/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>kali安装教程</title>
-    <link href="http://yoursite.com/2018/12/26/kali%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/"/>
-    <id>http://yoursite.com/2018/12/26/kali安装教程/</id>
-    <published>2018-12-26T02:59:41.000Z</published>
-    <updated>2018-12-26T07:02:38.000Z</updated>
-    
-    <content type="html"><![CDATA[<p></p><h2 style="color:blue">前言</h2><br>　　五个月之前因为兴趣接触了kali，从安装到基本命令以及一些黑客常用技术算是系统过了一遍，然而，这段时间没有碰现在全部忘记了，连基本的安装不会。博客是一个好东西，督促我不断学习，之前对自己太自信了，总以为自己过目不忘，然而却被现实打倒，好记性不如烂笔头，算是对自己的一个教训了，现在深刻地认识到做技术写博客是多么重要的一件事，一来回顾，二来查缺补漏，最后也是对自己职业生涯的一种见证与规划吧。一位学长曾告诉我们学习要脚踏实地，苦口婆心的劝说我也没能听进去多少，工作了才意识到，下面就从最基本的安装开始，听过来人的话把地踩塌。　　<p></p><ol><li>打开vmware，一次选择“文件”-&gt;“新建虚拟机”，弹出以下界面，选择“典型”，点击“下一步”。<br><img src="/2018/12/26/kali安装教程/安装步骤1.jpg" alt="安装步骤1"></li><li>选择“稍后安装操作系统”，点击“下一步”。<br><img src="/2018/12/26/kali安装教程/安装步骤2.jpg" alt="安装步骤2"></li><li>下面的选项除了第一个是选择Linux，第二个我在安装过程中选择centos和ubuntu都可以。选择之后点击“下一步”。<br><img src="/2018/12/26/kali安装教程/安装步骤3.jpg" alt="安装步骤3"></li><li>这一步首先需要给你的虚拟机命名，下面一个就是设置新建虚拟机的存储位置，设置好之后点击“下一步”。接下来的步骤都是默认。<br><img src="/2018/12/26/kali安装教程/安装步骤4.jpg" alt="安装步骤4"></li><li>新建结束之后，需要配置系统镜像，鼠标放置在虚拟机上右击，点击“设置”。<br><img src="/2018/12/26/kali安装教程/安装步骤5.jpg" alt="安装步骤5"></li><li>选择CD/DVD这个选项，在右边”使用ISO镜像文件“中设置我们下载好的镜像文件，点击“确定”。<br><img src="/2018/12/26/kali安装教程/安装步骤6.jpg" alt="安装步骤6"><br>到目前为止虚拟机就新建好了，下面我们需要启动虚拟机，启动过程中会有一些系统设置。</li><li>鼠标放置在我们新建的虚拟机上，右击“电源”-&gt;“启动客户机”。出现图形界面，选择“Graphical install”，enter键。<br><img src="/2018/12/26/kali安装教程/安装步骤7.jpg" alt="安装步骤7"></li><li>选择语言“简体中文”。<br><img src="/2018/12/26/kali安装教程/安装步骤8.jpg" alt="安装步骤8"></li><li>选择“中国”，点击”继续“。<br><img src="/2018/12/26/kali安装教程/安装步骤9.jpg" alt="安装步骤9"></li><li>下面选择“汉语”。稍等一会儿出现主机名配置。配置好之后点击“继续”。<br><img src="/2018/12/26/kali安装教程/安装步骤10.jpg" alt="安装步骤10"></li><li>接下来是域名配置，直接跳过，enter键。<br><img src="/2018/12/26/kali安装教程/安装步骤11.jpg" alt="安装步骤11"></li><li>设置密码，这个密码就是开机密码，我设置为root。<br><img src="/2018/12/26/kali安装教程/安装步骤12.jpg" alt="安装步骤12"></li><li>选择第一个<br><img src="/2018/12/26/kali安装教程/安装步骤13.jpg" alt="安装步骤13"></li><li>选择如下：<br><img src="/2018/12/26/kali安装教程/安装步骤14.jpg" alt="安装步骤14"></li><li>下面的步骤直接默认，直到出现以下。选择“是”。<br><img src="/2018/12/26/kali安装教程/安装步骤15.jpg" alt="安装步骤15"></li><li>接着有一个漫长的等待过程。<br><img src="/2018/12/26/kali安装教程/安装步骤16.jpg" alt="安装步骤16"></li><li>然后会问你是否要选择网络镜像，如果你的网络很好可以选择是，这里呢我选择的否。都行的。接下来都是默认。<br><img src="/2018/12/26/kali安装教程/安装步骤17.jpg" alt="安装步骤17"></li><li>出现这一步选择“是”。<br><img src="/2018/12/26/kali安装教程/安装步骤18.jpg" alt="安装步骤18"></li><li>选择第二个。<br><img src="/2018/12/26/kali安装教程/安装步骤19.jpg" alt="安装步骤19"></li><li>出现这个的时候就说明安装结束了，点击继续现在开始你的黑客之旅吧。<br><img src="/2018/12/26/kali安装教程/安装步骤20.jpg" alt="安装步骤20"></li></ol>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;/p&gt;&lt;h2 style=&quot;color:blue&quot;&gt;前言&lt;/h2&gt;&lt;br&gt;　　五个月之前因为兴趣接触了kali，从安装到基本命令以及一些黑客常用技术算是系统过了一遍，然而，这段时间没有碰现在全部忘记了，连基本的安装不会。博客是一个好东西，督促我不断学习，之前对自己太自信了
-      
-    
-    </summary>
-    
-    
-      <category term="kali" scheme="http://yoursite.com/tags/kali/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>与德工作记录</title>
-    <link href="http://yoursite.com/2018/12/25/%E4%B8%8E%E5%BE%B7%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/"/>
-    <id>http://yoursite.com/2018/12/25/与德工作记录/</id>
-    <published>2018-12-25T01:56:51.000Z</published>
-    <updated>2018-12-25T06:58:50.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>　　前两日在忙项目归档，今天得空回顾一下自己在与德工作一年以来的记录。与德访问控制这个方面做的很好，但还是屈服于互联网科技的迅速发展，大多数同事都使用有道云笔记来记录工作中遇到的问题以及学到的新知识，我也随了他们的习惯。</p><p><strong>1. 单编</strong><br>　　单编是指只编译一个模块，一般系统代码中具有.mk文件的都可以进行单编，结束后将单编后的apk等文件拷贝到版本通道，在push到手机中即可验证bug和feature是否修改成功。单编从整体上来说比make或者new编译节省大量时间，并且不用刷机验证，以下为单编步骤，以Launcher3为例：<br>　　首先：<code>source build/envsetup.sh</code><br>　　接着执行<code>lunch</code><br>　　然后选对应的版本<br>　　最后<code>mmma packages/apps/Launcher3</code>(使用mmma的权限比mmm的权限更大，它会编译到一些更加底层的库文件，有时候mmm不能成功的可能就是因为库文件没有找到，这时可以使用mmma来编)</p><hr><p><strong>2. 关于抓log</strong><br>　　通过adb抓取手机运行过程中生成的log，具体做法先把手机打开开发者模式，连接电脑，打开usb调试，如果我们想让生成的log在指定的位置，比如E盘，那么直接E: 接着在里面输入<code>adb logcat -v  time&gt;1.log</code>，这里的1.log就是生成的log文件的名称，按“Ctrl+C”终止抓log。</p><hr><p><strong>3. 关于解bug</strong><br>　　2018.7.27，截止现在，我解了快一个月的bug，之前在四部从来没有解过，这段时间的工作，让我增长了很多方面的知识，对于解bug，有了暂时的心得，记录下方便下次回顾。<br>　　真正意义上我开始解的第一个bug是手机设置中查看SIM卡信息，IMEI等信息时报<code>“com.android.phone&quot;</code>停止运行，组长过来询问我工作如何，我乘机问了一下他关于解bug的流程以及如何找到原因并解决这个bug。现在凭借我仅存的记忆记录如下。<br>　　首先，看到一个bug之后，先在自己的手机上刷最新的版本，验证是否会出现和测试那边描述的一样的现象，如果没有出现，可能是后期别人提交的代码没有合上去，导致测试那边不能通过，也可能是操作手法不对，在这种情况下，要和测试那边提出这个bug的小伙伴沟通。在肯定最新版本没有这个问题时，就关闭这个bug并且在下面备注“在某月某日验证通过，请在下个版本验证”。<br> 　　确定最新版本出现同样的现象之后，连接电脑抓log，之前一直用的是adb命令形式，<code>adb logcat -v  time&gt;1.log</code>，后来发现我自己的nodepad++安装了抓log的插件，点击就可以抓。抓完log之后分析。一般情况下，像这种程序异常结束的，我们搜索的关键字有<code>“exception”</code>、<code>“fail”</code>、<code>“crush”</code>等。搜索定位到具体的某个类的某个方法，接下来就开始看源码，修改。这个部分就要凭经验。今天成功改了一个bug之后，我认为首先要会猜某段代码究竟是干嘛的，安卓代码量100多G，这么大，不可能每段代码的含义，每个变量的含义我们都知道，在定位到具体方法后，大胆修改去尝试很重要。<br>　　在试用期间，我从对安卓系统开发的理论理解上升到现在的实际工作，从一开始的基础工作到现在学习如何解bug，每一项工作都学习到了很多知识和经验。<br>　　前期发版本过程中，最重要的心得就是要胆大细心，这项工作但凡有一点疏忽，花半天编的版本就有问题，其次，在编译版本之前要再三和这个项目的开发经理确认打patch的时间、gms包的版本、版本号以及修改点是否都是正确的，千万不能想当然，我因为这几个问题犯了几次错，给了我沉痛的教训，所以现在一有改需求后发版本的工作都战战兢兢。<br>　　合patch是一项锻炼人意志的工作，在这个过程中小心驶得万年船。再枯燥的工作也有可以学习的地方，因为合patch，我掌握和如何使用git提交、回退以及查看提交记录等。<br>　　解bug是一点一点积累经验的过程，从一开始连步骤都不会到现在可以独自解bug，这段时间经历了收获了很多，也经历了很多迷茫，在海军、组长、师父以及其他同事的帮助下，度过了这一段迷茫期。最重要的是定位问题，抓取了log之后，要搜索什么样的关键词去定位文件是解bug的敲门砖，这个只有通过经验来慢慢积累，其次，定位了问题之后，我不知道该如何修改，前辈们教我不知道如何修改的时候，要学会看代码猜含义，不懂的百度搜，百度内容可能不是很透彻，但是加入我们自己的理解代码就比较好懂了，这时大胆修改代码去验证自己的修改是否是正确的。<br>　　之前我每次修改完都remake编译一下去刷版本，但解bug时才发现，这样太浪费时间了，能够单编的尽量去单编，非常节省时间。<br>     关于单编，有时用mmm编译报错，显示大致意思是缺少文件，问了旁边的海军后才明白，mmm的权限比mmma的小，有的库文件编译需要用但是编译用mmma可以编译到更多的库文件。</p><hr><p><strong>4. git管理工具</strong><br>　　工作中学到最有用的便是git，只想说git的发明者是一个非常了不起的人,很感谢这段工作经验。<br>　　E628_O项目的提交步骤如下：<br>　　<code>git status .</code>  看修改了哪些文件，<br>　　如果有不需要提交的文件A，直接<code>rm -rf A</code>将文件A删除之后执行<code>git add .</code>　之后依次执行<code>git add .</code>和<code>.  git_ci.sh E628_GIG</code>，这一步就相当于<code>git commit .</code>操作，执行了这一步之后就不需要再执行commit了。<br>之后执行<code>repoc upload .</code>,有的也会用<code>repo upload .</code><br>　　提交到服务器上之后，如果发现有不需要提交或者提交错的文件，需回退代码，回退到刚刚修改完文件的状态，首先要看提交日志，查看提交日志使用<code>git log</code>,这里的回退是只有自己本地代码回退，不是服务器上的，使用<code>git reset  ffw2395742432</code>，执行完这一步，将不需要提交的文件删除，再执行<code>git add .</code>或者执行执行<code>git add 文件名</code>，提交顺序和上面一样。　　</p><hr><p><strong>5. Linux命令</strong><br>　　(1)查找文件<br>　　例如查找a.java这个文件，使用命令<code>find * -name &quot;a.java&quot;</code><br>　　(2)找某个文件中具体字段被哪些文件引用<br>　　<code>grep  --exclude &quot;colors.xml&quot; -rn &quot;badge_color&quot; ./</code><br>　　(3)更新代码：<code>更新代码git pull</code><br>　　(4)查看当前应用的包名:打开当前应用，手机开发者模式直接输入改命令<code>adb shell &quot;dumpsys window | grep mCurrentFocus&quot;</code></p><hr><p> <strong>6. 未接来电和未读短信等通知改成红色小图标</strong><br>　　在gerrit上面看了同事的提交记录，修改的是<code>packages/apps/Launcher3/res/values/colors.xml</code>文件中的<code>“badge_color”</code>和<code>“folder_badge_color”</code>这两个字段，将其修改为红色“#FF0033”。<br>　　使用<code>grep  --exclude &quot;colors.xml&quot; -rn &quot;badge_color&quot; ./</code> 在Launcher对应的目录下面搜索，发现这个字段在<code>IconPalette.java</code>函数<code>getBadgePalette()</code>中被引用，打开<br>　　<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">int badgeColor = resources.getColor(R.color.badge_color);</span><br><span class="line">if(badgeColor == Color.TRASPARENT)&#123;</span><br><span class="line">return null;</span><br><span class="line">&#125;</span><br><span class="line">if(sBadgePalette==null)&#123;</span><br><span class="line">sbadgePalette = fromDominantColor(badgeColor,false);</span><br><span class="line">&#125;</span><br><span class="line">return sbadgePalette ;</span><br></pre></td></tr></table></figure></p><p>　　我对这段代码的理解就是，先获得定义好的颜色，判断，如果颜色是透明的（TRASPARENT），直接返回空，如果sBadgePalette（应该是类似画笔之类的对象）是也是空，那么，就根据我们获取到的颜色badgeColor去画，把它保存在sbadgePalette 对象中，最后返回此对象。<br>　　之后看这个函数在哪里被调用，在Launcher3目录下执行<code>grep  --exclude &quot;IconPalette.javal&quot; -rn &quot;getBadgePalette&quot; ./</code> ，出现了两个文件，一个<code>是PopupContainerWithArrow.java</code>的671行，打开看了一下，它被调用的地方在函数<code>&quot;updateNotificationHeader()&quot;</code>中，根据函数名，应该是更新通知头之类的含义，在这个函数中，大致含义应该是：如果通知界面和信息界面都不是空，说明有未接电话或者未读信息等通知，这时，就创建一个图标画笔，画笔的内容就是<code>getBadgePalette（）</code>的返回值，也就是我们定义的红色，即用红色画出一个图标，然后把图标显示在界面上。</p><p></p><hr><p> </p><p><strong>7. apk覆盖问题</strong><br>　　今天做的一个需求就是修改未接电话或者未读短信等通知的图标为红色，我修改的地方是<code>packages/apps/Launcher3</code>这个目录下面的<code>res/values/color.xml</code>文件，但是后来同事告诉我不能在这个地方修改，原因是MTK很多apk会被vendor目录下面的<code>packages/apps</code>覆盖。我的问题是，如何看一个apk究竟是packages下面的还是vendor下面的呢？主管告诉我可以通过查看编译生成的out目录的app名字来反推。比如本次修改的Launcher3,查看编译生成的apk名字是mtkLanucher3，在<code>packages/apps</code>下面，打开自己的Android.mk文件，属性<code>local_package_name:=Launcher3</code>,但是在vendor下面，这个属性值为mtkLanucher3,就是编译生成的out中的apk的名字。<br>　　其次就是编译生成的<code>out/system</code>下有一个app还有一个priv-app目录，他们的区别在与，后者是系统中重要的apk，如何将一个应用编译时生成到pri-app中呢？需要在Android.mk中做如下设置即可：<br><code>LOCAL_PRIVILEGED_MODULE := true</code>，如果是false就编译到app中。</p><p></p><hr><p> <strong>8. Android系统紧急号码</strong><br>　　 修改vendor目录下面的<code>ecc_list.xml</code>文件，将我们需要添加的号码加进去，如添加112为紧急号码：<code>&lt;EccEntry Ecc=&quot;112&quot; Category=&quot;0&quot; Condition=&quot;0&quot;/&gt;</code>添加参数condition时，0表示在无卡的时候当紧急号码，1表示始终当紧急号码，2表示洁面霜显示成紧急号码但是实际是以普通方式拨出。</p><hr><p> <strong>9. Android系统设置中移除短信通知</strong><br> 　　控件的移除要通过父控件来移除<br>　<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">if(enabled)</span><br><span class="line"> ((PreferenceCategory)findPreference(KEY_SIM_ACTIVITIES)).removePreference(findPreference(KEY_SMS))；</span><br></pre></td></tr></table></figure></p><p>　　这段代码在<code>vendor/mediatek/proprity/packages/apps/MtkSetting/Sim</code>下面，打开这个文件之后，找到<code>updateSmsValues()</code>函数，函数分析下：<br>（1）<code>final Preference simPref = findPreference(KEY_SMS)</code>这里需要注意的是<code>Preference</code>是一种布局，这句话的含义就是，找到<code>KEY_SMS</code>这个字段的布局赋给<code>simPref</code> 。<br>（2）找<code>KEY_SMS</code>布局在什么地方，在s<code>ource insight</code>中ctrl并点击这个变量，发现在<code>SimSettings.java</code>函数中定义的位置，得知它保存的字符串是<code>&quot;sim_sms&quot;</code>，如何找<code>“sim_sms”</code>在哪里被定义呢？方法：鼠标放置在<code>“sim_sms”</code>上，按<code>“ctrl+/”</code>点击确定，等搜索结果出来了之后点击前面的符号就能进入被定义的地方，这里我们看到的是改布局在<code>Sim_setting.xml</code>文件中被定义，点开，看到<code>sim_sms</code>是一个<code>preference</code>的<code>key</code>，通过这个<code>key</code>和<code>findprefrence(key)</code>就能找到该布局。搜索这个布局的<code>@string</code>，看到该布局表示的是“短信”。</p><hr><p> <strong>10. java序列化</strong><br> 在公司电脑上安装开发软件以及配置环境，电脑内存只有4G，非常卡，无情吐槽……<br> 1.下载工具<br>　　工具选择intelliJ IDEA，打开官网下载最新版本的2018.1.5，一共有两个版本，一个是ultimate还有一个是community，之前也听过分为商业版和社区版，但是因为下载成功了也没有特别注意区别。第一次下载的是community这个版本，但是在配置tomcat的时候发现没有tomcat server这个选项，正确的是下载的时候选择ultimate商业版。<br>2.java序列化代码<br>　　注意点：序列化的类实现serializeble接口。<br><code>ObjectOuptPutStream</code>用于对象的读出流，在序列化的时候，首先实例化一个对象，再创建一个.txt文本用于保存序列化的对象。<code>ObjectInputStream</code>用于对象的读入流。<br>具体代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">package com.aust.serializable;</span><br><span class="line"></span><br><span class="line">import java.io.*;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * Created by jinxiaomei on 2018/7/5</span><br><span class="line"> */</span><br><span class="line">public class serializableTest &#123;</span><br><span class="line">    public static void main(String[] args) throws Exception &#123;</span><br><span class="line">            serializeStudent();</span><br><span class="line">            Student student = deSerializaStudent();</span><br><span class="line">            System.out.printf(student.toString());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    private static void serializeStudent() throws  Exception&#123;</span><br><span class="line">        Student stu1 = new Student();</span><br><span class="line">        stu1.setId(1);</span><br><span class="line">        stu1.setName(&quot;jinxiaoemi&quot;);</span><br><span class="line">        stu1.setPwd(&quot;123456&quot;);</span><br><span class="line">        ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(new File(&quot;E:/doc/serialize.txt&quot;)));</span><br><span class="line">        oos.writeObject(stu1);</span><br><span class="line">        System.out.printf(&quot;Student序列化成功！&quot;);</span><br><span class="line">        oos.close();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    private static Student deSerializaStudent() throws Exception&#123;</span><br><span class="line">        ObjectInputStream ois = new ObjectInputStream(new FileInputStream(new File(&quot;E:/doc/serialize.txt&quot;)));</span><br><span class="line">        Student stu2 = (Student) ois.readObject();</span><br><span class="line">        System.out.printf(&quot;Student反序列化成功&quot;);</span><br><span class="line">        return stu2;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;　　前两日在忙项目归档，今天得空回顾一下自己在与德工作一年以来的记录。与德访问控制这个方面做的很好，但还是屈服于互联网科技的迅速发展，大多数同事都使用有道云笔记来记录工作中遇到的问题以及学到的新知识，我也随了他们的习惯。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;1. 单编&lt;/stro
-      
-    
-    </summary>
-    
-    
-      <category term="android 系统" scheme="http://yoursite.com/tags/android-%E7%B3%BB%E7%BB%9F/"/>
     
   </entry>
   
