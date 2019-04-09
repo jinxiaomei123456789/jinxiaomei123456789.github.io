@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Kali Linux下的基础命令]]></title>
+    <url>%2F2019%2F04%2F09%2FKali-Linux%E4%B8%8B%E7%9A%84%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4%2F</url>
+    <content type="text"><![CDATA[Kali简介&emsp;&emsp;Kali Linux是基于Debian的Linux发行版，设计用于数字取证和渗透测试的操作系统。预装了很多和渗透测试相关的软件，如nmap（端口扫描器）、Wireshark（数据分析器）等。 基础命令&emsp;&emsp;1.列出目录下的文件 ls&emsp;&emsp;2.列出目录下的文件详细信息 ls -l&emsp;&emsp;3.列出目录下文件的详细信息（文件大小带单位） ls -lh&emsp;&emsp;4.列出目录下所有文件（包括隐藏文件） ls -a&emsp;&emsp;5.列出目录下所有文件的详细信息（文件大小带单位） ls -alh&emsp;&emsp;6.更换工作目录 cd&emsp;&emsp;7.显示当前所在目录 pwd&emsp;&emsp;8.返回上级目录 cd ..&emsp;&emsp;9.返回上一次操作的目录 cd -&emsp;&emsp;10.返回家目录 cd ~ 目录操作&emsp;&emsp;1.创建新目录 mkdir dir-name&emsp;&emsp;2.复制文件或者目录 cp -r 源文件目录地址 目标目录地址&emsp;&emsp;3.删除空目录 rmdir dir-name&emsp;&emsp;4,删除非空目录或文件 rm dir&emsp;&emsp;5.删除目录下全部内容 rm -rf *&emsp;&emsp;6.移动文件或目录 mv dir/file 目标目录地址&emsp;&emsp;7.重命名格式 mv dir/file new 文件查看&emsp;&emsp;1.查看文件 cat file&emsp;&emsp;2.查看文件头几行 head file&emsp;&emsp;3.查看文件后几行 tail file&emsp;&emsp;4.一页一页地显示文件 more file]]></content>
+      <tags>
+        <tag>Kali</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[sqlmap课题]]></title>
+    <url>%2F2019%2F04%2F01%2Fsqlmap%E8%AF%BE%E9%A2%98%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
     <title><![CDATA[ubuntu16.04下安装sqlmap]]></title>
     <url>%2F2019%2F04%2F01%2Fubuntu16-04%E4%B8%8B%E5%AE%89%E8%A3%85sqlmap%2F</url>
     <content type="text"><![CDATA[1.首先安装git，但报错如下：2.给报错文件赋777权限。3.安装sqlmap。4.配置环境变量。在home/jin目录下执行ls -a，打开bashrc文件，文件末尾加入一下环境变量，同样，打开/etc/profile文件，在全局环境变量中也加入。5.安装结束后在终端输入sqlmap，发现无反应。6.查阅资料，由于加入的环境变量不生效导致，分别执行source .bashrc和source /etc/profile使加入的环境变量生效。7.输入sqlmap可以看到已生效。]]></content>
@@ -157,7 +170,7 @@
   <entry>
     <title><![CDATA[kali安装教程]]></title>
     <url>%2F2018%2F12%2F26%2Fkali%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%2F</url>
-    <content type="text"><![CDATA[前言 五个月之前因为兴趣接触了kali，从安装到基本命令以及一些黑客常用技术算是系统过了一遍，然而，这段时间没有碰现在全部忘记了，连基本的安装不会。博客是一个好东西，督促我不断学习，之前对自己太自信了，总以为自己过目不忘，然而却被现实打倒，好记性不如烂笔头，算是对自己的一个教训了，现在深刻地认识到做技术写博客是多么重要的一件事，一来回顾，二来查缺补漏，最后也是对自己职业生涯的一种见证与规划吧。一位学长曾告诉我们学习要脚踏实地，苦口婆心的劝说我也没能听进去多少，工作了才意识到，下面就从最基本的安装开始，听过来人的话把地踩塌。 打开vmware，一次选择“文件”-&gt;“新建虚拟机”，弹出以下界面，选择“典型”，点击“下一步”。 选择“稍后安装操作系统”，点击“下一步”。 下面的选项除了第一个是选择Linux，第二个我在安装过程中选择centos和ubuntu都可以。选择之后点击“下一步”。 这一步首先需要给你的虚拟机命名，下面一个就是设置新建虚拟机的存储位置，设置好之后点击“下一步”。接下来的步骤都是默认。 新建结束之后，需要配置系统镜像，鼠标放置在虚拟机上右击，点击“设置”。 选择CD/DVD这个选项，在右边”使用ISO镜像文件“中设置我们下载好的镜像文件，点击“确定”。到目前为止虚拟机就新建好了，下面我们需要启动虚拟机，启动过程中会有一些系统设置。 鼠标放置在我们新建的虚拟机上，右击“电源”-&gt;“启动客户机”。出现图形界面，选择“Graphical install”，enter键。 选择语言“简体中文”。 选择“中国”，点击”继续“。 下面选择“汉语”。稍等一会儿出现主机名配置。配置好之后点击“继续”。 接下来是域名配置，直接跳过，enter键。 设置密码，这个密码就是开机密码，我设置为root。 选择第一个 选择如下： 下面的步骤直接默认，直到出现以下。选择“是”。 接着有一个漫长的等待过程。 然后会问你是否要选择网络镜像，如果你的网络很好可以选择是，这里呢我选择的否。都行的。接下来都是默认。 出现这一步选择“是”。 选择第二个。 出现这个的时候就说明安装结束了，点击继续现在开始你的黑客之旅吧。]]></content>
+    <content type="text"><![CDATA[前言 五个月之前因为兴趣接触了kali，从安装到基本命令以及一些黑客常用技术算是系统过了一遍，然而，这段时间没有碰现在全部忘记了，连基本的安装不会。博客是一个好东西，督促我不断学习，之前对自己太自信了，总以为自己过目不忘，然而却被现实打倒，好记性不如烂笔头，算是对自己的一个教训了，现在深刻地认识到做技术写博客是多么重要的一件事，一来回顾，二来查缺补漏，最后也是对自己职业生涯的一种见证与规划吧。一位学长曾告诉我们学习要脚踏实地，苦口婆心的劝说我也没能听进去多少，工作了才意识到，下面就从最基本的安装开始，听过来人的话把地踩塌。 安装步骤&emsp;&emsp;安装之前先下载kali linux系统镜像，地址：https://www.kali.org/downloads/，选择kali linux64 Bit。 打开vmware，一次选择“文件”-&gt;“新建虚拟机”，弹出以下界面，选择“典型”，点击“下一步”。 选择“稍后安装操作系统”，点击“下一步”。 下面的选项除了第一个是选择Linux，第二个我在安装过程中选择centos和ubuntu都可以。选择之后点击“下一步”。 这一步首先需要给你的虚拟机命名，下面一个就是设置新建虚拟机的存储位置，设置好之后点击“下一步”。接下来的步骤都是默认。 新建结束之后，需要配置系统镜像，鼠标放置在虚拟机上右击，点击“设置”。 选择CD/DVD这个选项，在右边”使用ISO镜像文件“中设置我们下载好的镜像文件，点击“确定”。到目前为止虚拟机就新建好了，下面我们需要启动虚拟机，启动过程中会有一些系统设置。 鼠标放置在我们新建的虚拟机上，右击“电源”-&gt;“启动客户机”。出现图形界面，选择“Graphical install”，enter键。 选择语言“简体中文”。 选择“中国”，点击”继续“。 下面选择“汉语”。稍等一会儿出现主机名配置。配置好之后点击“继续”。 接下来是域名配置，直接跳过，enter键。 设置密码，这个密码就是开机密码，我设置为root。 选择第一个 选择如下： 下面的步骤直接默认，直到出现以下。选择“是”。 接着有一个漫长的等待过程。 然后会问你是否要选择网络镜像，如果你的网络很好可以选择是，这里呢我选择的否。都行的。接下来都是默认。 出现这一步选择“是”。 选择第二个。 出现这个的时候就说明安装结束了，点击继续现在开始你的黑客之旅吧。 安装vmtools输入命令apt install open-vm-tools-desktop,并点击y，结束后输入reboot重启kali即可。kali更新源vim /etc/apt/sources.list删除源内的内容或者只删除自带的kali源，并添加阿里云源deb http://mirrors.aliyun.com/kali kali-rolling main non-free contrib deb-src http://mirrors.aliyun.com/kali kali-rolling main non-free contrib依次输入以下命令：apt-get clean //清除缓存索引apt-get update //更新索引文件apt-get upgrade //更新实际的软件包文件apt-get dist-upgrade //根据依赖关系更新]]></content>
       <tags>
         <tag>kali</tag>
       </tags>

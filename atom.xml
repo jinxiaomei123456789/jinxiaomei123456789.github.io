@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-04-01T06:03:21.315Z</updated>
+  <updated>2019-04-09T02:45:11.534Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,43 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Kali Linux下的基础命令</title>
+    <link href="http://yoursite.com/2019/04/09/Kali-Linux%E4%B8%8B%E7%9A%84%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/"/>
+    <id>http://yoursite.com/2019/04/09/Kali-Linux下的基础命令/</id>
+    <published>2019-04-09T01:31:50.000Z</published>
+    <updated>2019-04-09T02:45:11.534Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Kali简介"><a href="#Kali简介" class="headerlink" title="Kali简介"></a>Kali简介</h1><p>&emsp;&emsp;Kali Linux是基于Debian的Linux发行版，设计用于数字取证和渗透测试的操作系统。预装了很多和渗透测试相关的软件，如nmap（端口扫描器）、Wireshark（数据分析器）等。   </p><h1 id="基础命令"><a href="#基础命令" class="headerlink" title="基础命令"></a>基础命令</h1><p>&emsp;&emsp;1.列出目录下的文件 ls<br>&emsp;&emsp;2.列出目录下的文件详细信息 ls -l<br>&emsp;&emsp;3.列出目录下文件的详细信息（文件大小带单位） ls -lh<br>&emsp;&emsp;4.列出目录下所有文件（包括隐藏文件） ls -a<br>&emsp;&emsp;5.列出目录下所有文件的详细信息（文件大小带单位） ls -alh<br>&emsp;&emsp;6.更换工作目录  cd<br>&emsp;&emsp;7.显示当前所在目录 pwd<br>&emsp;&emsp;8.返回上级目录 cd ..<br>&emsp;&emsp;9.返回上一次操作的目录 cd -<br>&emsp;&emsp;10.返回家目录 cd ~   </p><h1 id="目录操作"><a href="#目录操作" class="headerlink" title="目录操作"></a>目录操作</h1><p>&emsp;&emsp;1.创建新目录 mkdir dir-name<br>&emsp;&emsp;2.复制文件或者目录 cp -r 源文件目录地址  目标目录地址<br>&emsp;&emsp;3.删除空目录 rmdir dir-name<br>&emsp;&emsp;4,删除非空目录或文件 rm dir<br>&emsp;&emsp;5.删除目录下全部内容 rm -rf *<br>&emsp;&emsp;6.移动文件或目录 mv dir/file 目标目录地址<br>&emsp;&emsp;7.重命名格式 mv dir/file new   </p><h1 id="文件查看"><a href="#文件查看" class="headerlink" title="文件查看"></a>文件查看</h1><p>&emsp;&emsp;1.查看文件 cat file<br>&emsp;&emsp;2.查看文件头几行 head file<br>&emsp;&emsp;3.查看文件后几行 tail file<br>&emsp;&emsp;4.一页一页地显示文件 more file</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Kali简介&quot;&gt;&lt;a href=&quot;#Kali简介&quot; class=&quot;headerlink&quot; title=&quot;Kali简介&quot;&gt;&lt;/a&gt;Kali简介&lt;/h1&gt;&lt;p&gt;&amp;emsp;&amp;emsp;Kali Linux是基于Debian的Linux发行版，设计用于数字取证和渗透测试
+      
+    
+    </summary>
+    
+    
+      <category term="Kali" scheme="http://yoursite.com/tags/Kali/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>sqlmap课题</title>
+    <link href="http://yoursite.com/2019/04/01/sqlmap%E8%AF%BE%E9%A2%98/"/>
+    <id>http://yoursite.com/2019/04/01/sqlmap课题/</id>
+    <published>2019-04-01T07:02:02.000Z</published>
+    <updated>2019-04-01T07:02:02.325Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>ubuntu16.04下安装sqlmap</title>
@@ -422,53 +459,6 @@
     
     
       <category term="ESXI" scheme="http://yoursite.com/tags/ESXI/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>课外拓展之电脑硬件</title>
-    <link href="http://yoursite.com/2019/01/02/%E8%AF%BE%E5%A4%96%E6%8B%93%E5%B1%95%E4%B9%8B%E7%94%B5%E8%84%91%E7%A1%AC%E4%BB%B6/"/>
-    <id>http://yoursite.com/2019/01/02/课外拓展之电脑硬件/</id>
-    <published>2019-01-02T06:17:13.000Z</published>
-    <updated>2019-01-07T13:43:12.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>　　</p><h2 id="１-cpu"><a href="#１-cpu" class="headerlink" title="１.cpu"></a>１.cpu</h2><p>　　cpu在操作系统中用于做浮点运算。电脑cpu主要有两个品牌，intel和AMD。下面以intel某一产品介绍cpu的配置。</p><p> 　　1. cpu内核因素<br> 　　cpu架构：64位。如果自己的电脑是32位的系统，cpu为64位就不适用。<br>    核心数量：六核心。<br>    线程数量：12。线程数量刚好是核心数量的双倍，源于intel特有的技术：超线程，意思是在操作系统中一个核心可以当两个cpu来用。</p><p> 　　2. cpu频率<br> 　　主频：在预算范围内，主频越大越好。<br> 　　3. cpu插槽<br> 　　插槽类型：LGA 2011，不同的CPU有不同的插槽，插槽之间不通用。<br> 　　4. cpu技术<br> 　　超线程技术：支持。如前面所说的，如果支持超线程技术，一般都是线程数量是核心数量的两倍，目前还没有三倍技术。<br>     虚拟化技术：Intel VT。CPU之处虚拟化指定工具才能安装。<br> 　　5. cpu内存<br> 　　适用类型：台式机。指定内存安装在台式机还是笔记本。<br>     内存容量：8GB。<br>     内存类型:DDR3。内存类型还有其他，如DDR2，DDR4等，他们之间不同之处在于，在内存条从DDR2到DDR3到DDR4做升级时，修改缺口的位置不同，但主板上的总长度不变。缺口位置如下图所示。<br><img src="/2019/01/02/课外拓展之电脑硬件/内存类型.jpg" alt="内存条示例"><br> 　　6. 虚拟化<br> 　　虚拟化是指通过虚拟化技术将一台计算机虚拟化为多台逻辑计算机。在一台计算机上同时运行多个逻辑计算机，每个逻辑计算机可运行不同的操作系统，并且应用程序都可以在互相独立的空间内运行而互不影响，从而显著提高工作效率。 　　　</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;　　&lt;/p&gt;
-&lt;h2 id=&quot;１-cpu&quot;&gt;&lt;a href=&quot;#１-cpu&quot; class=&quot;headerlink&quot; title=&quot;１.cpu&quot;&gt;&lt;/a&gt;１.cpu&lt;/h2&gt;&lt;p&gt;　　cpu在操作系统中用于做浮点运算。电脑cpu主要有两个品牌，intel和AMD。下面以int
-      
-    
-    </summary>
-    
-    
-      <category term="硬件" scheme="http://yoursite.com/tags/%E7%A1%AC%E4%BB%B6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2019年计划</title>
-    <link href="http://yoursite.com/2018/12/29/2019%E5%B9%B4%E8%AE%A1%E5%88%92/"/>
-    <id>http://yoursite.com/2018/12/29/2019年计划/</id>
-    <published>2018-12-29T02:06:22.000Z</published>
-    <updated>2019-02-19T06:55:12.621Z</updated>
-    
-    <content type="html"><![CDATA[<p>　　转眼间已到了2018年的最后第三天，回首过去的一年，基本处于颠沛流离的状态。17年十月份找了一份安卓系统开发的工作，12月进部门之后几乎就没有了自己的生活，每天早上六点多起床，晚上几乎都在十点左右到家，一两点到家的也有几次，加班于当时的我来说是常事，时间全部奉献给了无数的客户需求、bug和版本维护，以及无休无止的patch。<br>　　以为这样的生活会锻炼出我在专业领域愈加丰富的经验，然而并没有达到预想的效果。跳槽的想法在公司开始产业转移时产生，手机已不是公司的新宠，人工智能才是未来社会发展的大方向。其次，伴随着产业转移带来的一系列矛盾渐渐浮出水面，员工人事调整以及财务危机渐渐摧垮了大家对工作的积极性，于是，在一个夜黑风高的时刻，我离职了。<br>　　11月份我来到了新公司，一家事业单位，新工作要求知识面广，需要和客户交流，这样的工作正好给我一个锻炼社交的机会，于是我决定在这里脚踏实地的干下去。<br>　　19年我的计划是考等级保护证书，元旦之后每天晚上回家有空了就去学习关于渗透的内容，计划明年年底将渗透学熟练。   </p><pre><code>学习计划如下：js-&gt;jquery-&gt;nodejs-&gt;php基础-&gt;php进阶-&gt;SQL注入等。</code></pre>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;　　转眼间已到了2018年的最后第三天，回首过去的一年，基本处于颠沛流离的状态。17年十月份找了一份安卓系统开发的工作，12月进部门之后几乎就没有了自己的生活，每天早上六点多起床，晚上几乎都在十点左右到家，一两点到家的也有几次，加班于当时的我来说是常事，时间全部奉献给了无数
-      
-    
-    </summary>
-    
-    
-      <category term="随笔" scheme="http://yoursite.com/tags/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   

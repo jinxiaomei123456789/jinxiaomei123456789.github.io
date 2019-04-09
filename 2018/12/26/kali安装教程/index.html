@@ -19,6 +19,7 @@
 <meta property="og:site_name" content="小生の博客">
 <meta property="og:description" content="前言　　五个月之前因为兴趣接触了kali，从安装到基本命令以及一些黑客常用技术算是系统过了一遍，然而，这段时间没有碰现在全部忘记了，连基本的安装不会。博客是一个好东西，督促我不断学习，之前对自己太自信了，总以为自己过目不忘，然而却被现实打倒，好记性不如烂笔头，算是对自己的一个教训了，现在深刻地认识到做技术写博客是多么重要的一件事，一来回顾，二来查缺补漏，最后也是对自己职业生涯的一种见证与规划吧。一">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://yoursite.com/2018/12/26/kali安装教程/kali镜像选择.jpg">
 <meta property="og:image" content="http://yoursite.com/2018/12/26/kali安装教程/安装步骤1.jpg">
 <meta property="og:image" content="http://yoursite.com/2018/12/26/kali安装教程/安装步骤2.jpg">
 <meta property="og:image" content="http://yoursite.com/2018/12/26/kali安装教程/安装步骤3.jpg">
@@ -39,11 +40,11 @@
 <meta property="og:image" content="http://yoursite.com/2018/12/26/kali安装教程/安装步骤18.jpg">
 <meta property="og:image" content="http://yoursite.com/2018/12/26/kali安装教程/安装步骤19.jpg">
 <meta property="og:image" content="http://yoursite.com/2018/12/26/kali安装教程/安装步骤20.jpg">
-<meta property="og:updated_time" content="2018-12-26T07:02:38.000Z">
+<meta property="og:updated_time" content="2019-04-09T06:13:25.013Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="kali安装教程">
 <meta name="twitter:description" content="前言　　五个月之前因为兴趣接触了kali，从安装到基本命令以及一些黑客常用技术算是系统过了一遍，然而，这段时间没有碰现在全部忘记了，连基本的安装不会。博客是一个好东西，督促我不断学习，之前对自己太自信了，总以为自己过目不忘，然而却被现实打倒，好记性不如烂笔头，算是对自己的一个教训了，现在深刻地认识到做技术写博客是多么重要的一件事，一来回顾，二来查缺补漏，最后也是对自己职业生涯的一种见证与规划吧。一">
-<meta name="twitter:image" content="http://yoursite.com/2018/12/26/kali安装教程/安装步骤1.jpg">
+<meta name="twitter:image" content="http://yoursite.com/2018/12/26/kali安装教程/kali镜像选择.jpg">
 
     
     <link rel="alternative" href="/atom.xml" title="小生の博客" type="application/atom+xml">
@@ -119,12 +120,13 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li></ol><li class="toc-item toc-level-1"><a class="toc-link" href="#安装步骤"><span class="toc-number"></span> <span class="toc-text">安装步骤</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#安装vmtools"><span class="toc-number"></span> <span class="toc-text">安装vmtools</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#kali更新源"><span class="toc-number"></span> <span class="toc-text">kali更新源</span></a>
 		
-		</div>
+		</li></div>
 		
 		<p></p><h2 style="color:blue">前言</h2><br>　　五个月之前因为兴趣接触了kali，从安装到基本命令以及一些黑客常用技术算是系统过了一遍，然而，这段时间没有碰现在全部忘记了，连基本的安装不会。博客是一个好东西，督促我不断学习，之前对自己太自信了，总以为自己过目不忘，然而却被现实打倒，好记性不如烂笔头，算是对自己的一个教训了，现在深刻地认识到做技术写博客是多么重要的一件事，一来回顾，二来查缺补漏，最后也是对自己职业生涯的一种见证与规划吧。一位学长曾告诉我们学习要脚踏实地，苦口婆心的劝说我也没能听进去多少，工作了才意识到，下面就从最基本的安装开始，听过来人的话把地踩塌。
 　　<p></p>
+<h1 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h1><p>&emsp;&emsp;安装之前先下载kali linux系统镜像，地址：<a href="https://www.kali.org/downloads/，选择kali" target="_blank" rel="noopener">https://www.kali.org/downloads/，选择kali</a> linux64 Bit。<br>   <img src="/2018/12/26/kali安装教程/kali镜像选择.jpg" alt="kali镜像选择"></p>
 <ol>
 <li>打开vmware，一次选择“文件”-&gt;“新建虚拟机”，弹出以下界面，选择“典型”，点击“下一步”。<br><img src="/2018/12/26/kali安装教程/安装步骤1.jpg" alt="安装步骤1"></li>
 <li>选择“稍后安装操作系统”，点击“下一步”。<br><img src="/2018/12/26/kali安装教程/安装步骤2.jpg" alt="安装步骤2"></li>
@@ -145,7 +147,8 @@
 <li>然后会问你是否要选择网络镜像，如果你的网络很好可以选择是，这里呢我选择的否。都行的。接下来都是默认。<br><img src="/2018/12/26/kali安装教程/安装步骤17.jpg" alt="安装步骤17"></li>
 <li>出现这一步选择“是”。<br><img src="/2018/12/26/kali安装教程/安装步骤18.jpg" alt="安装步骤18"></li>
 <li>选择第二个。<br><img src="/2018/12/26/kali安装教程/安装步骤19.jpg" alt="安装步骤19"></li>
-<li>出现这个的时候就说明安装结束了，点击继续现在开始你的黑客之旅吧。<br><img src="/2018/12/26/kali安装教程/安装步骤20.jpg" alt="安装步骤20"></li>
+<li>出现这个的时候就说明安装结束了，点击继续现在开始你的黑客之旅吧。<br><img src="/2018/12/26/kali安装教程/安装步骤20.jpg" alt="安装步骤20">   <h1 id="安装vmtools"><a href="#安装vmtools" class="headerlink" title="安装vmtools"></a>安装vmtools</h1>输入命令apt install open-vm-tools-desktop,并点击y，结束后输入reboot重启kali即可。<h1 id="kali更新源"><a href="#kali更新源" class="headerlink" title="kali更新源"></a>kali更新源</h1><code>vim /etc/apt/sources.list</code><br>删除源内的内容或者只删除自带的kali源，并添加阿里云源<br><code>deb http://mirrors.aliyun.com/kali kali-rolling main non-free contrib 
+deb-src http://mirrors.aliyun.com/kali kali-rolling main non-free contrib</code><br>依次输入以下命令：<br><code>apt-get clean</code>   //清除缓存索引<br><code>apt-get update</code>    //更新索引文件<br><code>apt-get upgrade</code>   //更新实际的软件包文件<br><code>apt-get dist-upgrade</code>    //根据依赖关系更新</li>
 </ol>
   
 	</div>
@@ -206,9 +209,9 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li></ol><li class="toc-item toc-level-1"><a class="toc-link" href="#安装步骤"><span class="toc-number"></span> <span class="toc-text">安装步骤</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#安装vmtools"><span class="toc-number"></span> <span class="toc-text">安装vmtools</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#kali更新源"><span class="toc-number"></span> <span class="toc-text">kali更新源</span></a>
  
-  </div>
+  </li></div>
 
 <div id="asidepart">
 <div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
@@ -229,11 +232,11 @@
 			
 		
 			
-				<li><a href="/tags/java/" title="java">java<sup>4</sup></a></li>
+				<li><a href="/tags/ssm/" title="ssm">ssm<sup>4</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/ssm/" title="ssm">ssm<sup>4</sup></a></li>
+				<li><a href="/tags/java/" title="java">java<sup>4</sup></a></li>
 			
 		
 			
@@ -245,19 +248,11 @@
 			
 		
 			
-				<li><a href="/tags/考试/" title="考试">考试<sup>2</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/随笔/" title="随笔">随笔<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/bootstrap/" title="bootstrap">bootstrap<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/kali/" title="kali">kali<sup>1</sup></a></li>
+				<li><a href="/tags/考试/" title="考试">考试<sup>2</sup></a></li>
 			
 		
 			
@@ -265,11 +260,19 @@
 			
 		
 			
-				<li><a href="/tags/mybatis/" title="mybatis">mybatis<sup>1</sup></a></li>
+				<li><a href="/tags/burpsuite/" title="burpsuite">burpsuite<sup>1</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/springmvc/" title="springmvc">springmvc<sup>1</sup></a></li>
+				<li><a href="/tags/kali/" title="kali">kali<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/bootstrap/" title="bootstrap">bootstrap<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/mybatis/" title="mybatis">mybatis<sup>1</sup></a></li>
 			
 		
 			
@@ -277,15 +280,19 @@
 			
 		
 			
+				<li><a href="/tags/springmvc/" title="springmvc">springmvc<sup>1</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/xss/" title="xss">xss<sup>1</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/windows/" title="windows">windows<sup>1</sup></a></li>
+				<li><a href="/tags/sqlmap/" title="sqlmap">sqlmap<sup>1</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/burpsuite/" title="burpsuite">burpsuite<sup>1</sup></a></li>
+				<li><a href="/tags/Kali/" title="Kali">Kali<sup>1</sup></a></li>
 			
 		
 			
@@ -297,11 +304,7 @@
 			
 		
 			
-				<li><a href="/tags/杂谈/" title="杂谈">杂谈<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/hexo/" title="hexo">hexo<sup>1</sup></a></li>
+				<li><a href="/tags/网络/" title="网络">网络<sup>1</sup></a></li>
 			
 		
 		</ul>
