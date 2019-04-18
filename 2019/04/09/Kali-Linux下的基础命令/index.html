@@ -19,7 +19,7 @@
 <meta property="og:site_name" content="小生の博客">
 <meta property="og:description" content="Kali简介&amp;emsp;&amp;emsp;Kali Linux是基于Debian的Linux发行版，设计用于数字取证和渗透测试的操作系统。预装了很多和渗透测试相关的软件，如nmap（端口扫描器）、Wireshark（数据分析器）等。    基础命令&amp;emsp;&amp;emsp;1.列出目录下的文件 ls&amp;emsp;&amp;emsp;2.列出目录下的文件详细信息 ls -l&amp;emsp;&amp;emsp;3.列出目录下文件的">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-09T02:45:11.534Z">
+<meta property="og:updated_time" content="2019-04-09T09:29:39.551Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Kali Linux下的基础命令">
 <meta name="twitter:description" content="Kali简介&amp;emsp;&amp;emsp;Kali Linux是基于Debian的Linux发行版，设计用于数字取证和渗透测试的操作系统。预装了很多和渗透测试相关的软件，如nmap（端口扫描器）、Wireshark（数据分析器）等。    基础命令&amp;emsp;&amp;emsp;1.列出目录下的文件 ls&amp;emsp;&amp;emsp;2.列出目录下的文件详细信息 ls -l&amp;emsp;&amp;emsp;3.列出目录下文件的">
@@ -98,7 +98,7 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Kali简介"><span class="toc-number">1.</span> <span class="toc-text">Kali简介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#基础命令"><span class="toc-number">2.</span> <span class="toc-text">基础命令</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#目录操作"><span class="toc-number">3.</span> <span class="toc-text">目录操作</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#文件查看"><span class="toc-number">4.</span> <span class="toc-text">文件查看</span></a></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Kali简介"><span class="toc-number">1.</span> <span class="toc-text">Kali简介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#基础命令"><span class="toc-number">2.</span> <span class="toc-text">基础命令</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#目录操作"><span class="toc-number">3.</span> <span class="toc-text">目录操作</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#文件查看"><span class="toc-number">4.</span> <span class="toc-text">文件查看</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#rpm套餐"><span class="toc-number">5.</span> <span class="toc-text">rpm套餐</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Metasploit使用"><span class="toc-number">6.</span> <span class="toc-text">Metasploit使用</span></a></li></ol>
 		
 		</div>
 		
@@ -106,6 +106,8 @@
 <h1 id="基础命令"><a href="#基础命令" class="headerlink" title="基础命令"></a>基础命令</h1><p>&emsp;&emsp;1.列出目录下的文件 ls<br>&emsp;&emsp;2.列出目录下的文件详细信息 ls -l<br>&emsp;&emsp;3.列出目录下文件的详细信息（文件大小带单位） ls -lh<br>&emsp;&emsp;4.列出目录下所有文件（包括隐藏文件） ls -a<br>&emsp;&emsp;5.列出目录下所有文件的详细信息（文件大小带单位） ls -alh<br>&emsp;&emsp;6.更换工作目录  cd<br>&emsp;&emsp;7.显示当前所在目录 pwd<br>&emsp;&emsp;8.返回上级目录 cd ..<br>&emsp;&emsp;9.返回上一次操作的目录 cd -<br>&emsp;&emsp;10.返回家目录 cd ~   </p>
 <h1 id="目录操作"><a href="#目录操作" class="headerlink" title="目录操作"></a>目录操作</h1><p>&emsp;&emsp;1.创建新目录 mkdir dir-name<br>&emsp;&emsp;2.复制文件或者目录 cp -r 源文件目录地址  目标目录地址<br>&emsp;&emsp;3.删除空目录 rmdir dir-name<br>&emsp;&emsp;4,删除非空目录或文件 rm dir<br>&emsp;&emsp;5.删除目录下全部内容 rm -rf *<br>&emsp;&emsp;6.移动文件或目录 mv dir/file 目标目录地址<br>&emsp;&emsp;7.重命名格式 mv dir/file new   </p>
 <h1 id="文件查看"><a href="#文件查看" class="headerlink" title="文件查看"></a>文件查看</h1><p>&emsp;&emsp;1.查看文件 cat file<br>&emsp;&emsp;2.查看文件头几行 head file<br>&emsp;&emsp;3.查看文件后几行 tail file<br>&emsp;&emsp;4.一页一页地显示文件 more file</p>
+<h1 id="rpm套餐"><a href="#rpm套餐" class="headerlink" title="rpm套餐"></a>rpm套餐</h1><p>1.列出系统安装的所有软件 rpm -qa<br>2.筛选出含有指定文件名的软件 rpm -qa|grep 名称<br>3.</p>
+<h1 id="Metasploit使用"><a href="#Metasploit使用" class="headerlink" title="Metasploit使用"></a>Metasploit使用</h1><p>&emsp;&emsp;启动此服务之前，需要先使用<code>service PostgreSQL start</code>启动PostgreSQL服务，再使用<code>service metasploit start</code>启动，输入<code>msfconsole</code>从终端启动metasploit框架。</p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -136,6 +138,14 @@
 	
 <nav class="article-nav clearfix">
  
+ <div class="prev">
+ <a href="/2019/04/18/项目测评学习/" title="项目测评学习">
+  <strong>上一篇：</strong><br>
+  <span>
+  项目测评学习</span>
+</a>
+</div>
+
 
 <div class="next">
 <a href="/2019/04/01/sqlmap课题/" title="sqlmap课题">
@@ -157,7 +167,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Kali简介"><span class="toc-number">1.</span> <span class="toc-text">Kali简介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#基础命令"><span class="toc-number">2.</span> <span class="toc-text">基础命令</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#目录操作"><span class="toc-number">3.</span> <span class="toc-text">目录操作</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#文件查看"><span class="toc-number">4.</span> <span class="toc-text">文件查看</span></a></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Kali简介"><span class="toc-number">1.</span> <span class="toc-text">Kali简介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#基础命令"><span class="toc-number">2.</span> <span class="toc-text">基础命令</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#目录操作"><span class="toc-number">3.</span> <span class="toc-text">目录操作</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#文件查看"><span class="toc-number">4.</span> <span class="toc-text">文件查看</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#rpm套餐"><span class="toc-number">5.</span> <span class="toc-text">rpm套餐</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Metasploit使用"><span class="toc-number">6.</span> <span class="toc-text">Metasploit使用</span></a></li></ol>
  
   </div>
 
@@ -180,11 +190,11 @@
 			
 		
 			
-				<li><a href="/tags/ssm/" title="ssm">ssm<sup>4</sup></a></li>
+				<li><a href="/tags/java/" title="java">java<sup>4</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/java/" title="java">java<sup>4</sup></a></li>
+				<li><a href="/tags/ssm/" title="ssm">ssm<sup>4</sup></a></li>
 			
 		
 			
@@ -204,11 +214,15 @@
 			
 		
 			
-				<li><a href="/tags/ESXI/" title="ESXI">ESXI<sup>1</sup></a></li>
+				<li><a href="/tags/windows/" title="windows">windows<sup>1</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/burpsuite/" title="burpsuite">burpsuite<sup>1</sup></a></li>
+				<li><a href="/tags/Kali/" title="Kali">Kali<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/mybatis/" title="mybatis">mybatis<sup>1</sup></a></li>
 			
 		
 			
@@ -217,10 +231,6 @@
 		
 			
 				<li><a href="/tags/bootstrap/" title="bootstrap">bootstrap<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/mybatis/" title="mybatis">mybatis<sup>1</sup></a></li>
 			
 		
 			
@@ -240,11 +250,11 @@
 			
 		
 			
-				<li><a href="/tags/Kali/" title="Kali">Kali<sup>1</sup></a></li>
+				<li><a href="/tags/ESXI/" title="ESXI">ESXI<sup>1</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/报告/" title="报告">报告<sup>1</sup></a></li>
+				<li><a href="/tags/burpsuite/" title="burpsuite">burpsuite<sup>1</sup></a></li>
 			
 		
 			
@@ -252,7 +262,7 @@
 			
 		
 			
-				<li><a href="/tags/网络/" title="网络">网络<sup>1</sup></a></li>
+				<li><a href="/tags/报告/" title="报告">报告<sup>1</sup></a></li>
 			
 		
 		</ul>

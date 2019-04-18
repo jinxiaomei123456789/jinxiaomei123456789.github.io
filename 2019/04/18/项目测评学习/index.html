@@ -4,25 +4,25 @@
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
   
-    <title>php环境 | 小生の博客</title>
+    <title>项目测评学习 | 小生の博客</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="小生">
     
 
     
-    <meta name="description" content="大二一段时间开始学习PHP，搭建环境用了一个多月，失败了，当时归结于三个软件版本下的不对有冲突，一个多月后最终使用了PHP的集成环境wamp，使用起来可以，但总觉得自己走的不是正儿八经的道路，最近学习渗透，教程里使用的也是PHP环境，一想都是痛苦的回忆，虽不想再捡起，但狠狠心还是撸起袖子加油干吧。1.管理员模式打开dos。2.卸载apache服务: sc delete Apache2.43.安装a">
-<meta name="keywords" content="php">
+    <meta name="description" content="tomcat客户在未设置网站最大连接数以及超时会话时间的情况下，使用的是tomcat默认设置。1.对于tomcat版本5.5以下的，在tomcat的配置文件server.xml文件中的有maxthreads，后面的数字就是能够处理的最大连接数。2.tomcat默认断开连接时间，5.5以下版本搜索sessionTimeout，5.5以上版本搜索connectionTimeout。">
+<meta name="keywords" content="等保">
 <meta property="og:type" content="article">
-<meta property="og:title" content="php环境">
-<meta property="og:url" content="http://yoursite.com/2019/01/18/php环境/index.html">
+<meta property="og:title" content="项目测评学习">
+<meta property="og:url" content="http://yoursite.com/2019/04/18/项目测评学习/index.html">
 <meta property="og:site_name" content="小生の博客">
-<meta property="og:description" content="大二一段时间开始学习PHP，搭建环境用了一个多月，失败了，当时归结于三个软件版本下的不对有冲突，一个多月后最终使用了PHP的集成环境wamp，使用起来可以，但总觉得自己走的不是正儿八经的道路，最近学习渗透，教程里使用的也是PHP环境，一想都是痛苦的回忆，虽不想再捡起，但狠狠心还是撸起袖子加油干吧。1.管理员模式打开dos。2.卸载apache服务: sc delete Apache2.43.安装a">
+<meta property="og:description" content="tomcat客户在未设置网站最大连接数以及超时会话时间的情况下，使用的是tomcat默认设置。1.对于tomcat版本5.5以下的，在tomcat的配置文件server.xml文件中的有maxthreads，后面的数字就是能够处理的最大连接数。2.tomcat默认断开连接时间，5.5以下版本搜索sessionTimeout，5.5以上版本搜索connectionTimeout。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-01-18T07:38:55.643Z">
+<meta property="og:updated_time" content="2019-04-18T03:05:15.457Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="php环境">
-<meta name="twitter:description" content="大二一段时间开始学习PHP，搭建环境用了一个多月，失败了，当时归结于三个软件版本下的不对有冲突，一个多月后最终使用了PHP的集成环境wamp，使用起来可以，但总觉得自己走的不是正儿八经的道路，最近学习渗透，教程里使用的也是PHP环境，一想都是痛苦的回忆，虽不想再捡起，但狠狠心还是撸起袖子加油干吧。1.管理员模式打开dos。2.卸载apache服务: sc delete Apache2.43.安装a">
+<meta name="twitter:title" content="项目测评学习">
+<meta name="twitter:description" content="tomcat客户在未设置网站最大连接数以及超时会话时间的情况下，使用的是tomcat默认设置。1.对于tomcat版本5.5以下的，在tomcat的配置文件server.xml文件中的有maxthreads，后面的数字就是能够处理的最大连接数。2.tomcat默认断开连接时间，5.5以下版本搜索sessionTimeout，5.5以上版本搜索connectionTimeout。">
 
     
     <link rel="alternative" href="/atom.xml" title="小生の博客" type="application/atom+xml">
@@ -82,14 +82,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2019/01/18/php环境/" title="php环境" itemprop="url">php环境</a>
+      <a href="/2019/04/18/项目测评学习/" title="项目测评学习" itemprop="url">项目测评学习</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="小生" target="_blank" itemprop="author">小生</a>
 		
   </p><p class="article-time">
-    <time datetime="2019-01-18T07:27:01.000Z" itemprop="datePublished"> 发表于 2019-01-18</time>
+    <time datetime="2019-04-18T02:31:12.000Z" itemprop="datePublished"> 发表于 2019-04-18</time>
     
   </p>
 </header>
@@ -98,12 +98,11 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#tomcat"><span class="toc-number">1.</span> <span class="toc-text">tomcat</span></a></li></ol>
 		
 		</div>
 		
-		<p>大二一段时间开始学习PHP，搭建环境用了一个多月，失败了，当时归结于三个软件版本下的不对有冲突，一个多月后最终使用了PHP的集成环境wamp，使用起来可以，但总觉得自己走的不是正儿八经的道路，最近学习渗透，教程里使用的也是PHP环境，一想都是痛苦的回忆，虽不想再捡起，但狠狠心还是撸起袖子加油干吧。<br>1.管理员模式打开dos。<br>2.卸载apache服务: sc delete Apache2.4<br>3.安装apache服务：httpd.exe -k install<br>4.开启apache服务：net start Apache2.4<br>5.停止apache服务：net stop Apache2.4</p>
-<p>6.php语法中，代码里出现mysql执行出错，改为mysqli即可。</p>
+		<h1 id="tomcat"><a href="#tomcat" class="headerlink" title="tomcat"></a>tomcat</h1><p>客户在未设置网站最大连接数以及超时会话时间的情况下，使用的是tomcat默认设置。<br>1.对于tomcat版本5.5以下的，在tomcat的配置文件server.xml文件中的<connector>有maxthreads，后面的数字就是能够处理的最大连接数。<br>2.tomcat默认断开连接时间，5.5以下版本搜索sessionTimeout，5.5以上版本搜索connectionTimeout。</connector></p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -112,7 +111,7 @@
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/php/">php</a>
+  <span></span> <a href="/tags/等保/">等保</a>
   </div>
 
 </div>
@@ -121,7 +120,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://yoursite.com/2019/01/18/php环境/" data-title="php环境 | 小生の博客" data-tsina="" class="share clearfix">
+	  <div data-url="http://yoursite.com/2019/04/18/项目测评学习/" data-title="项目测评学习 | 小生の博客" data-tsina="" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -134,19 +133,11 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev">
- <a href="/2019/01/22/php基础/" title="php基础">
-  <strong>上一篇：</strong><br>
-  <span>
-  php基础</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2019/01/09/更换电脑的博客问题/" title="更换电脑的博客问题">
+<a href="/2019/04/09/Kali-Linux下的基础命令/" title="Kali Linux下的基础命令">
  <strong>下一篇：</strong><br> 
- <span>更换电脑的博客问题
+ <span>Kali Linux下的基础命令
 </span>
 </a>
 </div>
@@ -163,7 +154,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- 
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#tomcat"><span class="toc-number">1.</span> <span class="toc-text">tomcat</span></a></li></ol>
  
   </div>
 

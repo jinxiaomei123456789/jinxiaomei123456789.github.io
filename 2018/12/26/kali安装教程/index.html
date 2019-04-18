@@ -40,7 +40,7 @@
 <meta property="og:image" content="http://yoursite.com/2018/12/26/kali安装教程/安装步骤18.jpg">
 <meta property="og:image" content="http://yoursite.com/2018/12/26/kali安装教程/安装步骤19.jpg">
 <meta property="og:image" content="http://yoursite.com/2018/12/26/kali安装教程/安装步骤20.jpg">
-<meta property="og:updated_time" content="2019-04-09T06:13:25.013Z">
+<meta property="og:updated_time" content="2019-04-09T07:22:25.390Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="kali安装教程">
 <meta name="twitter:description" content="前言　　五个月之前因为兴趣接触了kali，从安装到基本命令以及一些黑客常用技术算是系统过了一遍，然而，这段时间没有碰现在全部忘记了，连基本的安装不会。博客是一个好东西，督促我不断学习，之前对自己太自信了，总以为自己过目不忘，然而却被现实打倒，好记性不如烂笔头，算是对自己的一个教训了，现在深刻地认识到做技术写博客是多么重要的一件事，一来回顾，二来查缺补漏，最后也是对自己职业生涯的一种见证与规划吧。一">
@@ -147,8 +147,7 @@
 <li>然后会问你是否要选择网络镜像，如果你的网络很好可以选择是，这里呢我选择的否。都行的。接下来都是默认。<br><img src="/2018/12/26/kali安装教程/安装步骤17.jpg" alt="安装步骤17"></li>
 <li>出现这一步选择“是”。<br><img src="/2018/12/26/kali安装教程/安装步骤18.jpg" alt="安装步骤18"></li>
 <li>选择第二个。<br><img src="/2018/12/26/kali安装教程/安装步骤19.jpg" alt="安装步骤19"></li>
-<li>出现这个的时候就说明安装结束了，点击继续现在开始你的黑客之旅吧。<br><img src="/2018/12/26/kali安装教程/安装步骤20.jpg" alt="安装步骤20">   <h1 id="安装vmtools"><a href="#安装vmtools" class="headerlink" title="安装vmtools"></a>安装vmtools</h1>输入命令apt install open-vm-tools-desktop,并点击y，结束后输入reboot重启kali即可。<h1 id="kali更新源"><a href="#kali更新源" class="headerlink" title="kali更新源"></a>kali更新源</h1><code>vim /etc/apt/sources.list</code><br>删除源内的内容或者只删除自带的kali源，并添加阿里云源<br><code>deb http://mirrors.aliyun.com/kali kali-rolling main non-free contrib 
-deb-src http://mirrors.aliyun.com/kali kali-rolling main non-free contrib</code><br>依次输入以下命令：<br><code>apt-get clean</code>   //清除缓存索引<br><code>apt-get update</code>    //更新索引文件<br><code>apt-get upgrade</code>   //更新实际的软件包文件<br><code>apt-get dist-upgrade</code>    //根据依赖关系更新</li>
+<li>出现这个的时候就说明安装结束了，点击继续现在开始你的黑客之旅吧。<br><img src="/2018/12/26/kali安装教程/安装步骤20.jpg" alt="安装步骤20">   <h1 id="安装vmtools"><a href="#安装vmtools" class="headerlink" title="安装vmtools"></a>安装vmtools</h1>输入命令apt install open-vm-tools-desktop,并点击y，结束后输入reboot重启kali即可。<h1 id="kali更新源"><a href="#kali更新源" class="headerlink" title="kali更新源"></a>kali更新源</h1><code>vim /etc/apt/sources.list</code><br>删除源内的内容或者只删除自带的kali源，并添加阿里云源或者使用kali自带的源。<br>依次输入以下命令：<br><code>apt-get clean</code>   //清除缓存索引<br><code>apt-get update</code>    //更新索引文件<br><code>apt-get upgrade</code>   //更新实际的软件包文件<br><code>apt-get dist-upgrade</code>    //根据依赖关系更新</li>
 </ol>
   
 	</div>
@@ -232,11 +231,11 @@ deb-src http://mirrors.aliyun.com/kali kali-rolling main non-free contrib</code>
 			
 		
 			
-				<li><a href="/tags/ssm/" title="ssm">ssm<sup>4</sup></a></li>
+				<li><a href="/tags/java/" title="java">java<sup>4</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/java/" title="java">java<sup>4</sup></a></li>
+				<li><a href="/tags/ssm/" title="ssm">ssm<sup>4</sup></a></li>
 			
 		
 			
@@ -256,11 +255,15 @@ deb-src http://mirrors.aliyun.com/kali kali-rolling main non-free contrib</code>
 			
 		
 			
-				<li><a href="/tags/ESXI/" title="ESXI">ESXI<sup>1</sup></a></li>
+				<li><a href="/tags/windows/" title="windows">windows<sup>1</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/burpsuite/" title="burpsuite">burpsuite<sup>1</sup></a></li>
+				<li><a href="/tags/Kali/" title="Kali">Kali<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/mybatis/" title="mybatis">mybatis<sup>1</sup></a></li>
 			
 		
 			
@@ -269,10 +272,6 @@ deb-src http://mirrors.aliyun.com/kali kali-rolling main non-free contrib</code>
 		
 			
 				<li><a href="/tags/bootstrap/" title="bootstrap">bootstrap<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/mybatis/" title="mybatis">mybatis<sup>1</sup></a></li>
 			
 		
 			
@@ -292,11 +291,11 @@ deb-src http://mirrors.aliyun.com/kali kali-rolling main non-free contrib</code>
 			
 		
 			
-				<li><a href="/tags/Kali/" title="Kali">Kali<sup>1</sup></a></li>
+				<li><a href="/tags/ESXI/" title="ESXI">ESXI<sup>1</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/报告/" title="报告">报告<sup>1</sup></a></li>
+				<li><a href="/tags/burpsuite/" title="burpsuite">burpsuite<sup>1</sup></a></li>
 			
 		
 			
@@ -304,7 +303,7 @@ deb-src http://mirrors.aliyun.com/kali kali-rolling main non-free contrib</code>
 			
 		
 			
-				<li><a href="/tags/网络/" title="网络">网络<sup>1</sup></a></li>
+				<li><a href="/tags/报告/" title="报告">报告<sup>1</sup></a></li>
 			
 		
 		</ul>

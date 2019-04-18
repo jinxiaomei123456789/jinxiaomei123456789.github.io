@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-04-09T02:45:11.534Z</updated>
+  <updated>2019-04-18T03:05:15.457Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,13 +17,36 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>项目测评学习</title>
+    <link href="http://yoursite.com/2019/04/18/%E9%A1%B9%E7%9B%AE%E6%B5%8B%E8%AF%84%E5%AD%A6%E4%B9%A0/"/>
+    <id>http://yoursite.com/2019/04/18/项目测评学习/</id>
+    <published>2019-04-18T02:31:12.000Z</published>
+    <updated>2019-04-18T03:05:15.457Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="tomcat"><a href="#tomcat" class="headerlink" title="tomcat"></a>tomcat</h1><p>客户在未设置网站最大连接数以及超时会话时间的情况下，使用的是tomcat默认设置。<br>1.对于tomcat版本5.5以下的，在tomcat的配置文件server.xml文件中的<connector>有maxthreads，后面的数字就是能够处理的最大连接数。<br>2.tomcat默认断开连接时间，5.5以下版本搜索sessionTimeout，5.5以上版本搜索connectionTimeout。</connector></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;tomcat&quot;&gt;&lt;a href=&quot;#tomcat&quot; class=&quot;headerlink&quot; title=&quot;tomcat&quot;&gt;&lt;/a&gt;tomcat&lt;/h1&gt;&lt;p&gt;客户在未设置网站最大连接数以及超时会话时间的情况下，使用的是tomcat默认设置。&lt;br&gt;1.对于tomca
+      
+    
+    </summary>
+    
+    
+      <category term="等保" scheme="http://yoursite.com/tags/%E7%AD%89%E4%BF%9D/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Kali Linux下的基础命令</title>
     <link href="http://yoursite.com/2019/04/09/Kali-Linux%E4%B8%8B%E7%9A%84%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/"/>
     <id>http://yoursite.com/2019/04/09/Kali-Linux下的基础命令/</id>
     <published>2019-04-09T01:31:50.000Z</published>
-    <updated>2019-04-09T02:45:11.534Z</updated>
+    <updated>2019-04-09T09:29:39.551Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Kali简介"><a href="#Kali简介" class="headerlink" title="Kali简介"></a>Kali简介</h1><p>&emsp;&emsp;Kali Linux是基于Debian的Linux发行版，设计用于数字取证和渗透测试的操作系统。预装了很多和渗透测试相关的软件，如nmap（端口扫描器）、Wireshark（数据分析器）等。   </p><h1 id="基础命令"><a href="#基础命令" class="headerlink" title="基础命令"></a>基础命令</h1><p>&emsp;&emsp;1.列出目录下的文件 ls<br>&emsp;&emsp;2.列出目录下的文件详细信息 ls -l<br>&emsp;&emsp;3.列出目录下文件的详细信息（文件大小带单位） ls -lh<br>&emsp;&emsp;4.列出目录下所有文件（包括隐藏文件） ls -a<br>&emsp;&emsp;5.列出目录下所有文件的详细信息（文件大小带单位） ls -alh<br>&emsp;&emsp;6.更换工作目录  cd<br>&emsp;&emsp;7.显示当前所在目录 pwd<br>&emsp;&emsp;8.返回上级目录 cd ..<br>&emsp;&emsp;9.返回上一次操作的目录 cd -<br>&emsp;&emsp;10.返回家目录 cd ~   </p><h1 id="目录操作"><a href="#目录操作" class="headerlink" title="目录操作"></a>目录操作</h1><p>&emsp;&emsp;1.创建新目录 mkdir dir-name<br>&emsp;&emsp;2.复制文件或者目录 cp -r 源文件目录地址  目标目录地址<br>&emsp;&emsp;3.删除空目录 rmdir dir-name<br>&emsp;&emsp;4,删除非空目录或文件 rm dir<br>&emsp;&emsp;5.删除目录下全部内容 rm -rf *<br>&emsp;&emsp;6.移动文件或目录 mv dir/file 目标目录地址<br>&emsp;&emsp;7.重命名格式 mv dir/file new   </p><h1 id="文件查看"><a href="#文件查看" class="headerlink" title="文件查看"></a>文件查看</h1><p>&emsp;&emsp;1.查看文件 cat file<br>&emsp;&emsp;2.查看文件头几行 head file<br>&emsp;&emsp;3.查看文件后几行 tail file<br>&emsp;&emsp;4.一页一页地显示文件 more file</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="Kali简介"><a href="#Kali简介" class="headerlink" title="Kali简介"></a>Kali简介</h1><p>&emsp;&emsp;Kali Linux是基于Debian的Linux发行版，设计用于数字取证和渗透测试的操作系统。预装了很多和渗透测试相关的软件，如nmap（端口扫描器）、Wireshark（数据分析器）等。   </p><h1 id="基础命令"><a href="#基础命令" class="headerlink" title="基础命令"></a>基础命令</h1><p>&emsp;&emsp;1.列出目录下的文件 ls<br>&emsp;&emsp;2.列出目录下的文件详细信息 ls -l<br>&emsp;&emsp;3.列出目录下文件的详细信息（文件大小带单位） ls -lh<br>&emsp;&emsp;4.列出目录下所有文件（包括隐藏文件） ls -a<br>&emsp;&emsp;5.列出目录下所有文件的详细信息（文件大小带单位） ls -alh<br>&emsp;&emsp;6.更换工作目录  cd<br>&emsp;&emsp;7.显示当前所在目录 pwd<br>&emsp;&emsp;8.返回上级目录 cd ..<br>&emsp;&emsp;9.返回上一次操作的目录 cd -<br>&emsp;&emsp;10.返回家目录 cd ~   </p><h1 id="目录操作"><a href="#目录操作" class="headerlink" title="目录操作"></a>目录操作</h1><p>&emsp;&emsp;1.创建新目录 mkdir dir-name<br>&emsp;&emsp;2.复制文件或者目录 cp -r 源文件目录地址  目标目录地址<br>&emsp;&emsp;3.删除空目录 rmdir dir-name<br>&emsp;&emsp;4,删除非空目录或文件 rm dir<br>&emsp;&emsp;5.删除目录下全部内容 rm -rf *<br>&emsp;&emsp;6.移动文件或目录 mv dir/file 目标目录地址<br>&emsp;&emsp;7.重命名格式 mv dir/file new   </p><h1 id="文件查看"><a href="#文件查看" class="headerlink" title="文件查看"></a>文件查看</h1><p>&emsp;&emsp;1.查看文件 cat file<br>&emsp;&emsp;2.查看文件头几行 head file<br>&emsp;&emsp;3.查看文件后几行 tail file<br>&emsp;&emsp;4.一页一页地显示文件 more file</p><h1 id="rpm套餐"><a href="#rpm套餐" class="headerlink" title="rpm套餐"></a>rpm套餐</h1><p>1.列出系统安装的所有软件 rpm -qa<br>2.筛选出含有指定文件名的软件 rpm -qa|grep 名称<br>3.</p><h1 id="Metasploit使用"><a href="#Metasploit使用" class="headerlink" title="Metasploit使用"></a>Metasploit使用</h1><p>&emsp;&emsp;启动此服务之前，需要先使用<code>service PostgreSQL start</code>启动PostgreSQL服务，再使用<code>service metasploit start</code>启动，输入<code>msfconsole</code>从终端启动metasploit框架。</p>]]></content>
     
     <summary type="html">
     
@@ -211,9 +234,9 @@
     <link href="http://yoursite.com/2019/02/11/%E8%AE%B0%E5%BD%95/"/>
     <id>http://yoursite.com/2019/02/11/记录/</id>
     <published>2019-02-11T08:45:46.000Z</published>
-    <updated>2019-02-26T06:05:33.922Z</updated>
+    <updated>2019-04-12T09:17:06.013Z</updated>
     
-    <content type="html"><![CDATA[<p>1.胡靓   SliSIeLVqut0GBI61b81g72dHJR4/soUKZVUvyoKSL5jnoAjpEdBpg==</p><h1 id="写报告注意事项"><a href="#写报告注意事项" class="headerlink" title="写报告注意事项"></a>写报告注意事项</h1><p>1.双击高危项，整改记录结果写详细，不能只写整改的那一部分，重新打分。<br>2.整改后不合格的需要和客户沟通，是否进行二次整改。<br>3.二级系统复核一般远程。<br>4.项目概述中的（DJCP2017310073）删除，右边的基本测评指标中-XXX不要勾选，其他保留。<br>5.简介中的第一行时间注意修改，项目启动为调研第一天，末次会议正常情况是进场的最后一天（末次会议时间一定要在渗透测试之后），复核日期按照实际来写（不要在用户提交整改情况后过久，用户提交整改材料时间后一周内）。<br>6.详细过程中的每个测评项的天数看情况完善后预览，预览中的4.分析与报告时间在复核时间确认之后，3中的现场实施结束时间在渗透测试之后，一般在进场的最后一天，方案编制过程为调研第二天，总时间为3天，最后一天不能在休息日，不合理的手动修改。<br>7.被测系统信息和承载业务情况在备案材料中找。<br>8.被测信息系统情况下的前次测评情况，如果是首次测评写：本次测评为首次测评。<br>9业务承载情况中的承载业务情况相关图片可以放也可以不放。<br>10.网络结构中的系统边界不用写。<br>11.安全服务商在系统建设最后一个测评项中找，安全服务名称例如：云服务。<br>12.测评对象选择方法中的“XX”删除，测评工具可以勾选也可以不选，具体的按照指定的模板。<br>13.整体测评第一页不改，第二页从例如开始全部删除，加上一句：经综合分析，，，，，，。<br>14.06总体评价中的内容全部删除，需要自己写。<br>15.ACDE文件，出具报告申请文件，必须在报告生成后生成，。A文件点击高级-》项目——》一键归档-》测评结论报告——》点击下载模板。文件中的每一项都是一票否决项，每一项描述文字不能超过500字，不能有图片。A文件的最后时间下一行加上参入测评人员（有证人员）<br>16.C文件是安全问题汇总，导出即可。<br>17.D文件不在工具中导，拿模板修改。<br>18.E文件导出整改状态调整。导出后表格中首句有句号，删掉加上未整改，或者直接删除。文件末尾时间是复核时间。<br>19.方案编制的最后一天不能是休息日，必须在工作日。<br>20.表格中一行内容都没有的，写“无”，合并单元格并居中。</p><h1 id="微盟报告检测注意事项"><a href="#微盟报告检测注意事项" class="headerlink" title="微盟报告检测注意事项"></a>微盟报告检测注意事项</h1><p>1.基于云平台的，在附上A13云平台的等级备案，更新目录时，将目录中的”A13XXX”删除，文本中依然以标题的形式存放。<br>2.报告中A12的漏扫中，如果有两份漏扫报告，这两份报告中的漏洞名称可能有一样的，需要将这两个合并，然后在地址栏中写两个漏洞地址。<br>3.云上系统，在3.2章节关于测评对象选择结果，该说明的都要说明。</p>]]></content>
+    <content type="html"><![CDATA[<p>1.胡靓   SliSIeLVqut0GBI61b81g72dHJR4/soUKZVUvyoKSL5jnoAjpEdBpg==</p><h1 id="写报告注意事项"><a href="#写报告注意事项" class="headerlink" title="写报告注意事项"></a>写报告注意事项</h1><p>1.双击高危项，整改记录结果写详细，不能只写整改的那一部分，重新打分。<br>2.整改后不合格的需要和客户沟通，是否进行二次整改。<br>3.二级系统复核一般远程。</p><h1 id="写报告流程"><a href="#写报告流程" class="headerlink" title="写报告流程"></a>写报告流程</h1><h2 id="测评目的和依据"><a href="#测评目的和依据" class="headerlink" title="测评目的和依据"></a>测评目的和依据</h2><p>1.项目概述中的（DJCP2017310073）删除，右边的基本测评指标中-XXX不要勾选，其他保留。</p><h2 id="测评过程"><a href="#测评过程" class="headerlink" title="测评过程"></a>测评过程</h2><p>5.简介中的第一行时间注意修改，项目启动为调研第一天，末次会议正常情况是进场的最后一天（末次会议时间一定要在渗透测试之后），复核日期按照实际来写（不要在用户提交整改情况后过久，用户提交整改材料时间后一周内）。<br>6.详细过程中的每个测评项的天数看情况完善后预览，预览中的4.分析与报告时间在复核时间确认之后，3中的现场实施结束时间在渗透测试之后，一般在进场的最后一天，方案编制过程为调研第二天，总时间为3天，最后一天不能在休息日，不合理的手动修改。<br>7.被测系统信息和承载业务情况在备案材料中找。<br>8.被测信息系统情况下的前次测评情况，如果是首次测评写：本次测评为首次测评。<br>9业务承载情况中的承载业务情况相关图片可以放也可以不放。<br>10.网络结构中的系统边界不用写。<br>11.安全服务商在系统建设最后一个测评项中找，安全服务名称例如：云服务。<br>12.测评对象选择方法中的“XX”删除，测评工具可以勾选也可以不选，具体的按照指定的模板。<br>13.整体测评第一页不改，第二页从例如开始全部删除，加上一句：经综合分析，，，，，，。<br>14.06总体评价中的内容全部删除，需要自己写。<br>15.ACDE文件，出具报告申请文件，必须在报告生成后生成，。A文件点击高级-》项目——》一键归档-》测评结论报告——》点击下载模板。文件中的每一项都是一票否决项，每一项描述文字不能超过500字，不能有图片。A文件的最后时间下一行加上参入测评人员（有证人员）<br>16.C文件是安全问题汇总，导出即可。<br>17.D文件不在工具中导，拿模板修改。<br>18.E文件导出整改状态调整。导出后表格中首句有句号，删掉加上未整改，或者直接删除。文件末尾时间是复核时间。<br>19.方案编制的最后一天不能是休息日，必须在工作日。<br>20.表格中一行内容都没有的，写“无”，合并单元格并居中。</p><h1 id="微盟报告检测注意事项"><a href="#微盟报告检测注意事项" class="headerlink" title="微盟报告检测注意事项"></a>微盟报告检测注意事项</h1><p>1.基于云平台的，在附上A13云平台的等级备案，更新目录时，将目录中的”A13XXX”删除，文本中依然以标题的形式存放。<br>2.报告中A12的漏扫中，如果有两份漏扫报告，这两份报告中的漏洞名称可能有一样的，需要将这两个合并，然后在地址栏中写两个漏洞地址。<br>3.云上系统，在3.2章节关于测评对象选择结果，该说明的都要说明。</p>]]></content>
     
     <summary type="html">
     
@@ -436,29 +459,6 @@
     
     
       <category term="网络" scheme="http://yoursite.com/tags/%E7%BD%91%E7%BB%9C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ESXI填坑</title>
-    <link href="http://yoursite.com/2019/01/07/ESXI%E5%A1%AB%E5%9D%91/"/>
-    <id>http://yoursite.com/2019/01/07/ESXI填坑/</id>
-    <published>2019-01-07T13:02:45.000Z</published>
-    <updated>2019-01-08T13:01:54.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>　　前段时间听所里小哥聊天，整个测评部能够做渗透测试的只有旭哥一个人，惊讶得很，这几天便开始了我的渗透之路，遇上很多坑，记录如下，以防后面查缺补漏增加学习和工作效率。　　</p><hr><p>　　</p><h4>新建虚拟机后IP地址分配不对</h4><br>　　 在新建虚拟机后，分配到的IP地址为169开头或者是0.0.0.0，这是因为电脑中还有其他的虚拟网卡，禁用掉除此虚拟机之外的网卡再新建虚拟机地址即可分配正确，一般都是以192.168开头的IP地址。禁用网卡位置如下图。<br>　　 <img src="/2019/01/07/ESXI填坑/网卡干扰.jpg" alt="禁用多余网卡">　　 　　 <p></p><hr><p>　　</p><h4>虚拟机开机分配动态IP地址</h4><br>　　新建虚拟机结束后，使用客户端连接服务器，第一次成功，后来第二此重启服务器后再连接就失败了，这是因为虚拟机中IPV4设置中，有一项默认设置是：使用动态IP地址，我们需要把这一项修改为使用静态IP地址，按F2进入系统配置，详细设置见下图。<br>　　<img src="/2019/01/07/ESXI填坑/静态IP设置.jpg" alt="静态IP">　　　　<p></p><hr><p>  </p><h4>客户端连接报错</h4><br>  使用客户端连接报错：在服务器192.168.2.3上调用对象“ServiceInstance”的“ServiceInstance.RetrieveContent”失败。这个错误原因是因为虚拟机没有开启SSH功能。按F2进入系统配置后选择“Troubleshooting Mode Options”，进入后将关于ssh的设置为enabled即可，如下图。<br>  <img src="/2019/01/07/ESXI填坑/客户端不能正常连接.jpg" alt="ssh功能未开启"><p></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;　　前段时间听所里小哥聊天，整个测评部能够做渗透测试的只有旭哥一个人，惊讶得很，这几天便开始了我的渗透之路，遇上很多坑，记录如下，以防后面查
-      
-    
-    </summary>
-    
-    
-      <category term="ESXI" scheme="http://yoursite.com/tags/ESXI/"/>
     
   </entry>
   
