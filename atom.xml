@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-04-20T06:00:29.635Z</updated>
+  <updated>2019-04-20T06:03:49.551Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>docker安装与命令</title>
+    <link href="http://yoursite.com/2019/04/20/docker%E5%AE%89%E8%A3%85%E4%B8%8E%E5%91%BD%E4%BB%A4/"/>
+    <id>http://yoursite.com/2019/04/20/docker安装与命令/</id>
+    <published>2019-04-20T06:02:50.000Z</published>
+    <updated>2019-04-20T06:03:49.551Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h1><p>&emsp;&emsp;docker是一个开源的引擎，可以轻松的为任何应用创建一个轻量级的、可移植的、自给自足的容器。开发者在笔记本上编译通过的容器可以批量地在生产环境中部署，包括VMware（虚拟机）、bare metal、OpenStack集群和其他的基础应用平台。 </p><h2 id="docker的三个基本概念"><a href="#docker的三个基本概念" class="headerlink" title="docker的三个基本概念"></a>docker的三个基本概念</h2><p>&emsp;&emsp;1.镜像(Image)<br>&emsp;&emsp;2.容器(Container)<br>&emsp;&emsp;3.仓库(Repository)</p><h3 id="镜像"><a href="#镜像" class="headerlink" title="镜像"></a>镜像</h3><p>docker镜像就是一个只读的模板，如：一个镜像可以包含一个完整的ubuntu操作系统环境，里面仅安装了Apache或者用户需要的其他应用程序；docker镜像可以用来创建docker容器；docker提供了一个很简单的机制来创建镜像或者更新现有的镜像，用户甚至可以直接从其他人那里下载一个已经做好的镜像来直接使用。简而言之，docker镜像就相当于我们平常安装Ubuntu系统时需要下载的ISO文件。 </p><h3 id="docker容器"><a href="#docker容器" class="headerlink" title="docker容器"></a>docker容器</h3><p>&emsp;&emsp;docker利用容器来运行应用，容器是从镜像创建的运行实例，它可以被启动、开始、停止、删除。每个容器都是相互隔离的、保证安全的平台。可以把容器看做是一个简易版的LInux环境（包括root用户权限、进程空间、用户空间和网络空间等）和运行在其中的应用程序。可以理解为已经创建好的具有界面的windows操作系统。</p><h3 id="docker仓库"><a href="#docker仓库" class="headerlink" title="docker仓库"></a>docker仓库</h3><p>&emsp;&emsp;仓库是集中存放镜像文件的场所，有时候会把仓库和仓库注册服务器（Registry）混为一谈，并不严格区分。实际上，仓库注册服务器上往往存放着多个仓库，每个仓库中又包含了多个镜像，每个镜像有不同的标签（tag）。<br>&emsp;&emsp;仓库分为公开仓库（public）和私有仓库（private）两种形式，最大的公开仓库是docker hub，存放了数量庞大的镜像供用户下载，国内的公开仓库包括docker pool，可以提供大陆用户更稳定快速的访问。<br>&emsp;&emsp;用户也可以在本地网络内创建一个私有仓库，当用户创建了自己的镜像之后可以使用push命令将它上传到公有或者私有仓库，这样下次在另外一台机器上使用这个镜像的时候，只需要从仓库上pull下来就可以了。</p><h1 id="docker优点"><a href="#docker优点" class="headerlink" title="docker优点"></a>docker优点</h1><p>&emsp;&emsp;1.docker是轻量级的、传统的物理机和虚拟机都太重型了，在互联网尤其是移动互联网时代，是特别讲究强调软件作为轻型服务发布，而docker正好满足这种需求；<br>&emsp;&emsp;2.docker的scale out能力是物理机和虚拟机所不具备的，而且container相对于物理机和虚拟机管理更方便；<br>&emsp;&emsp;3.docker作为lxc（linux constainerlinux容器）的管理器，封装了lxc的技术细节，将容器技术的使用门槛降低了，这是很多创业公司看中的，可以快速见到产品的效果；<br>&emsp;&emsp;4. docker开源技术的生态也越来越好，系统层面，ubuntu、centos、redhat、suse、windows、mac os都支持运行docker，这意味着应用容器可以直接在这些平台上迁移。</p><h1 id="docker安装"><a href="#docker安装" class="headerlink" title="docker安装"></a>docker安装</h1><p>&emsp;&emsp;首先准备一个centos7的环境，centos7已经搭建好了docker相关的依赖关系，我们只需要直接安装，而centos6还需要安装一些依赖包。<br>&emsp;&emsp;centos7下载以及配置方法参考：<a href="https://blog.csdn.net/reticent_man/article/details/80732395" target="_blank" rel="noopener">https://blog.csdn.net/reticent_man/article/details/80732395</a><br>&emsp;&emsp;下载完成后使用<code>yum install docker</code>安装docker包，在此过程中出现问题<code>“another app is currently holding the yum lock”</code>，一直循环输出这段话，提示yum被锁定，解决方法就是kill锁定yum的进程，输入<code>kill -s 9 pid（</code>锁定的进程号）。下面再去安装docker包，网速不好的需要花费一段时间（比如我自己），弹出complete表示安装结束。<br>&emsp;&emsp;安装结束后我们现在需要启动docker，centos7和centos6启动服务命令不同，centos6无法使用systemctl命令启动，7之后的版本可以使用。启动docker服务命令如下：<code>systemctl start docker</code>。之后我们可输入命令<code>systemctl status docker</code>检查docker是否已经正在运行，显示running 表示docker服务正在运行，如下图。<br> <img src="/2019/04/20/docker安装与命令/docker/docker运行状态.jpg" alt="查看docker运行状态"> </p><h1 id="docker使用"><a href="#docker使用" class="headerlink" title="docker使用"></a>docker使用</h1><h2 id="获取镜像"><a href="#获取镜像" class="headerlink" title="获取镜像"></a>获取镜像</h2><p>&emsp;&emsp;在docker仓库中搜索centos7镜像，命令如下：docker search centos:7  </p><h2 id="拉取镜像"><a href="#拉取镜像" class="headerlink" title="拉取镜像"></a>拉取镜像</h2><p>&emsp;&emsp;执行命令拉取镜像：<code>docker pull docker.io/cnetos</code></p><h2 id="进入容器与退出容器"><a href="#进入容器与退出容器" class="headerlink" title="进入容器与退出容器"></a>进入容器与退出容器</h2><p>&emsp;&emsp;1.进入容器命令：<code>docker run -t -i docker.io/centos   /bin/bash</code>，其中，-t参数让docker分配一个伪终端并绑定到标准输入上，-i参数则让容器的标准输入保持打开。进入容器后可看到命令行主机产生了改变，如下图：<br>  <img src="/2019/04/20/docker安装与命令/docker/进入容器.jpg" alt="进入容器"><br>&emsp;&emsp;2.退出容器：使用命令exit。<br>&emsp;&emsp;3.查看本地已有镜像，此处的本地是指安装的centos系统中已有的镜像，在查看之前，首先我们需要从docker容器中退出到centos系统中。查看命令如下：<code>docker images</code>，显示如下图所示。<br>  <img src="/2019/04/20/docker安装与命令/docker/查看本地已有镜像.jpg" alt="查看本地已有docker镜像"><br>&emsp;&emsp;注释：REPOSITORY:说明镜像来源于哪个仓库<br>&emsp;&emsp;TAG:镜像的标记<br>&emsp;&emsp;IMAGE ID它的ID号（唯一的）<br>&emsp;&emsp;CREATED：创建时间<br>&emsp;&emsp;VIRTUAL SIZE：镜像大小   </p><h2 id="保存docker镜像"><a href="#保存docker镜像" class="headerlink" title="保存docker镜像"></a>保存docker镜像</h2><p>&emsp;&emsp;使用命令<code>docker save -o centos7.tar docker.io/centos</code>将docker镜像打包到当前目录。<br>&emsp;&emsp;使用ls查看发现有一个叫centos7.tar的文件，这就是我们打包压缩好的centos7。<br>  <img src="/2019/04/20/docker安装与命令/docker/保存docker镜像.jpg" alt="保存docker镜像"> </p><h2 id="载入镜像"><a href="#载入镜像" class="headerlink" title="载入镜像"></a>载入镜像</h2><p>&emsp;&emsp;使用命令:<code>docker load --input centos7.tar</code>,<br>使用命令<code>docker ps -a</code>查看正在运行的容器，<code>docker stop ID号</code>终止正在运行的容器。<br>&emsp;&emsp;移除本地的docker镜像命令：<code>docker rm ID</code>，一处正在运行的docker镜像：<code>docker rm -f ID</code></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h1&gt;&lt;p&gt;&amp;emsp;&amp;emsp;docker是一个开源的引擎，可以轻松的为任何应用创建一个轻量级的、可移植的、自给自足的容器。开发者在笔记本上编译通
+      
+    
+    </summary>
+    
+    
+      <category term="docker" scheme="http://yoursite.com/tags/docker/"/>
+    
+  </entry>
   
   <entry>
     <title>docker</title>
@@ -436,29 +459,6 @@
     
     
       <category term="php" scheme="http://yoursite.com/tags/php/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>更换电脑的博客问题</title>
-    <link href="http://yoursite.com/2019/01/09/%E6%9B%B4%E6%8D%A2%E7%94%B5%E8%84%91%E7%9A%84%E5%8D%9A%E5%AE%A2%E9%97%AE%E9%A2%98/"/>
-    <id>http://yoursite.com/2019/01/09/更换电脑的博客问题/</id>
-    <published>2019-01-09T06:38:34.000Z</published>
-    <updated>2019-01-09T07:22:00.016Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>&emsp;&emsp;公司新发了一台笔记本，以往我还是使用自己的笔记本，某天，钟老师说：“你怎么不带公司发的笔记本，是不是嫌弃它比你的重？”说完阴险地笑了笑。组长听了这话，和颜悦色地对我说：“下次出项目还是统一一下电脑吧。”于是，这个星期我便换了新的电脑，新电脑上很多环境都要自己配，麻烦，但也权当是一个知识的回顾过程吧。首先，便是换电脑之后hexo博客如何继续更新的问题，以下是解决步骤。</p><h1 id="工具下载"><a href="#工具下载" class="headerlink" title="工具下载"></a>工具下载</h1><h2 id="NodeJs下载与环境配置"><a href="#NodeJs下载与环境配置" class="headerlink" title="NodeJs下载与环境配置"></a>NodeJs下载与环境配置</h2><p>&emsp;&emsp;在官网上下载NodeJs，一路next,选择安装地址时为D:\kit\node.js，完成后在cmd控制台中输入node -version提示node不是命令，这是因为在系统变量path中没有将D:\kit\node.js路径加进去，添加好之后再次输入还是无效，重新启动后成功，想来我自己的电脑是win7是不用重新启动的，而新电脑是win10，必须要重新启动。控制台中输入node -v显示如下信息说明安装成功。<br> <img src="/2019/01/09/更换电脑的博客问题/node安装成功.jpg" alt="node安装成功"></p><h2 id="Git下载与配置"><a href="#Git下载与配置" class="headerlink" title="Git下载与配置"></a>Git下载与配置</h2><p>&emsp;&emsp;在官网上下载Git工具，安装步骤网上有很多，安装结束后，桌面点击鼠标右键，看到有下图说明安装成功。<br> <img src="/2019/01/09/更换电脑的博客问题/Git安装成功.jpg" alt="Git安装成功"></p><h2 id="hexo安装"><a href="#hexo安装" class="headerlink" title="hexo安装"></a>hexo安装</h2><p>&emsp;&emsp;在cmd窗口中输入<code>npm install hexo-cli -g</code>来安装hexo，结束后输入hexo -v可以查看安装是否成功。<br><img src="/2019/01/09/更换电脑的博客问题/hexo安装.jpg" alt="hexo安装"></p><h1 id="在GitHub官网上添加新电脑产生的秘钥"><a href="#在GitHub官网上添加新电脑产生的秘钥" class="headerlink" title="在GitHub官网上添加新电脑产生的秘钥"></a>在GitHub官网上添加新电脑产生的秘钥</h1><ul><li>1.首先配置Git的用户名和邮箱。<br><img src="/2019/01/09/更换电脑的博客问题/配置Git用户名和邮箱.jpg" alt="配置Git用户名和邮箱"><br>2.输入命令在电脑上生成新的SSH KEY。连续点击三次“enter”键。如果电脑上之前已经生成过SSH KEY，那么新的会覆盖旧的。<br><img src="/2019/01/09/更换电脑的博客问题/给电脑上生成SSH KEY.jpg" alt="给电脑上生成SSH KEY"></li></ul><ol start="3"><li>打开电脑，可以看到电脑上生成了两个秘钥，秘钥生成算法为RSA算法，第一个文件是私钥，自己保留，不能给旁人知道，下面一个pub文件是公钥，大家都可以知晓。<br><img src="/2019/01/09/更换电脑的博客问题/电脑生成公私钥.jpg" alt="电脑生成公私钥"></li><li>打开公钥文件，复制添加到GitHub官网上。<br><img src="/2019/01/09/更换电脑的博客问题/github官网上添加新的SSH KEY.jpg" alt="github官网上添加新的SSH KEY"></li><li>配置结束后，测试配置是否成功。<br><img src="/2019/01/09/更换电脑的博客问题/测试新的SSH KEY配置是否成功.jpg" alt="测试新的SSH KEY配置是否成功"><h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1>&emsp;&emsp;当能够看到这篇博客时说明我已经成功了，在我打字时刻内心依然非常欣喜，在这不断探索不断修改直至看到效果的过程中，我备受鼓舞，想起一年多前一位大神学长曾经教导的话，做技术做学问要脚踏实地，我走着他经历过的路，遵循着他说过的话，不断去踩坑。很多事情其实很明了，坑都是自己挖的却还未看透继续在捯饬着，比如，在做完这一切配置后，我这篇博客在首次发布的时候图片不显示了，检查好几遍都没什么问题，最后的最后发现图片前面的感叹号!是中文模式下输入的……</li></ol>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;&amp;emsp;&amp;emsp;公司新发了一台笔记本，以往我还是使用自己的笔记本，某天，钟老师说：“你怎么不带公司发的笔记本，是不是嫌弃它比你的重？
-      
-    
-    </summary>
-    
-    
-      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
     
   </entry>
   
