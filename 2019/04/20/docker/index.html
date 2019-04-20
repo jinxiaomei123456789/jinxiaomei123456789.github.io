@@ -1,0 +1,519 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+  
+    <title>小生の博客</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="小生">
+    
+
+    
+    <meta name="description" content="title: dockerdate: 2019-04-20 10:05:48 tags: docker概念&amp;emsp;&amp;emsp;docker是一个开源的引擎，可以轻松的为任何应用创建一个轻量级的、可移植的、自给自足的容器。开发者在笔记本上编译通过的容器可以批量地在生产环境中部署，包括VMware（虚拟机）、bare metal、OpenStack集群和其他的基础应用平台。  docker的三个">
+<meta property="og:type" content="article">
+<meta property="og:title" content="小生の博客">
+<meta property="og:url" content="http://yoursite.com/2019/04/20/docker/index.html">
+<meta property="og:site_name" content="小生の博客">
+<meta property="og:description" content="title: dockerdate: 2019-04-20 10:05:48 tags: docker概念&amp;emsp;&amp;emsp;docker是一个开源的引擎，可以轻松的为任何应用创建一个轻量级的、可移植的、自给自足的容器。开发者在笔记本上编译通过的容器可以批量地在生产环境中部署，包括VMware（虚拟机）、bare metal、OpenStack集群和其他的基础应用平台。  docker的三个">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://yoursite.com/2019/04/20/docker/docker运行状态.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/04/20/docker/进入容器.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/04/20/docker/查看本地已有镜像.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/04/20/docker/保存docker镜像.jpg">
+<meta property="og:updated_time" content="2019-04-20T05:47:04.033Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="小生の博客">
+<meta name="twitter:description" content="title: dockerdate: 2019-04-20 10:05:48 tags: docker概念&amp;emsp;&amp;emsp;docker是一个开源的引擎，可以轻松的为任何应用创建一个轻量级的、可移植的、自给自足的容器。开发者在笔记本上编译通过的容器可以批量地在生产环境中部署，包括VMware（虚拟机）、bare metal、OpenStack集群和其他的基础应用平台。  docker的三个">
+<meta name="twitter:image" content="http://yoursite.com/2019/04/20/docker/docker运行状态.jpg">
+
+    
+    <link rel="alternative" href="/atom.xml" title="小生の博客" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/jacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/title.png" alt="小生の博客" title="小生の博客"></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="小生の博客">小生の博客</a></h1>
+				<h2 class="blog-motto">踏实努力地工作，踏实努力地学习</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">主页 | Home</a></li>
+					
+						<li><a href="/archives">归档 | Archives</a></li>
+					
+						<li><a href="/about">简介 | About</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索">
+						<input type="hidden" name="q" value="site:yoursite.com">
+					</form>
+					
+					</li>
+				</ul>
+			</ul></nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope="" itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2019/04/20/docker/" title="" itemprop="url"></a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="小生" target="_blank" itemprop="author">小生</a>
+		
+  </p><p class="article-time">
+    <time datetime="2019-04-20T02:05:48.910Z" itemprop="datePublished"> 发表于 2019-04-20</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#tags-docker"><span class="toc-number">1.</span> <span class="toc-text">tags: docker</span></a></li></ol><li class="toc-item toc-level-1"><a class="toc-link" href="#概念"><span class="toc-number"></span> <span class="toc-text">概念</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#docker的三个基本概念"><span class="toc-number">1.</span> <span class="toc-text">docker的三个基本概念</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#镜像"><span class="toc-number">1.1.</span> <span class="toc-text">镜像</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#docker容器"><span class="toc-number">1.2.</span> <span class="toc-text">docker容器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#docker仓库"><span class="toc-number">1.3.</span> <span class="toc-text">docker仓库</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#docker优点"><span class="toc-number"></span> <span class="toc-text">docker优点</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#docker安装"><span class="toc-number"></span> <span class="toc-text">docker安装</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#docker使用"><span class="toc-number"></span> <span class="toc-text">docker使用</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#获取镜像"><span class="toc-number">1.</span> <span class="toc-text">获取镜像</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#拉取镜像"><span class="toc-number">2.</span> <span class="toc-text">拉取镜像</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#进入容器与退出容器"><span class="toc-number">3.</span> <span class="toc-text">进入容器与退出容器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#保存docker镜像"><span class="toc-number">4.</span> <span class="toc-text">保存docker镜像</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#载入镜像"><span class="toc-number">5.</span> <span class="toc-text">载入镜像</span></a></li></ol>
+		
+		</li></div>
+		
+		<hr>
+<p>title: docker<br>date: 2019-04-20 10:05:48</p>
+<h2 id="tags-docker"><a href="#tags-docker" class="headerlink" title="tags: docker"></a>tags: docker</h2><h1 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h1><p>&emsp;&emsp;docker是一个开源的引擎，可以轻松的为任何应用创建一个轻量级的、可移植的、自给自足的容器。开发者在笔记本上编译通过的容器可以批量地在生产环境中部署，包括VMware（虚拟机）、bare metal、OpenStack集群和其他的基础应用平台。 </p>
+<h2 id="docker的三个基本概念"><a href="#docker的三个基本概念" class="headerlink" title="docker的三个基本概念"></a>docker的三个基本概念</h2><p>&emsp;&emsp;1.镜像(Image)<br>&emsp;&emsp;2.容器(Container)<br>&emsp;&emsp;3.仓库(Repository)</p>
+<h3 id="镜像"><a href="#镜像" class="headerlink" title="镜像"></a>镜像</h3><p>docker镜像就是一个只读的模板，如：一个镜像可以包含一个完整的ubuntu操作系统环境，里面仅安装了Apache或者用户需要的其他应用程序；docker镜像可以用来创建docker容器；docker提供了一个很简单的机制来创建镜像或者更新现有的镜像，用户甚至可以直接从其他人那里下载一个已经做好的镜像来直接使用。简而言之，docker镜像就相当于我们平常安装Ubuntu系统时需要下载的ISO文件。 </p>
+<h3 id="docker容器"><a href="#docker容器" class="headerlink" title="docker容器"></a>docker容器</h3><p>&emsp;&emsp;docker利用容器来运行应用，容器是从镜像创建的运行实例，它可以被启动、开始、停止、删除。每个容器都是相互隔离的、保证安全的平台。可以把容器看做是一个简易版的LInux环境（包括root用户权限、进程空间、用户空间和网络空间等）和运行在其中的应用程序。可以理解为已经创建好的具有界面的windows操作系统。</p>
+<h3 id="docker仓库"><a href="#docker仓库" class="headerlink" title="docker仓库"></a>docker仓库</h3><p>&emsp;&emsp;仓库是集中存放镜像文件的场所，有时候会把仓库和仓库注册服务器（Registry）混为一谈，并不严格区分。实际上，仓库注册服务器上往往存放着多个仓库，每个仓库中又包含了多个镜像，每个镜像有不同的标签（tag）。<br>&emsp;&emsp;仓库分为公开仓库（public）和私有仓库（private）两种形式，最大的公开仓库是docker hub，存放了数量庞大的镜像供用户下载，国内的公开仓库包括docker pool，可以提供大陆用户更稳定快速的访问。<br>&emsp;&emsp;用户也可以在本地网络内创建一个私有仓库，当用户创建了自己的镜像之后可以使用push命令将它上传到公有或者私有仓库，这样下次在另外一台机器上使用这个镜像的时候，只需要从仓库上pull下来就可以了。</p>
+<h1 id="docker优点"><a href="#docker优点" class="headerlink" title="docker优点"></a>docker优点</h1><p>&emsp;&emsp;1.docker是轻量级的、传统的物理机和虚拟机都太重型了，在互联网尤其是移动互联网时代，是特别讲究强调软件作为轻型服务发布，而docker正好满足这种需求；<br>&emsp;&emsp;2.docker的scale out能力是物理机和虚拟机所不具备的，而且container相对于物理机和虚拟机管理更方便；<br>&emsp;&emsp;3.docker作为lxc（linux constainerlinux容器）的管理器，封装了lxc的技术细节，将容器技术的使用门槛降低了，这是很多创业公司看中的，可以快速见到产品的效果；<br>&emsp;&emsp;4. docker开源技术的生态也越来越好，系统层面，ubuntu、centos、redhat、suse、windows、mac os都支持运行docker，这意味着应用容器可以直接在这些平台上迁移。</p>
+<h1 id="docker安装"><a href="#docker安装" class="headerlink" title="docker安装"></a>docker安装</h1><p>&emsp;&emsp;首先准备一个centos7的环境，centos7已经搭建好了docker相关的依赖关系，我们只需要直接安装，而centos6还需要安装一些依赖包。<br>&emsp;&emsp;centos7下载以及配置方法参考：<a href="https://blog.csdn.net/reticent_man/article/details/80732395" target="_blank" rel="noopener">https://blog.csdn.net/reticent_man/article/details/80732395</a><br>&emsp;&emsp;下载完成后使用<code>yum install docker</code>安装docker包，在此过程中出现问题<code>“another app is currently holding the yum lock”</code>，一直循环输出这段话，提示yum被锁定，解决方法就是kill锁定yum的进程，输入<code>kill -s 9 pid（</code>锁定的进程号）。下面再去安装docker包，网速不好的需要花费一段时间（比如我自己），弹出complete表示安装结束。<br>&emsp;&emsp;安装结束后我们现在需要启动docker，centos7和centos6启动服务命令不同，centos6无法使用systemctl命令启动，7之后的版本可以使用。启动docker服务命令如下：<code>systemctl start docker</code>。之后我们可输入命令<code>systemctl status docker</code>检查docker是否已经正在运行，显示running 表示docker服务正在运行，如下图。<br> <img src="/2019/04/20/docker/docker运行状态.jpg" alt="查看docker运行状态"> </p>
+<h1 id="docker使用"><a href="#docker使用" class="headerlink" title="docker使用"></a>docker使用</h1><h2 id="获取镜像"><a href="#获取镜像" class="headerlink" title="获取镜像"></a>获取镜像</h2><p>&emsp;&emsp;在docker仓库中搜索centos7镜像，命令如下：docker search centos:7  </p>
+<h2 id="拉取镜像"><a href="#拉取镜像" class="headerlink" title="拉取镜像"></a>拉取镜像</h2><p>&emsp;&emsp;执行命令拉取镜像：<code>docker pull docker.io/cnetos</code></p>
+<h2 id="进入容器与退出容器"><a href="#进入容器与退出容器" class="headerlink" title="进入容器与退出容器"></a>进入容器与退出容器</h2><p>&emsp;&emsp;1.进入容器命令：<code>docker run -t -i docker.io/centos   /bin/bash</code>，其中，-t参数让docker分配一个伪终端并绑定到标准输入上，-i参数则让容器的标准输入保持打开。进入容器后可看到命令行主机产生了改变，如下图：<br>  <img src="/2019/04/20/docker/进入容器.jpg" alt="进入容器"><br>&emsp;&emsp;2.退出容器：使用命令exit。<br>&emsp;&emsp;3.查看本地已有镜像，此处的本地是指安装的centos系统中已有的镜像，在查看之前，首先我们需要从docker容器中退出到centos系统中。查看命令如下：<code>docker images</code>，显示如下图所示。<br>  <img src="/2019/04/20/docker/查看本地已有镜像.jpg" alt="查看本地已有docker镜像"><br>&emsp;&emsp;注释：REPOSITORY:说明镜像来源于哪个仓库<br>&emsp;&emsp;TAG:镜像的标记<br>&emsp;&emsp;IMAGE ID它的ID号（唯一的）<br>&emsp;&emsp;CREATED：创建时间<br>&emsp;&emsp;VIRTUAL SIZE：镜像大小   </p>
+<h2 id="保存docker镜像"><a href="#保存docker镜像" class="headerlink" title="保存docker镜像"></a>保存docker镜像</h2><p>&emsp;&emsp;使用命令<code>docker save -o centos7.tar docker.io/centos</code>将docker镜像打包到当前目录。<br>&emsp;&emsp;使用ls查看发现有一个叫centos7.tar的文件，这就是我们打包压缩好的centos7。<br>  <img src="/2019/04/20/docker/保存docker镜像.jpg" alt="保存docker镜像"> </p>
+<h2 id="载入镜像"><a href="#载入镜像" class="headerlink" title="载入镜像"></a>载入镜像</h2><p>&emsp;&emsp;使用命令:<code>docker load --input centos7.tar</code>,<br>使用命令<code>docker ps -a</code>查看正在运行的容器，<code>docker stop</code>终止正在运行的容器。</p>
+  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://yoursite.com/2019/04/20/docker/" data-title="小生の博客" data-tsina="" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+
+<div class="next">
+<a href="/2019/04/18/项目测评学习/" title="项目测评学习">
+ <strong>下一篇：</strong><br> 
+ <span>项目测评学习
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+
+
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#tags-docker"><span class="toc-number">1.</span> <span class="toc-text">tags: docker</span></a></li></ol><li class="toc-item toc-level-1"><a class="toc-link" href="#概念"><span class="toc-number"></span> <span class="toc-text">概念</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#docker的三个基本概念"><span class="toc-number">1.</span> <span class="toc-text">docker的三个基本概念</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#镜像"><span class="toc-number">1.1.</span> <span class="toc-text">镜像</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#docker容器"><span class="toc-number">1.2.</span> <span class="toc-text">docker容器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#docker仓库"><span class="toc-number">1.3.</span> <span class="toc-text">docker仓库</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#docker优点"><span class="toc-number"></span> <span class="toc-text">docker优点</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#docker安装"><span class="toc-number"></span> <span class="toc-text">docker安装</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#docker使用"><span class="toc-number"></span> <span class="toc-text">docker使用</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#获取镜像"><span class="toc-number">1.</span> <span class="toc-text">获取镜像</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#拉取镜像"><span class="toc-number">2.</span> <span class="toc-text">拉取镜像</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#进入容器与退出容器"><span class="toc-number">3.</span> <span class="toc-text">进入容器与退出容器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#保存docker镜像"><span class="toc-number">4.</span> <span class="toc-text">保存docker镜像</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#载入镜像"><span class="toc-number">5.</span> <span class="toc-text">载入镜像</span></a></li></ol>
+ 
+  </li></div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+
+
+  
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/ajax/" title="ajax">ajax<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/java/" title="java">java<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/ssm/" title="ssm">ssm<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Linux/" title="Linux">Linux<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/php/" title="php">php<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/随笔/" title="随笔">随笔<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/考试/" title="考试">考试<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/xss/" title="xss">xss<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Kali/" title="Kali">Kali<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/mybatis/" title="mybatis">mybatis<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/kali/" title="kali">kali<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/bootstrap/" title="bootstrap">bootstrap<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/springmvc/" title="springmvc">springmvc<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/spring/" title="spring">spring<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/sqlmap/" title="sqlmap">sqlmap<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/windows/" title="windows">windows<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/burpsuite/" title="burpsuite">burpsuite<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/ESXI/" title="ESXI">ESXI<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/云镜-WAF-zabbix/" title="云镜 WAF zabbix">云镜 WAF zabbix<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/报告/" title="报告">报告<sup>1</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  
+
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer">
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Hello ,I&#39;m 小生 <br>
+			</p>
+	</section>
+	 
+	<div class="social-font">
+		
+		<a href="http://weibo.com/每日元气满满" target="_blank" class="icon-weibo" title="微博"></a>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</div>
+			
+		
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2019 
+		
+		<a href="/about" target="_blank" title="小生">小生</a>
+		
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?e6d1f421bbc9962127a50488f9ed37d1";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+  <script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"right","width":60,"height":120},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>

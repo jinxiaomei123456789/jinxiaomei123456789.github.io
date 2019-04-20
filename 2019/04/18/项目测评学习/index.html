@@ -11,18 +11,18 @@
     
 
     
-    <meta name="description" content="tomcat客户在未设置网站最大连接数以及超时会话时间的情况下，使用的是tomcat默认设置。1.对于tomcat版本5.5以下的，在tomcat的配置文件server.xml文件中的有maxthreads，后面的数字就是能够处理的最大连接数。2.tomcat默认断开连接时间，5.5以下版本搜索sessionTimeout，5.5以上版本搜索connectionTimeout。">
+    <meta name="description" content="tomcat&amp;emsp;&amp;emsp;客户在未设置网站最大连接数以及超时会话时间的情况下，使用的是tomcat默认设置。&amp;emsp;&amp;emsp;1.对于tomcat版本5.5以下的，在tomcat的配置文件server.xml文件中的有maxthreads，后面的数字就是能够处理的最大连接数。&amp;emsp;&amp;emsp;2.tomcat默认断开连接时间，5.5以下版本搜索sessionTimeout，5">
 <meta name="keywords" content="等保">
 <meta property="og:type" content="article">
 <meta property="og:title" content="项目测评学习">
 <meta property="og:url" content="http://yoursite.com/2019/04/18/项目测评学习/index.html">
 <meta property="og:site_name" content="小生の博客">
-<meta property="og:description" content="tomcat客户在未设置网站最大连接数以及超时会话时间的情况下，使用的是tomcat默认设置。1.对于tomcat版本5.5以下的，在tomcat的配置文件server.xml文件中的有maxthreads，后面的数字就是能够处理的最大连接数。2.tomcat默认断开连接时间，5.5以下版本搜索sessionTimeout，5.5以上版本搜索connectionTimeout。">
+<meta property="og:description" content="tomcat&amp;emsp;&amp;emsp;客户在未设置网站最大连接数以及超时会话时间的情况下，使用的是tomcat默认设置。&amp;emsp;&amp;emsp;1.对于tomcat版本5.5以下的，在tomcat的配置文件server.xml文件中的有maxthreads，后面的数字就是能够处理的最大连接数。&amp;emsp;&amp;emsp;2.tomcat默认断开连接时间，5.5以下版本搜索sessionTimeout，5">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-18T03:05:15.457Z">
+<meta property="og:updated_time" content="2019-04-18T07:50:16.303Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="项目测评学习">
-<meta name="twitter:description" content="tomcat客户在未设置网站最大连接数以及超时会话时间的情况下，使用的是tomcat默认设置。1.对于tomcat版本5.5以下的，在tomcat的配置文件server.xml文件中的有maxthreads，后面的数字就是能够处理的最大连接数。2.tomcat默认断开连接时间，5.5以下版本搜索sessionTimeout，5.5以上版本搜索connectionTimeout。">
+<meta name="twitter:description" content="tomcat&amp;emsp;&amp;emsp;客户在未设置网站最大连接数以及超时会话时间的情况下，使用的是tomcat默认设置。&amp;emsp;&amp;emsp;1.对于tomcat版本5.5以下的，在tomcat的配置文件server.xml文件中的有maxthreads，后面的数字就是能够处理的最大连接数。&amp;emsp;&amp;emsp;2.tomcat默认断开连接时间，5.5以下版本搜索sessionTimeout，5">
 
     
     <link rel="alternative" href="/atom.xml" title="小生の博客" type="application/atom+xml">
@@ -98,11 +98,16 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#tomcat"><span class="toc-number">1.</span> <span class="toc-text">tomcat</span></a></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#tomcat"><span class="toc-number">1.</span> <span class="toc-text">tomcat</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#linux身份认证"><span class="toc-number">2.</span> <span class="toc-text">linux身份认证</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#hosts-equiv文件"><span class="toc-number">2.1.</span> <span class="toc-text">hosts.equiv文件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#用途"><span class="toc-number">2.1.1.</span> <span class="toc-text">用途</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#检查方法"><span class="toc-number">2.1.2.</span> <span class="toc-text">检查方法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#鉴别信息复杂度策略"><span class="toc-number">2.2.</span> <span class="toc-text">鉴别信息复杂度策略</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#登录失败处理策略配置"><span class="toc-number">2.3.</span> <span class="toc-text">登录失败处理策略配置</span></a></li></ol></li></ol>
 		
 		</div>
 		
-		<h1 id="tomcat"><a href="#tomcat" class="headerlink" title="tomcat"></a>tomcat</h1><p>客户在未设置网站最大连接数以及超时会话时间的情况下，使用的是tomcat默认设置。<br>1.对于tomcat版本5.5以下的，在tomcat的配置文件server.xml文件中的<connector>有maxthreads，后面的数字就是能够处理的最大连接数。<br>2.tomcat默认断开连接时间，5.5以下版本搜索sessionTimeout，5.5以上版本搜索connectionTimeout。</connector></p>
+		<h1 id="tomcat"><a href="#tomcat" class="headerlink" title="tomcat"></a>tomcat</h1><p>&emsp;&emsp;客户在未设置网站最大连接数以及超时会话时间的情况下，使用的是tomcat默认设置。<br>&emsp;&emsp;1.对于tomcat版本5.5以下的，在tomcat的配置文件server.xml文件中的<connector>有maxthreads，后面的数字就是能够处理的最大连接数。<br>&emsp;&emsp;2.tomcat默认断开连接时间，5.5以下版本搜索sessionTimeout，5.5以上版本搜索connectionTimeout。</connector></p>
+<h1 id="linux身份认证"><a href="#linux身份认证" class="headerlink" title="linux身份认证"></a>linux身份认证</h1><h2 id="hosts-equiv文件"><a href="#hosts-equiv文件" class="headerlink" title="hosts.equiv文件"></a>hosts.equiv文件</h2><p> &emsp;&emsp;hosts.equiv文件是为了便于远程主机在本地计算机上执行远程命令而设计的。    </p>
+<h3 id="用途"><a href="#用途" class="headerlink" title="用途"></a>用途</h3><p>&emsp;&emsp;hosts.equiv和home目录下的.rhosts定义了哪些计算机和用户可以<code>不用提供口令</code>就在本地计算机上执行远程命令，如rcp等，这些不需要提供口令的计算机和用户称为受信任的。<br>&emsp;&emsp;当本地计算机收到执行远程命令请求时，相应的远程命令服务进程，如rcp远程拷贝服务，首先会检查/etc/hosts.equiv来确认请求是否来自受信任的计算机和用户，如果这个文件不存在或者虽然存在但不包括相应的计算机和用户，服务进程就会去检查$HOME/.rhosts文件。</p>
+<h3 id="检查方法"><a href="#检查方法" class="headerlink" title="检查方法"></a>检查方法</h3><p>&emsp;&emsp;主机方面的测评项a)应对登录操作系统和数据库系统的用户进行身份标识和鉴别。对于linux系统来说，要做两个方面的检查，（1）查看/etc/passwd文件中各用户的密码字段是否为空；（2）<br>应删除.rhosts和/etc/hosts.equiv文件中的主机或用户。</p>
+<h2 id="鉴别信息复杂度策略"><a href="#鉴别信息复杂度策略" class="headerlink" title="鉴别信息复杂度策略"></a>鉴别信息复杂度策略</h2><p>&emsp;&emsp;linux主机测评项:b)操作系统和数据库系统管理用户身份鉴别信息应具有不易被冒用的特点，口令应具有复杂度要求并定期更换。<br>&emsp;&emsp;查看/etc/login.defs文件，记录密码周期PASS_MAX_DAYS、PASS_MIN_DAYS；<br>&emsp;&emsp;查看/etc/pam.d/system-auth文件，此文件涉及到Linux服务器的密码复杂度，记录minlen=x(最小密码长度) ucredit=-x(最少x个大写字母) lcredit=-x(最少x个小写字母) dcredit=-x(最少x个数字)。</p>
+<h2 id="登录失败处理策略配置"><a href="#登录失败处理策略配置" class="headerlink" title="登录失败处理策略配置"></a>登录失败处理策略配置</h2><p>&emsp;&emsp;linux主机测评项：c)应启用登录失败处理功能，可采取结束会话、限制非法登录次数和自动退出等措施。<br>&emsp;&emsp;查看/etc/pam.d/system-auth文件，记录deny=X unlock_time=x，X次登录失败后账户锁定x秒。</p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -133,6 +138,14 @@
 	
 <nav class="article-nav clearfix">
  
+ <div class="prev">
+ <a href="/2019/04/20/docker/" title="">
+  <strong>上一篇：</strong><br>
+  <span>
+  (no title)</span>
+</a>
+</div>
+
 
 <div class="next">
 <a href="/2019/04/09/Kali-Linux下的基础命令/" title="Kali Linux下的基础命令">
@@ -154,7 +167,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#tomcat"><span class="toc-number">1.</span> <span class="toc-text">tomcat</span></a></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#tomcat"><span class="toc-number">1.</span> <span class="toc-text">tomcat</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#linux身份认证"><span class="toc-number">2.</span> <span class="toc-text">linux身份认证</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#hosts-equiv文件"><span class="toc-number">2.1.</span> <span class="toc-text">hosts.equiv文件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#用途"><span class="toc-number">2.1.1.</span> <span class="toc-text">用途</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#检查方法"><span class="toc-number">2.1.2.</span> <span class="toc-text">检查方法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#鉴别信息复杂度策略"><span class="toc-number">2.2.</span> <span class="toc-text">鉴别信息复杂度策略</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#登录失败处理策略配置"><span class="toc-number">2.3.</span> <span class="toc-text">登录失败处理策略配置</span></a></li></ol></li></ol>
  
   </div>
 
@@ -201,7 +214,7 @@
 			
 		
 			
-				<li><a href="/tags/windows/" title="windows">windows<sup>1</sup></a></li>
+				<li><a href="/tags/xss/" title="xss">xss<sup>1</sup></a></li>
 			
 		
 			
@@ -221,15 +234,11 @@
 			
 		
 			
-				<li><a href="/tags/spring/" title="spring">spring<sup>1</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/springmvc/" title="springmvc">springmvc<sup>1</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/xss/" title="xss">xss<sup>1</sup></a></li>
+				<li><a href="/tags/spring/" title="spring">spring<sup>1</sup></a></li>
 			
 		
 			
@@ -237,11 +246,15 @@
 			
 		
 			
-				<li><a href="/tags/ESXI/" title="ESXI">ESXI<sup>1</sup></a></li>
+				<li><a href="/tags/windows/" title="windows">windows<sup>1</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/burpsuite/" title="burpsuite">burpsuite<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/ESXI/" title="ESXI">ESXI<sup>1</sup></a></li>
 			
 		
 			

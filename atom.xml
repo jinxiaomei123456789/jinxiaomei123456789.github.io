@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-04-18T03:05:15.457Z</updated>
+  <updated>2019-04-20T05:47:04.033Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,19 +17,42 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>项目测评学习</title>
-    <link href="http://yoursite.com/2019/04/18/%E9%A1%B9%E7%9B%AE%E6%B5%8B%E8%AF%84%E5%AD%A6%E4%B9%A0/"/>
-    <id>http://yoursite.com/2019/04/18/项目测评学习/</id>
-    <published>2019-04-18T02:31:12.000Z</published>
-    <updated>2019-04-18T03:05:15.457Z</updated>
+    <title></title>
+    <link href="http://yoursite.com/2019/04/20/docker/"/>
+    <id>http://yoursite.com/2019/04/20/docker/</id>
+    <published>2019-04-20T02:05:48.910Z</published>
+    <updated>2019-04-20T05:47:04.033Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="tomcat"><a href="#tomcat" class="headerlink" title="tomcat"></a>tomcat</h1><p>客户在未设置网站最大连接数以及超时会话时间的情况下，使用的是tomcat默认设置。<br>1.对于tomcat版本5.5以下的，在tomcat的配置文件server.xml文件中的<connector>有maxthreads，后面的数字就是能够处理的最大连接数。<br>2.tomcat默认断开连接时间，5.5以下版本搜索sessionTimeout，5.5以上版本搜索connectionTimeout。</connector></p>]]></content>
+    <content type="html"><![CDATA[<hr><p>title: docker<br>date: 2019-04-20 10:05:48</p><h2 id="tags-docker"><a href="#tags-docker" class="headerlink" title="tags: docker"></a>tags: docker</h2><h1 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h1><p>&emsp;&emsp;docker是一个开源的引擎，可以轻松的为任何应用创建一个轻量级的、可移植的、自给自足的容器。开发者在笔记本上编译通过的容器可以批量地在生产环境中部署，包括VMware（虚拟机）、bare metal、OpenStack集群和其他的基础应用平台。 </p><h2 id="docker的三个基本概念"><a href="#docker的三个基本概念" class="headerlink" title="docker的三个基本概念"></a>docker的三个基本概念</h2><p>&emsp;&emsp;1.镜像(Image)<br>&emsp;&emsp;2.容器(Container)<br>&emsp;&emsp;3.仓库(Repository)</p><h3 id="镜像"><a href="#镜像" class="headerlink" title="镜像"></a>镜像</h3><p>docker镜像就是一个只读的模板，如：一个镜像可以包含一个完整的ubuntu操作系统环境，里面仅安装了Apache或者用户需要的其他应用程序；docker镜像可以用来创建docker容器；docker提供了一个很简单的机制来创建镜像或者更新现有的镜像，用户甚至可以直接从其他人那里下载一个已经做好的镜像来直接使用。简而言之，docker镜像就相当于我们平常安装Ubuntu系统时需要下载的ISO文件。 </p><h3 id="docker容器"><a href="#docker容器" class="headerlink" title="docker容器"></a>docker容器</h3><p>&emsp;&emsp;docker利用容器来运行应用，容器是从镜像创建的运行实例，它可以被启动、开始、停止、删除。每个容器都是相互隔离的、保证安全的平台。可以把容器看做是一个简易版的LInux环境（包括root用户权限、进程空间、用户空间和网络空间等）和运行在其中的应用程序。可以理解为已经创建好的具有界面的windows操作系统。</p><h3 id="docker仓库"><a href="#docker仓库" class="headerlink" title="docker仓库"></a>docker仓库</h3><p>&emsp;&emsp;仓库是集中存放镜像文件的场所，有时候会把仓库和仓库注册服务器（Registry）混为一谈，并不严格区分。实际上，仓库注册服务器上往往存放着多个仓库，每个仓库中又包含了多个镜像，每个镜像有不同的标签（tag）。<br>&emsp;&emsp;仓库分为公开仓库（public）和私有仓库（private）两种形式，最大的公开仓库是docker hub，存放了数量庞大的镜像供用户下载，国内的公开仓库包括docker pool，可以提供大陆用户更稳定快速的访问。<br>&emsp;&emsp;用户也可以在本地网络内创建一个私有仓库，当用户创建了自己的镜像之后可以使用push命令将它上传到公有或者私有仓库，这样下次在另外一台机器上使用这个镜像的时候，只需要从仓库上pull下来就可以了。</p><h1 id="docker优点"><a href="#docker优点" class="headerlink" title="docker优点"></a>docker优点</h1><p>&emsp;&emsp;1.docker是轻量级的、传统的物理机和虚拟机都太重型了，在互联网尤其是移动互联网时代，是特别讲究强调软件作为轻型服务发布，而docker正好满足这种需求；<br>&emsp;&emsp;2.docker的scale out能力是物理机和虚拟机所不具备的，而且container相对于物理机和虚拟机管理更方便；<br>&emsp;&emsp;3.docker作为lxc（linux constainerlinux容器）的管理器，封装了lxc的技术细节，将容器技术的使用门槛降低了，这是很多创业公司看中的，可以快速见到产品的效果；<br>&emsp;&emsp;4. docker开源技术的生态也越来越好，系统层面，ubuntu、centos、redhat、suse、windows、mac os都支持运行docker，这意味着应用容器可以直接在这些平台上迁移。</p><h1 id="docker安装"><a href="#docker安装" class="headerlink" title="docker安装"></a>docker安装</h1><p>&emsp;&emsp;首先准备一个centos7的环境，centos7已经搭建好了docker相关的依赖关系，我们只需要直接安装，而centos6还需要安装一些依赖包。<br>&emsp;&emsp;centos7下载以及配置方法参考：<a href="https://blog.csdn.net/reticent_man/article/details/80732395" target="_blank" rel="noopener">https://blog.csdn.net/reticent_man/article/details/80732395</a><br>&emsp;&emsp;下载完成后使用<code>yum install docker</code>安装docker包，在此过程中出现问题<code>“another app is currently holding the yum lock”</code>，一直循环输出这段话，提示yum被锁定，解决方法就是kill锁定yum的进程，输入<code>kill -s 9 pid（</code>锁定的进程号）。下面再去安装docker包，网速不好的需要花费一段时间（比如我自己），弹出complete表示安装结束。<br>&emsp;&emsp;安装结束后我们现在需要启动docker，centos7和centos6启动服务命令不同，centos6无法使用systemctl命令启动，7之后的版本可以使用。启动docker服务命令如下：<code>systemctl start docker</code>。之后我们可输入命令<code>systemctl status docker</code>检查docker是否已经正在运行，显示running 表示docker服务正在运行，如下图。<br> <img src="/2019/04/20/docker/docker运行状态.jpg" alt="查看docker运行状态"> </p><h1 id="docker使用"><a href="#docker使用" class="headerlink" title="docker使用"></a>docker使用</h1><h2 id="获取镜像"><a href="#获取镜像" class="headerlink" title="获取镜像"></a>获取镜像</h2><p>&emsp;&emsp;在docker仓库中搜索centos7镜像，命令如下：docker search centos:7  </p><h2 id="拉取镜像"><a href="#拉取镜像" class="headerlink" title="拉取镜像"></a>拉取镜像</h2><p>&emsp;&emsp;执行命令拉取镜像：<code>docker pull docker.io/cnetos</code></p><h2 id="进入容器与退出容器"><a href="#进入容器与退出容器" class="headerlink" title="进入容器与退出容器"></a>进入容器与退出容器</h2><p>&emsp;&emsp;1.进入容器命令：<code>docker run -t -i docker.io/centos   /bin/bash</code>，其中，-t参数让docker分配一个伪终端并绑定到标准输入上，-i参数则让容器的标准输入保持打开。进入容器后可看到命令行主机产生了改变，如下图：<br>  <img src="/2019/04/20/docker/进入容器.jpg" alt="进入容器"><br>&emsp;&emsp;2.退出容器：使用命令exit。<br>&emsp;&emsp;3.查看本地已有镜像，此处的本地是指安装的centos系统中已有的镜像，在查看之前，首先我们需要从docker容器中退出到centos系统中。查看命令如下：<code>docker images</code>，显示如下图所示。<br>  <img src="/2019/04/20/docker/查看本地已有镜像.jpg" alt="查看本地已有docker镜像"><br>&emsp;&emsp;注释：REPOSITORY:说明镜像来源于哪个仓库<br>&emsp;&emsp;TAG:镜像的标记<br>&emsp;&emsp;IMAGE ID它的ID号（唯一的）<br>&emsp;&emsp;CREATED：创建时间<br>&emsp;&emsp;VIRTUAL SIZE：镜像大小   </p><h2 id="保存docker镜像"><a href="#保存docker镜像" class="headerlink" title="保存docker镜像"></a>保存docker镜像</h2><p>&emsp;&emsp;使用命令<code>docker save -o centos7.tar docker.io/centos</code>将docker镜像打包到当前目录。<br>&emsp;&emsp;使用ls查看发现有一个叫centos7.tar的文件，这就是我们打包压缩好的centos7。<br>  <img src="/2019/04/20/docker/保存docker镜像.jpg" alt="保存docker镜像"> </p><h2 id="载入镜像"><a href="#载入镜像" class="headerlink" title="载入镜像"></a>载入镜像</h2><p>&emsp;&emsp;使用命令:<code>docker load --input centos7.tar</code>,<br>使用命令<code>docker ps -a</code>查看正在运行的容器，<code>docker stop</code>终止正在运行的容器。</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h1 id=&quot;tomcat&quot;&gt;&lt;a href=&quot;#tomcat&quot; class=&quot;headerlink&quot; title=&quot;tomcat&quot;&gt;&lt;/a&gt;tomcat&lt;/h1&gt;&lt;p&gt;客户在未设置网站最大连接数以及超时会话时间的情况下，使用的是tomcat默认设置。&lt;br&gt;1.对于tomca
+        &lt;hr&gt;
+&lt;p&gt;title: docker&lt;br&gt;date: 2019-04-20 10:05:48&lt;/p&gt;
+&lt;h2 id=&quot;tags-docker&quot;&gt;&lt;a href=&quot;#tags-docker&quot; class=&quot;headerlink&quot; title=&quot;tags: docker&quot;&gt;&lt;
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>项目测评学习</title>
+    <link href="http://yoursite.com/2019/04/18/%E9%A1%B9%E7%9B%AE%E6%B5%8B%E8%AF%84%E5%AD%A6%E4%B9%A0/"/>
+    <id>http://yoursite.com/2019/04/18/项目测评学习/</id>
+    <published>2019-04-18T02:31:12.000Z</published>
+    <updated>2019-04-18T07:50:16.303Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="tomcat"><a href="#tomcat" class="headerlink" title="tomcat"></a>tomcat</h1><p>&emsp;&emsp;客户在未设置网站最大连接数以及超时会话时间的情况下，使用的是tomcat默认设置。<br>&emsp;&emsp;1.对于tomcat版本5.5以下的，在tomcat的配置文件server.xml文件中的<connector>有maxthreads，后面的数字就是能够处理的最大连接数。<br>&emsp;&emsp;2.tomcat默认断开连接时间，5.5以下版本搜索sessionTimeout，5.5以上版本搜索connectionTimeout。</connector></p><h1 id="linux身份认证"><a href="#linux身份认证" class="headerlink" title="linux身份认证"></a>linux身份认证</h1><h2 id="hosts-equiv文件"><a href="#hosts-equiv文件" class="headerlink" title="hosts.equiv文件"></a>hosts.equiv文件</h2><p> &emsp;&emsp;hosts.equiv文件是为了便于远程主机在本地计算机上执行远程命令而设计的。    </p><h3 id="用途"><a href="#用途" class="headerlink" title="用途"></a>用途</h3><p>&emsp;&emsp;hosts.equiv和home目录下的.rhosts定义了哪些计算机和用户可以<code>不用提供口令</code>就在本地计算机上执行远程命令，如rcp等，这些不需要提供口令的计算机和用户称为受信任的。<br>&emsp;&emsp;当本地计算机收到执行远程命令请求时，相应的远程命令服务进程，如rcp远程拷贝服务，首先会检查/etc/hosts.equiv来确认请求是否来自受信任的计算机和用户，如果这个文件不存在或者虽然存在但不包括相应的计算机和用户，服务进程就会去检查$HOME/.rhosts文件。</p><h3 id="检查方法"><a href="#检查方法" class="headerlink" title="检查方法"></a>检查方法</h3><p>&emsp;&emsp;主机方面的测评项a)应对登录操作系统和数据库系统的用户进行身份标识和鉴别。对于linux系统来说，要做两个方面的检查，（1）查看/etc/passwd文件中各用户的密码字段是否为空；（2）<br>应删除.rhosts和/etc/hosts.equiv文件中的主机或用户。</p><h2 id="鉴别信息复杂度策略"><a href="#鉴别信息复杂度策略" class="headerlink" title="鉴别信息复杂度策略"></a>鉴别信息复杂度策略</h2><p>&emsp;&emsp;linux主机测评项:b)操作系统和数据库系统管理用户身份鉴别信息应具有不易被冒用的特点，口令应具有复杂度要求并定期更换。<br>&emsp;&emsp;查看/etc/login.defs文件，记录密码周期PASS_MAX_DAYS、PASS_MIN_DAYS；<br>&emsp;&emsp;查看/etc/pam.d/system-auth文件，此文件涉及到Linux服务器的密码复杂度，记录minlen=x(最小密码长度) ucredit=-x(最少x个大写字母) lcredit=-x(最少x个小写字母) dcredit=-x(最少x个数字)。</p><h2 id="登录失败处理策略配置"><a href="#登录失败处理策略配置" class="headerlink" title="登录失败处理策略配置"></a>登录失败处理策略配置</h2><p>&emsp;&emsp;linux主机测评项：c)应启用登录失败处理功能，可采取结束会话、限制非法登录次数和自动退出等措施。<br>&emsp;&emsp;查看/etc/pam.d/system-auth文件，记录deny=X unlock_time=x，X次登录失败后账户锁定x秒。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;tomcat&quot;&gt;&lt;a href=&quot;#tomcat&quot; class=&quot;headerlink&quot; title=&quot;tomcat&quot;&gt;&lt;/a&gt;tomcat&lt;/h1&gt;&lt;p&gt;&amp;emsp;&amp;emsp;客户在未设置网站最大连接数以及超时会话时间的情况下，使用的是tomcat默认设置。&lt;
       
     
     </summary>
@@ -436,29 +459,6 @@
     
     
       <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>网络</title>
-    <link href="http://yoursite.com/2019/01/08/%E7%BD%91%E7%BB%9C/"/>
-    <id>http://yoursite.com/2019/01/08/网络/</id>
-    <published>2019-01-08T13:03:33.000Z</published>
-    <updated>2019-04-01T06:03:41.150Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>&emsp;&emsp;网络方面很多知识在大三学习的，计算机网络与网络安全这两门都是信息安全系主任葛斌老师授课，我们习惯叫他葛大爷。葛大爷苦口婆心教导每一个知识点，每次上课前随机点名抽取上一堂课的问题让学生回答，问题长达十个都有，在他教授这两门课的过程是我们大学时代最最黑暗的时光了，每次他上课的前两天宿舍就开始不分昼夜地背书，问问题，问原理，他上的每一次课，提前十分钟教室就坐满了人，教室里笼罩着恐怖气息，个个盯着书本嘴里念念有词还手舞足蹈（紧张地），仿佛下一秒就要变成哈利波特骑着扫把飞走了。</p><p>&emsp;&emsp;这样的好处是期中期末考试时，班上几乎没有人在这两门课上花时间，因为所有知识都滚瓜烂熟了，感谢葛大爷！！！而距离现在已经快两年没有接触网络了，在工作学习甚至是面试考试中又或多或少会遇到，索性这次就去回顾学习一番。</p><h1 id="什么是计算机网络"><a href="#什么是计算机网络" class="headerlink" title="什么是计算机网络"></a>什么是计算机网络</h1><p>&emsp;&emsp;计算机网络是指由两台或两台以上的计算机通过网络设备连接起来所组成的一个系统，在这个系统中计算机与计算机之间可以进行数据通信、数据共享及协同完成某些数据处理的工作。这里的计算机不仅仅指我们的电脑，其实指的是所有在网络中的网络设备，比如手机，平板电脑等。</p><h1 id="计算机之间如何进行通信"><a href="#计算机之间如何进行通信" class="headerlink" title="计算机之间如何进行通信"></a>计算机之间如何进行通信</h1><p>&emsp;&emsp;有了计算机等设备，也就得考虑如何连接起来他们，这就是他们之间该如何通信的问题。对计算机来说，就是一个硬件设备，如何让计算机与计算机连接起来，必需需要软件的支撑。那么支持计算机通讯的软件是什么呢？就是计算机网络参考模型。这个计算机网络参考模型就是计算机网络软件。最经典的当然是国际化标准的OSI（Open System InterConnect  开放式系统互联）参考模型。它是通过一个机器上的一个应用进程与另一个机器上的进程进行信息交互。下面我们了解下这个模型。</p><h1 id="网络模型"><a href="#网络模型" class="headerlink" title="网络模型"></a>网络模型</h1><h2 id="OSI七层模型"><a href="#OSI七层模型" class="headerlink" title="OSI七层模型"></a>OSI七层模型</h2><p>&emsp;&emsp;OSI七层模型（从下到上）：物理层、数据链路层、网络层、传输层、会话层、表示层、应用层。同层之间相互进行通信，下层为上层提供服务。OSI参考模型如下图所示。<br> <img src="/2019/01/08/网络/OSI模型图.jpg" alt="OSI参考模型"><br>&emsp;&emsp;物理层：物理层向上为数据链路层传输比特流，这一层的数据单位是比特（bit）,协议有Rj45，802.3等。<br>&emsp;&emsp;数据链路层：负责在单个链路节点上传输以帧为单位的数据。协议有ATM，FDDI等。<br>&emsp;&emsp;网络层：  网络层传送的数据称为分组或包(packet)，在物理网络间传送分组，负责将源端主机的报文通过中间转发结点传送到目的端。网络层主要负责分组转发和路由选择，根据路由表把分组逐跳地由源站传送到目的站，并能适应网络的负载及拓扑结构的变化，动态地更新路由表。协议有：IP,IPX等。<br>&emsp;&emsp;传输层：  传输层传输的数据称为报文(message)，传输层为源结点和目的结点的用户进程之间提供端到端的可靠的传输服务。协议有：TCP，UDP等。<br>&emsp;&emsp;会话层：会话层在传输层服务的基础上增加控制会话的机制，建立、组织和协调应用进程之间的交互过程。会话层提供的会话服务种类包括双工、半双工和单工方式。协议有RPC，SQL等。<br>&emsp;&emsp;表示层：表示层定义用户或应用程序之间交换数据的格式，提供数据表示之间的转换服务，保证传输的信息到达目的端后意义不变。协议有：GIF，JPEG，等。<br>&emsp;&emsp;应用层：这一层为用户的应用程序（例如电子邮件、文件传输和终端仿真）提供网络服务。协议有：telnet，HTTP,FTP,NFS,SMTP等。</p><h2 id="TCP-IP模型"><a href="#TCP-IP模型" class="headerlink" title="TCP/IP模型"></a>TCP/IP模型</h2><p>&emsp;&emsp; TCP/IP模型（从下到上）：物理层、数据链路层、网络层、传输层、应用层。模型图如下。<br> <img src="/2019/01/08/网络/五层协议模型.jpg" alt="五层协议参考模型">  </p><h3 id="TCP的三次握手"><a href="#TCP的三次握手" class="headerlink" title="TCP的三次握手"></a>TCP的三次握手</h3><hr><p>&emsp;&emsp;TCP(Transmission Control Protocol)　传输控制协议，是主机对主机层的传输控制协议，提供可靠的连接服务，采用三次握手确认建立一个连接，TCP的标志位又称为位码，在三次握手过程中有6种标示：<br>&emsp;&emsp;SYN(synchronous建立联机)：建立连接，设置为1，SYN这个标志位只有在TCP建产连接时才会被置1，握手完成后SYN标志位被置0。<br>&emsp;&emsp;ACK(acknowledgement确认) ：占1位，仅当ACK=1时，确认号字段才有效。ACK=0时，确认号无效 。<br>&emsp;&emsp;PSH(push传送)：提示接收端应用程序立即从TCP缓冲区把数据读走。<br>&emsp;&emsp;FIN(finish结束)：用来释放一个连接。FIN=1表示：此报文段的发送方的数据已经发送完毕，并要求释放运输连接<br>&emsp;&emsp;RST(rest重置)：对方要求重新建立连接，复位。<br>&emsp;&emsp;URG(uegent紧急)：紧急指针是否有效。为1，表示某一位需要被优先处理 。<br>&emsp;&emsp;seq(Sequence number序列号码)：序列号seq就是这个报文段中的第一个字节的数据编号，随机产生。<br>&emsp;&emsp;ack(Acknowledge numbe确认号码)：期待收到对方下一个报文段的第一个数据字节的序号，值为seq+1.<br>&emsp;&emsp;在建立连接过程中客户端TCP状态变化如下：<br>&emsp;&emsp;CLOSED-&gt;SYN_SENT-&gt;ESTABLISHED-&gt;FIN_WAIT_1-&gt;FIN_WAIT_2-&gt;TIME_WAIT-&gt;CLOSED<br>&emsp;&emsp;在建立连接的过程中服务器端TCP状态变化如下：<br>&emsp;&emsp;CLOSED-&gt;LISTEN-&gt;SYN-RECEIVED-&gt;ESTABLISHED-&gt;CLOSE_WAIT-&gt;LAST_ACK-&gt;CLOSED<br>&emsp;&emsp;TCP建立连接的三次握手过程文字描述如下：<br>&emsp;&emsp;第一次握手：客户端A发送位码为SYN＝1,随机产生seq number=1234567的数据包到服务器B，服务器B由SYN=1知道，客户机A要求建立联机；<br>&emsp;&emsp;第二次握手：服务器B收到请求后要确认联机信息，向客户机A发送ack number=(主机A的seq+1),syn=1,ack=1,随机产生seq=7654321的包。<br>&emsp;&emsp;第三次握手：客户机A收到服务器B发来的数据包后检查ack number是否等于客户机A第一次发送的seq number+1,以及位码ack是否为1，若正确，客户机A会再发送ack number=(服务器B的seq+1),SYN=0，ack=1的数据包给服务器B，服务器B收到后确认seq值与ack=1则连接建立成功。<br>&emsp;&emsp;TCP的三次握手模型图如下所示：<br> <img src="/2019/01/08/网络/TCP三次握手.jpg" alt="TCP三次握手"> </p><hr><h3 id="TCP的四次挥手"><a href="#TCP的四次挥手" class="headerlink" title="TCP的四次挥手"></a>TCP的四次挥手</h3><p>&emsp;&emsp;TCP的连接断开需要发送四个包，因此称为四次挥手(four-way handshake)。客户端或服务器均可主动发起挥手动作，在socket编程中，任何一方执行close()操作即可产生挥手操作。<br>&emsp;&emsp;客户端进程发出连接释放报文，并且停止发送数据。释放数据报文首部，FIN=1，其序列号为seq=u（等于前面已经传送过来的数据的最后一个字节的序号加1），此时，客户端进入FIN-WAIT-1（终止等待1）状态。<br>&emsp;&emsp;服务器收到连接释放报文，发出确认报文，ACK=1，ack=u+1，并且带上自己的序列号seq=v。<br>&emsp;&emsp;服务器B关闭与客户端A的连接，发送一个FIN给客户端A。<br>&emsp;&emsp;客户端A发回ACK报文确认，并将确认序号设置为收到序号加1。<br>&emsp;&emsp;TCP四次挥手如下图：<br><img src="/2019/01/08/网络/TCP四次挥手.jpg" alt="TCP四次挥手"> </p><h4 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h4><p>&emsp;&emsp;为什么建立连接协议是三次握手，而关闭连接却是四次握手呢？<br>&emsp;&emsp;这是因为服务端的LISTEN状态下的SOCKET当收到SYN报文的连接请求后，它可以把ACK和SYN(ACK起应答作用，而SYN起同步作用)放在一个报文里来发送。但关闭连接时，当收到对方的FIN报文通知时，它仅仅表示对方没有数据发送给你了；但未必你所有的数据都全部发送给对方了，所以你可能未必会马上会关闭SOCKET,也即你可能还需要发送一些数据给对方之后，再发送FIN报文给对方来表示你同意现在可以关闭连接了，所以它这里的ACK报文和FIN报文多数情况下都是分开发送的。</p><h3 id="TCP与UDP的区别"><a href="#TCP与UDP的区别" class="headerlink" title="TCP与UDP的区别"></a>TCP与UDP的区别</h3><p>&emsp;&emsp;1、TCP面向连接（如打电话要先拨号建立连接）;UDP是无连接的，即发送数据之前不需要建立连接。<br>&emsp;&emsp; 2、TCP提供可靠的服务。也就是说，通过TCP连接传送的数据，无差错，不丢失，不重复，且按序到达;UDP尽最大努力交付，即不保证可靠交付。Tcp通过校验和，重传控制，序号标识，滑动窗口、确认应答实现可靠传输。如丢包时的重发控制，还可以对次序乱掉的分包进行顺序控制。<br>&emsp;&emsp; 3、UDP具有较好的实时性，工作效率比TCP高，适用于对高速传输和实时性有较高的通信或广播通信。<br>&emsp;&emsp; 4.每一条TCP连接只能是点到点的;UDP支持一对一，一对多，多对一和多对多的交互通信。<br>&emsp;&emsp; 5、TCP对系统资源要求较多，UDP对系统资源要求较少。</p><h3 id="UDP优势"><a href="#UDP优势" class="headerlink" title="UDP优势"></a>UDP优势</h3><p>&emsp;&emsp;UDP以其简单、传输快的优势，在越来越多场景下取代了TCP,如实时游戏，原因如下。<br>&emsp;&emsp;1.网速的提升给UDP的稳定性提供可靠网络保障，丢包率很低，如果使用应用层重传，能够确保传输的可靠性。<br>&emsp;&emsp;2.TCP为了实现网络通信的可靠性，使用了复杂的拥塞控制算法，建立了繁琐的握手过程，由于TCP内置的系统协议栈中，极难对其进行改进。<br>&emsp;&emsp;3.采用TCP，一旦发生丢包，TCP会将后续的包缓存起来，等前面的包重传并接收到后再继续发送，延时会越来越大，基于UDP对实时性要求较为严格的情况下，采用自定义重传机制，能够把丢包产生的延迟降到最低，尽量减少网络问题对游戏性造成影响。</p><h1 id="IP地址相关"><a href="#IP地址相关" class="headerlink" title="IP地址相关"></a>IP地址相关</h1><h2 id="IP地址计算"><a href="#IP地址计算" class="headerlink" title="IP地址计算"></a>IP地址计算</h2><p>&emsp;&emsp;例题：子网掩码是255.255.255.0，能容纳多少台电脑？</p><h1 id="阿里云"><a href="#阿里云" class="headerlink" title="阿里云"></a>阿里云</h1><p>&emsp;&emsp;客户服务器搭建在阿里云上，在测网络时，需要对阿里云有足够的了解。</p><h2 id="阿里云安全产品"><a href="#阿里云安全产品" class="headerlink" title="阿里云安全产品"></a>阿里云安全产品</h2><h3 id="安骑士"><a href="#安骑士" class="headerlink" title="安骑士"></a>安骑士</h3><p>&emsp;&emsp;安骑士是一款经受百万级主机稳定性考验的主机安全加固产品，拥有自动化实时入侵威胁检测、病毒查杀、漏洞只能修复、基线一键核查等功能，是构建主机安全防线的统一管理平台。<br>&emsp;&emsp;1.安骑士分为基础版和企业版，2018年12月20号起，安骑士基础版将不支持主机异常检测功能，基础版用户将无法查看主机异常检测事件。以下为基础版和企业版的功能列表。<br><img src="/2019/01/08/网络/安骑士1.JPG" alt="安骑士">    </p><p><img src="/2019/01/08/网络/安骑士2.JPG" alt="安骑士">     </p><p><img src="/2019/01/08/网络/安骑士3.JPG" alt="安骑士">      </p><p><img src="/2019/01/08/网络/安骑士4.JPG" alt="安骑士"> </p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;&amp;emsp;&amp;emsp;网络方面很多知识在大三学习的，计算机网络与网络安全这两门都是信息安全系主任葛斌老师授课，我们习惯叫他葛大爷。葛大爷苦
-      
-    
-    </summary>
-    
-    
-      <category term="网络" scheme="http://yoursite.com/tags/%E7%BD%91%E7%BB%9C/"/>
     
   </entry>
   
