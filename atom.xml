@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-04-20T06:06:04.506Z</updated>
+  <updated>2019-04-29T02:23:52.607Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,13 +17,74 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Linux系统加固</title>
+    <link href="http://yoursite.com/2019/04/29/Linux%E7%B3%BB%E7%BB%9F%E5%8A%A0%E5%9B%BA/"/>
+    <id>http://yoursite.com/2019/04/29/Linux系统加固/</id>
+    <published>2019-04-29T02:09:26.000Z</published>
+    <updated>2019-04-29T02:23:52.607Z</updated>
+    
+    <content type="html"><![CDATA[<p>&emsp;&emsp;一下演示使用centos7版本。   </p><h1 id="系统信息"><a href="#系统信息" class="headerlink" title="系统信息"></a>系统信息</h1><p>&emsp;&emsp;查看内核信息：<code>uname -a</code>;<br>&emsp;&emsp;查看所有软件包：<code>rpm -qa</code>;<br>&emsp;&emsp;查看主机名：<code>hostname</code>;<br>&emsp;&emsp;查看网络配置：<code>ifconfig -a</code>;<br>&emsp;&emsp;查看路由表：<code>netstat -rn</code>;<br>&emsp;&emsp;查看开放端口：<code>netstat -an</code>;<br>&emsp;&emsp;查看当前进程：<code>ps -aux</code>;</p><h1 id="账号"><a href="#账号" class="headerlink" title="账号"></a>账号</h1><h2 id="弱口令"><a href="#弱口令" class="headerlink" title="弱口令"></a>弱口令</h2><p>&emsp;&emsp;操作目的：检查弱口令；<br>&emsp;&emsp;检查方法：将被检查主机的/etc/shadow文件拷贝出来，运行john工具检测弱口令，也可以使用字典检查弱口令：<code>john --wordlist=/usr/share/john/passwd.lst</code>文件路径。<br>&emsp;&emsp;加固方法：使用”<code>passwd 用户名</code>“命令为用户设置复杂密码。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&amp;emsp;&amp;emsp;一下演示使用centos7版本。   &lt;/p&gt;
+&lt;h1 id=&quot;系统信息&quot;&gt;&lt;a href=&quot;#系统信息&quot; class=&quot;headerlink&quot; title=&quot;系统信息&quot;&gt;&lt;/a&gt;系统信息&lt;/h1&gt;&lt;p&gt;&amp;emsp;&amp;emsp;查看内核信息：&lt;cod
+      
+    
+    </summary>
+    
+    
+      <category term="系统加固" scheme="http://yoursite.com/tags/%E7%B3%BB%E7%BB%9F%E5%8A%A0%E5%9B%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>windows系统加固</title>
+    <link href="http://yoursite.com/2019/04/27/windows%E7%B3%BB%E7%BB%9F%E5%8A%A0%E5%9B%BA/"/>
+    <id>http://yoursite.com/2019/04/27/windows系统加固/</id>
+    <published>2019-04-27T12:50:24.000Z</published>
+    <updated>2019-04-29T02:00:19.494Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="系统信息"><a href="#系统信息" class="headerlink" title="系统信息"></a>系统信息</h1><p>&emsp;&emsp;windows系统加固之前，需要查看windows的系统信息，通常需要查看的信息如下：<br>&emsp;&emsp;1.查看系统版本，使用命令<code>ver</code><br><img src="/2019/04/27/windows系统加固/查看系统版本.jpg" alt="windows系统加固"><br>&emsp;&emsp;2.查看SP版本，SP是指系统的补丁包,使用命令<code>wmic os get ServicePackMajorVersion</code><br><img src="/2019/04/27/windows系统加固/查看windows的SP.jpg" alt="windows系统加固"><br>&emsp;&emsp;3.查看Hotfix,Hotfix是微软公司研发的一个程序，针对某一个具体的系统漏洞或安全问题而发布的专门解决该漏洞或安全问题，通常称为修补程序。使用命令<code>wmic qfe get hotfixid</code><br><img src="/2019/04/27/windows系统加固/查看windows的hotfix.jpg" alt="windows系统加固"><br>&emsp;&emsp;4.查看windows的主机名hostname,使用命令<code>hostname</code><br><img src="/2019/04/27/windows系统加固/查看windows的hostname.jpg" alt="windows系统加固"><br>&emsp;&emsp;5.查看网络配置，使用命令<code>ipconfig/all</code><br><img src="/2019/04/27/windows系统加固/查看网络配置.jpg" alt="windows系统加固"><br>&emsp;&emsp;6.查看路由表，使用命令<code>route print</code><br><img src="/2019/04/27/windows系统加固/查看路由表.jpg" alt="windows系统加固"><br>&emsp;&emsp;7.查看开放端口，使用命令<code>netstat -ano</code><br><img src="/2019/04/27/windows系统加固/查看开放端口.jpg" alt="windows系统加固"></p><h1 id="补丁管理"><a href="#补丁管理" class="headerlink" title="补丁管理"></a>补丁管理</h1><p>&emsp;&emsp;1.补丁安装的目的：修补漏洞<br>&emsp;&emsp;2.注意事项：打补丁前做好业务或系统备份，回退时恢复备份。补丁安装后可能影响业务系统的稳定性。</p><h1 id="账号口令"><a href="#账号口令" class="headerlink" title="账号口令"></a>账号口令</h1><h2 id="账户"><a href="#账户" class="headerlink" title="账户"></a>账户</h2><p>&emsp;&emsp;操作目的：减少系统无用账户，降低风险。<br>&emsp;&emsp;检查方法：开始-&gt;运行-&gt;compmgmt.msc(计算机管理)-&gt;本地用户和组，查看是否有不用的账号，系统账户所属组是否正确，以及guest账户是否锁定。</p><h2 id="口令策略"><a href="#口令策略" class="headerlink" title="口令策略"></a>口令策略</h2><p>&emsp;&emsp;操作目的：增强口令的复杂度及锁定策略等，降低被暴力破解的可能性。<br>&emsp;&emsp;检查方法：开始-&gt;运行-&gt;secpol.msc(本地安全策略)-&gt;安全设置<br>&emsp;&emsp;加固方法：账户设置-&gt;密码策略，要求如下：<br>&emsp;&emsp;&emsp;&emsp;密码必须符合复杂性要求：启用<br>&emsp;&emsp;&emsp;&emsp;密码长度最小值：8个字符<br>&emsp;&emsp;&emsp;&emsp;密码最短使用期限：0天<br>&emsp;&emsp;&emsp;&emsp;密码最长使用期限：90天<br>&emsp;&emsp;&emsp;&emsp;强制密码历史：5个记住密码（更改的密码不能和前5次相同）</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;系统信息&quot;&gt;&lt;a href=&quot;#系统信息&quot; class=&quot;headerlink&quot; title=&quot;系统信息&quot;&gt;&lt;/a&gt;系统信息&lt;/h1&gt;&lt;p&gt;&amp;emsp;&amp;emsp;windows系统加固之前，需要查看windows的系统信息，通常需要查看的信息如下：&lt;br&gt;&amp;em
+      
+    
+    </summary>
+    
+    
+      <category term="系统加固" scheme="http://yoursite.com/tags/%E7%B3%BB%E7%BB%9F%E5%8A%A0%E5%9B%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>心情</title>
+    <link href="http://yoursite.com/2019/04/25/%E5%BF%83%E6%83%85/"/>
+    <id>http://yoursite.com/2019/04/25/心情/</id>
+    <published>2019-04-25T02:21:24.000Z</published>
+    <updated>2019-04-25T02:21:24.503Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>docker</title>
     <link href="http://yoursite.com/2019/04/20/docker/"/>
     <id>http://yoursite.com/2019/04/20/docker/</id>
     <published>2019-04-20T02:05:48.000Z</published>
-    <updated>2019-04-20T06:06:04.506Z</updated>
+    <updated>2019-04-20T12:12:10.248Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h1><p>&emsp;&emsp;docker是一个开源的引擎，可以轻松的为任何应用创建一个轻量级的、可移植的、自给自足的容器。开发者在笔记本上编译通过的容器可以批量地在生产环境中部署，包括VMware（虚拟机）、bare metal、OpenStack集群和其他的基础应用平台。 </p><h2 id="docker的三个基本概念"><a href="#docker的三个基本概念" class="headerlink" title="docker的三个基本概念"></a>docker的三个基本概念</h2><p>&emsp;&emsp;1.镜像(Image)<br>&emsp;&emsp;2.容器(Container)<br>&emsp;&emsp;3.仓库(Repository)</p><h3 id="镜像"><a href="#镜像" class="headerlink" title="镜像"></a>镜像</h3><p>docker镜像就是一个只读的模板，如：一个镜像可以包含一个完整的ubuntu操作系统环境，里面仅安装了Apache或者用户需要的其他应用程序；docker镜像可以用来创建docker容器；docker提供了一个很简单的机制来创建镜像或者更新现有的镜像，用户甚至可以直接从其他人那里下载一个已经做好的镜像来直接使用。简而言之，docker镜像就相当于我们平常安装Ubuntu系统时需要下载的ISO文件。 </p><h3 id="docker容器"><a href="#docker容器" class="headerlink" title="docker容器"></a>docker容器</h3><p>&emsp;&emsp;docker利用容器来运行应用，容器是从镜像创建的运行实例，它可以被启动、开始、停止、删除。每个容器都是相互隔离的、保证安全的平台。可以把容器看做是一个简易版的LInux环境（包括root用户权限、进程空间、用户空间和网络空间等）和运行在其中的应用程序。可以理解为已经创建好的具有界面的windows操作系统。</p><h3 id="docker仓库"><a href="#docker仓库" class="headerlink" title="docker仓库"></a>docker仓库</h3><p>&emsp;&emsp;仓库是集中存放镜像文件的场所，有时候会把仓库和仓库注册服务器（Registry）混为一谈，并不严格区分。实际上，仓库注册服务器上往往存放着多个仓库，每个仓库中又包含了多个镜像，每个镜像有不同的标签（tag）。<br>&emsp;&emsp;仓库分为公开仓库（public）和私有仓库（private）两种形式，最大的公开仓库是docker hub，存放了数量庞大的镜像供用户下载，国内的公开仓库包括docker pool，可以提供大陆用户更稳定快速的访问。<br>&emsp;&emsp;用户也可以在本地网络内创建一个私有仓库，当用户创建了自己的镜像之后可以使用push命令将它上传到公有或者私有仓库，这样下次在另外一台机器上使用这个镜像的时候，只需要从仓库上pull下来就可以了。</p><h1 id="docker优点"><a href="#docker优点" class="headerlink" title="docker优点"></a>docker优点</h1><p>&emsp;&emsp;1.docker是轻量级的、传统的物理机和虚拟机都太重型了，在互联网尤其是移动互联网时代，是特别讲究强调软件作为轻型服务发布，而docker正好满足这种需求；<br>&emsp;&emsp;2.docker的scale out能力是物理机和虚拟机所不具备的，而且container相对于物理机和虚拟机管理更方便；<br>&emsp;&emsp;3.docker作为lxc（linux constainerlinux容器）的管理器，封装了lxc的技术细节，将容器技术的使用门槛降低了，这是很多创业公司看中的，可以快速见到产品的效果；<br>&emsp;&emsp;4. docker开源技术的生态也越来越好，系统层面，ubuntu、centos、redhat、suse、windows、mac os都支持运行docker，这意味着应用容器可以直接在这些平台上迁移。</p><h1 id="docker安装"><a href="#docker安装" class="headerlink" title="docker安装"></a>docker安装</h1><p>&emsp;&emsp;首先准备一个centos7的环境，centos7已经搭建好了docker相关的依赖关系，我们只需要直接安装，而centos6还需要安装一些依赖包。<br>&emsp;&emsp;centos7下载以及配置方法参考：<a href="https://blog.csdn.net/reticent_man/article/details/80732395" target="_blank" rel="noopener">https://blog.csdn.net/reticent_man/article/details/80732395</a><br>&emsp;&emsp;下载完成后使用<code>yum install docker</code>安装docker包，在此过程中出现问题<code>“another app is currently holding the yum lock”</code>，一直循环输出这段话，提示yum被锁定，解决方法就是kill锁定yum的进程，输入<code>kill -s 9 pid（</code>锁定的进程号）。下面再去安装docker包，网速不好的需要花费一段时间（比如我自己），弹出complete表示安装结束。<br>&emsp;&emsp;安装结束后我们现在需要启动docker，centos7和centos6启动服务命令不同，centos6无法使用systemctl命令启动，7之后的版本可以使用。启动docker服务命令如下：<code>systemctl start docker</code>。之后我们可输入命令<code>systemctl status docker</code>检查docker是否已经正在运行，显示running 表示docker服务正在运行，如下图。<br> <img src="/2019/04/20/docker/docker运行状态.jpg" alt="查看docker运行状态"> </p><h1 id="docker使用"><a href="#docker使用" class="headerlink" title="docker使用"></a>docker使用</h1><h2 id="获取镜像"><a href="#获取镜像" class="headerlink" title="获取镜像"></a>获取镜像</h2><p>&emsp;&emsp;在docker仓库中搜索centos7镜像，命令如下：docker search centos:7  </p><h2 id="拉取镜像"><a href="#拉取镜像" class="headerlink" title="拉取镜像"></a>拉取镜像</h2><p>&emsp;&emsp;执行命令拉取镜像：<code>docker pull docker.io/cnetos</code></p><h2 id="进入容器与退出容器"><a href="#进入容器与退出容器" class="headerlink" title="进入容器与退出容器"></a>进入容器与退出容器</h2><p>&emsp;&emsp;1.进入容器命令：<code>docker run -t -i docker.io/centos   /bin/bash</code>，其中，-t参数让docker分配一个伪终端并绑定到标准输入上，-i参数则让容器的标准输入保持打开。进入容器后可看到命令行主机产生了改变，如下图：<br>  <img src="/2019/04/20/docker/进入容器.jpg" alt="进入容器"><br>&emsp;&emsp;2.退出容器：使用命令exit。<br>&emsp;&emsp;3.查看本地已有镜像，此处的本地是指安装的centos系统中已有的镜像，在查看之前，首先我们需要从docker容器中退出到centos系统中。查看命令如下：<code>docker images</code>，显示如下图所示。<br>  <img src="/2019/04/20/docker/查看本地已有镜像.jpg" alt="查看本地已有docker镜像"><br>&emsp;&emsp;注释：REPOSITORY:说明镜像来源于哪个仓库<br>&emsp;&emsp;TAG:镜像的标记<br>&emsp;&emsp;IMAGE ID它的ID号（唯一的）<br>&emsp;&emsp;CREATED：创建时间<br>&emsp;&emsp;VIRTUAL SIZE：镜像大小   </p><h2 id="保存docker镜像"><a href="#保存docker镜像" class="headerlink" title="保存docker镜像"></a>保存docker镜像</h2><p>&emsp;&emsp;使用命令<code>docker save -o centos7.tar docker.io/centos</code>将docker镜像打包到当前目录。<br>&emsp;&emsp;使用ls查看发现有一个叫centos7.tar的文件，这就是我们打包压缩好的centos7。<br>  <img src="/2019/04/20/docker/保存docker镜像.jpg" alt="保存docker镜像"> </p><h2 id="载入镜像"><a href="#载入镜像" class="headerlink" title="载入镜像"></a>载入镜像</h2><p>&emsp;&emsp;使用命令:<code>docker load --input centos7.tar</code>,<br>使用命令<code>docker ps -a</code>查看正在运行的容器，<code>docker stop ID号</code>终止正在运行的容器。<br>&emsp;&emsp;移除本地的docker镜像命令：<code>docker rm ID</code>，一处正在运行的docker镜像：<code>docker rm -f ID</code></p>]]></content>
+    <content type="html"><![CDATA[<h1 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h1><p>&emsp;&emsp;docker是一个开源的引擎，可以轻松的为任何应用创建一个轻量级的、可移植的、自给自足的容器。开发者在笔记本上编译通过的容器可以批量地在生产环境中部署，包括VMware（虚拟机）、bare metal、OpenStack集群和其他的基础应用平台。 </p><h2 id="docker的三个基本概念"><a href="#docker的三个基本概念" class="headerlink" title="docker的三个基本概念"></a>docker的三个基本概念</h2><p>&emsp;&emsp;1.镜像(Image)<br>&emsp;&emsp;2.容器(Container)<br>&emsp;&emsp;3.仓库(Repository)</p><h3 id="镜像"><a href="#镜像" class="headerlink" title="镜像"></a>镜像</h3><p>docker镜像就是一个只读的模板，如：一个镜像可以包含一个完整的ubuntu操作系统环境，里面仅安装了Apache或者用户需要的其他应用程序；docker镜像可以用来创建docker容器；docker提供了一个很简单的机制来创建镜像或者更新现有的镜像，用户甚至可以直接从其他人那里下载一个已经做好的镜像来直接使用。简而言之，docker镜像就相当于我们平常安装Ubuntu系统时需要下载的ISO文件。 </p><h3 id="docker容器"><a href="#docker容器" class="headerlink" title="docker容器"></a>docker容器</h3><p>&emsp;&emsp;docker利用容器来运行应用，容器是从镜像创建的运行实例，它可以被启动、开始、停止、删除。每个容器都是相互隔离的、保证安全的平台。可以把容器看做是一个简易版的LInux环境（包括root用户权限、进程空间、用户空间和网络空间等）和运行在其中的应用程序。可以理解为已经创建好的具有界面的windows操作系统。</p><h3 id="docker仓库"><a href="#docker仓库" class="headerlink" title="docker仓库"></a>docker仓库</h3><p>&emsp;&emsp;仓库是集中存放镜像文件的场所，有时候会把仓库和仓库注册服务器（Registry）混为一谈，并不严格区分。实际上，仓库注册服务器上往往存放着多个仓库，每个仓库中又包含了多个镜像，每个镜像有不同的标签（tag）。<br>&emsp;&emsp;仓库分为公开仓库（public）和私有仓库（private）两种形式，最大的公开仓库是docker hub，存放了数量庞大的镜像供用户下载，国内的公开仓库包括docker pool，可以提供大陆用户更稳定快速的访问。<br>&emsp;&emsp;用户也可以在本地网络内创建一个私有仓库，当用户创建了自己的镜像之后可以使用push命令将它上传到公有或者私有仓库，这样下次在另外一台机器上使用这个镜像的时候，只需要从仓库上pull下来就可以了。</p><h1 id="docker优点"><a href="#docker优点" class="headerlink" title="docker优点"></a>docker优点</h1><p>&emsp;&emsp;1.docker是轻量级的、传统的物理机和虚拟机都太重型了，在互联网尤其是移动互联网时代，是特别讲究强调软件作为轻型服务发布，而docker正好满足这种需求；<br>&emsp;&emsp;2.docker的scale out（可扩展）能力是物理机和虚拟机所不具备的，而且container相对于物理机和虚拟机管理更方便；<br>&emsp;&emsp;3.docker作为lxc（linux constainerlinux容器）的管理器，封装了lxc的技术细节，将容器技术的使用门槛降低了，这是很多创业公司看中的，可以快速见到产品的效果；<br>&emsp;&emsp;4. docker开源技术的生态也越来越好，系统层面，ubuntu、centos、redhat、suse、windows、mac os都支持运行docker，这意味着应用容器可以直接在这些平台上迁移。</p><h1 id="docker安装"><a href="#docker安装" class="headerlink" title="docker安装"></a>docker安装</h1><p>&emsp;&emsp;首先准备一个centos7的环境，centos7已经搭建好了docker相关的依赖关系，我们只需要直接安装，而centos6还需要安装一些依赖包。<br>&emsp;&emsp;centos7下载以及配置方法参考：<a href="https://blog.csdn.net/reticent_man/article/details/80732395" target="_blank" rel="noopener">https://blog.csdn.net/reticent_man/article/details/80732395</a><br>&emsp;&emsp;下载完成后使用<code>yum install docker</code>安装docker包，在此过程中出现问题<code>“another app is currently holding the yum lock”</code>，一直循环输出这段话，提示yum被锁定，解决方法就是kill锁定yum的进程，输入<code>kill -s 9 pid（</code>锁定的进程号）。下面再去安装docker包，网速不好的需要花费一段时间（比如我自己），弹出complete表示安装结束。<br>&emsp;&emsp;安装结束后我们现在需要启动docker，centos7和centos6启动服务命令不同，centos6无法使用systemctl命令启动，7之后的版本可以使用。启动docker服务命令如下：<code>systemctl start docker</code>。之后我们可输入命令<code>systemctl status docker</code>检查docker是否已经正在运行，显示running 表示docker服务正在运行，如下图。<br> <img src="/2019/04/20/docker/docker运行状态.jpg" alt="查看docker运行状态"> </p><h1 id="docker使用"><a href="#docker使用" class="headerlink" title="docker使用"></a>docker使用</h1><h2 id="获取镜像"><a href="#获取镜像" class="headerlink" title="获取镜像"></a>获取镜像</h2><p>&emsp;&emsp;在docker仓库中搜索centos7镜像，命令如下：docker search centos:7  </p><h2 id="拉取镜像"><a href="#拉取镜像" class="headerlink" title="拉取镜像"></a>拉取镜像</h2><p>&emsp;&emsp;执行命令拉取镜像：<code>docker pull docker.io/cnetos</code></p><h2 id="进入容器与退出容器"><a href="#进入容器与退出容器" class="headerlink" title="进入容器与退出容器"></a>进入容器与退出容器</h2><p>&emsp;&emsp;1.进入容器命令：<code>docker run -t -i docker.io/centos   /bin/bash</code>，其中，-t参数让docker分配一个伪终端并绑定到标准输入上，-i参数则让容器的标准输入保持打开。进入容器后可看到命令行主机产生了改变，如下图：<br>  <img src="/2019/04/20/docker/进入容器.jpg" alt="进入容器"><br>&emsp;&emsp;2.退出容器：使用命令exit。<br>&emsp;&emsp;3.查看本地已有镜像，此处的本地是指安装的centos系统中已有的镜像，在查看之前，首先我们需要从docker容器中退出到centos系统中。查看命令如下：<code>docker images</code>，显示如下图所示。<br>  <img src="/2019/04/20/docker/查看本地已有镜像.jpg" alt="查看本地已有docker镜像"><br>&emsp;&emsp;注释：REPOSITORY:说明镜像来源于哪个仓库<br>&emsp;&emsp;TAG:镜像的标记<br>&emsp;&emsp;IMAGE ID它的ID号（唯一的）<br>&emsp;&emsp;CREATED：创建时间<br>&emsp;&emsp;VIRTUAL SIZE：镜像大小   </p><h2 id="保存docker镜像"><a href="#保存docker镜像" class="headerlink" title="保存docker镜像"></a>保存docker镜像</h2><p>&emsp;&emsp;使用命令<code>docker save -o centos7.tar docker.io/centos</code>将docker镜像打包到当前目录。<br>&emsp;&emsp;使用ls查看发现有一个叫centos7.tar的文件，这就是我们打包压缩好的centos7。<br>  <img src="/2019/04/20/docker/保存docker镜像.jpg" alt="保存docker镜像"> </p><h2 id="载入镜像"><a href="#载入镜像" class="headerlink" title="载入镜像"></a>载入镜像</h2><p>&emsp;&emsp;使用命令:<code>docker load --input centos7.tar</code>,<br>使用命令<code>docker ps -a</code>查看正在运行的容器，<code>docker stop ID号</code>终止正在运行的容器。<br>&emsp;&emsp;移除本地的docker镜像命令：<code>docker rm ID</code>，一处正在运行的docker镜像：<code>docker rm -f ID</code></p>]]></content>
     
     <summary type="html">
     
@@ -390,75 +451,6 @@
     
     
       <category term="windows" scheme="http://yoursite.com/tags/windows/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>php基础</title>
-    <link href="http://yoursite.com/2019/01/22/php%E5%9F%BA%E7%A1%80/"/>
-    <id>http://yoursite.com/2019/01/22/php基础/</id>
-    <published>2019-01-22T00:59:58.000Z</published>
-    <updated>2019-01-23T01:32:18.932Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>　　我因学习不做笔记浪费了大量时间，知识在学习之后遗忘，遗忘之后重新学地不断循环。走过坑，踩过雷。也曾或许未来也是地雄心壮志地一段时间，然而脑子里想着我要做再多的事要学再多的知识都是浮于表面，不去真正动手事情永远摆在脑海里，长此以往便让人身心疲惫。“你觉得累是因为想的多而做的少罢了”一位前辈曾经如此教导，细细一想，确实没错。迷茫时学习就对了，不想动只是给自己的懒惰找借口，我也算看清自己性格弱点以及内心不正道的想法了。　　</p><p>&emsp;&emsp;好好学习，天天向上。</p><h1 id="php变量"><a href="#php变量" class="headerlink" title="php变量"></a>php变量</h1><h2 id="php代码格式"><a href="#php代码格式" class="headerlink" title="php代码格式"></a>php代码格式</h2><pre><code>`＜？php   php代码    ?＞`</code></pre><h2 id="php变量命名规则"><a href="#php变量命名规则" class="headerlink" title="php变量命名规则"></a>php变量命名规则</h2><p>&emsp;&emsp;1.变量以 $ 符号开始，后面跟着变量的名称<br>&emsp;&emsp;2.量名必须以字母或者下划线字符开头<br>&emsp;&emsp;3.变量名只能包含字母数字字符以及下划线（A-z、0-9 和 _ ）<br>&emsp;&emsp;4.变量名不能包含空格<br>&emsp;&emsp;5.变量名是区分大小写的（$y 和 $Y 是两个不同的变量）</p><h2 id="创建php变量"><a href="#创建php变量" class="headerlink" title="创建php变量"></a>创建php变量</h2><p>&emsp;&emsp;PHP没有声明变量的命令，变量无需声明，在第一次给它赋值的同时就被创建。php是一门弱类型语言，不必向 PHP 声明该变量的数据类型。PHP 会根据变量的值，自动把变量转换为正确的数据类型。在强类型的编程语言中，我们必须在使用变量前先声明（定义）变量的类型和名称。   </p><h3 id="变量"><a href="#变量" class="headerlink" title="变量$"></a>变量$</h3><p>&emsp;&emsp;在给变量赋值时即创建变量，那么$x赋值之后，在下面使用值时，能否直接使用x呢？<br>&emsp;&emsp;答案是不可以的，因为$x一个整体代表中国变量，分开使用会报错，如下，为代码示例：    </p><pre><code>&lt;?php    $a = 5;    echo a;   ?&gt;   `</code></pre><p>&emsp;&emsp;上述代码，输出时只输出a，在浏览器中解释执行后报错如下：<br>  <img src="/2019/01/22/php基础/变量使用.jpg" alt="变量使用"><br>&emsp;&emsp;正确代码如下：<br>  <img src="/2019/01/22/php基础/使用变量的正确方法.jpg" alt="变量使用"></p><h3 id="变量大小写"><a href="#变量大小写" class="headerlink" title="变量大小写"></a>变量大小写</h3><p>&emsp;&emsp;代码示例如下：   </p><pre><code>&lt;?php   $a = 5;   echo $A;   ?&gt;</code></pre><p>   `<br>&emsp;&emsp;输出结果为:<br> <img src="/2019/01/22/php基础/大小写注意事项.jpg" alt="变量使用"></p><h1 id="php变量引用"><a href="#php变量引用" class="headerlink" title="php变量引用"></a>php变量引用</h1><pre><code> &lt;?php $a = 5;    $b = 12; $a = &amp;$b;echo $a;?&gt;</code></pre><p>`<br>&emsp;&emsp;上述代码，首先给a,b两个变量开辟两个不同的空间，$a=&amp;$b;这句代码将变量a指向变量b所在的空间，这样，当这个空间的值为多少或者改变了，那么a和b两个的值都是一样的。所以上面代码输出值为12。</p><h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><h2 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h2><p>1.定义与使用<br>&emsp;&emsp;php函数定义到调用如下：<br><img src="/2019/01/22/php基础/函数.jpg" alt="函数"><br>&emsp;&emsp;注意：函数生效必须调用，只定义函数内容不会执行。<br>2.实参与形参<br>当函数形参没有默认值时，调用函数时，实参参数个数必须与形参一致，否则报错。如下。<br><img src="/2019/01/22/php基础/参数.jpg" alt="函数"><br>当函数形参有默认值时，实参参数个数无需和形参个数相同。如下代码：<br><img src="/2019/01/22/php基础/形参默认.jpg" alt="函数"><br>3.静态变量<br>静态变量只有第一次被初始化，在后面代码中继续用到函数体中的该静态变量时，不会再次执行初始化语句，变量值在上次执行后的基础上继续执行，如下面代码，输出$a的值一直是1，而$b的值则是3，第二次执行函数后是4：<br> <img src="/2019/01/22/php基础/静态变量.jpg" alt="函数">  </p><h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>1.第一种方法<br>$arr = array(元素1，元素2，元素3…);<br>2.第二种方法<br>$arr[] = 元素1;//将元素1添加到$arr数组中；<br>$arr[] = 元素2；//将元素2添加到$arr数组中；   </p><h2 id="遍历数组"><a href="#遍历数组" class="headerlink" title="遍历数组"></a>遍历数组</h2><pre><code>&lt;?php $arr = array(&apos;jin&apos;,&apos;21&apos;,&apos;网络安全&apos;); for($i=0;$i&lt;3;$i++){     echo $arr[$i];     echo &quot;&lt;br/&gt;&quot;; }?&gt; </code></pre>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;　　我因学习不做笔记浪费了大量时间，知识在学习之后遗忘，遗忘之后重新学地不断循环。走过坑，踩过雷。也曾或许未来也是地雄心壮志地一段时间，然而
-      
-    
-    </summary>
-    
-    
-      <category term="php" scheme="http://yoursite.com/tags/php/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>php环境</title>
-    <link href="http://yoursite.com/2019/01/18/php%E7%8E%AF%E5%A2%83/"/>
-    <id>http://yoursite.com/2019/01/18/php环境/</id>
-    <published>2019-01-18T07:27:01.000Z</published>
-    <updated>2019-01-18T07:38:55.643Z</updated>
-    
-    <content type="html"><![CDATA[<p>大二一段时间开始学习PHP，搭建环境用了一个多月，失败了，当时归结于三个软件版本下的不对有冲突，一个多月后最终使用了PHP的集成环境wamp，使用起来可以，但总觉得自己走的不是正儿八经的道路，最近学习渗透，教程里使用的也是PHP环境，一想都是痛苦的回忆，虽不想再捡起，但狠狠心还是撸起袖子加油干吧。<br>1.管理员模式打开dos。<br>2.卸载apache服务: sc delete Apache2.4<br>3.安装apache服务：httpd.exe -k install<br>4.开启apache服务：net start Apache2.4<br>5.停止apache服务：net stop Apache2.4</p><p>6.php语法中，代码里出现mysql执行出错，改为mysqli即可。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;大二一段时间开始学习PHP，搭建环境用了一个多月，失败了，当时归结于三个软件版本下的不对有冲突，一个多月后最终使用了PHP的集成环境wamp，使用起来可以，但总觉得自己走的不是正儿八经的道路，最近学习渗透，教程里使用的也是PHP环境，一想都是痛苦的回忆，虽不想再捡起，但狠狠
-      
-    
-    </summary>
-    
-    
-      <category term="php" scheme="http://yoursite.com/tags/php/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>更换电脑的博客问题</title>
-    <link href="http://yoursite.com/2019/01/09/%E6%9B%B4%E6%8D%A2%E7%94%B5%E8%84%91%E7%9A%84%E5%8D%9A%E5%AE%A2%E9%97%AE%E9%A2%98/"/>
-    <id>http://yoursite.com/2019/01/09/更换电脑的博客问题/</id>
-    <published>2019-01-09T06:38:34.000Z</published>
-    <updated>2019-01-09T07:22:00.016Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>&emsp;&emsp;公司新发了一台笔记本，以往我还是使用自己的笔记本，某天，钟老师说：“你怎么不带公司发的笔记本，是不是嫌弃它比你的重？”说完阴险地笑了笑。组长听了这话，和颜悦色地对我说：“下次出项目还是统一一下电脑吧。”于是，这个星期我便换了新的电脑，新电脑上很多环境都要自己配，麻烦，但也权当是一个知识的回顾过程吧。首先，便是换电脑之后hexo博客如何继续更新的问题，以下是解决步骤。</p><h1 id="工具下载"><a href="#工具下载" class="headerlink" title="工具下载"></a>工具下载</h1><h2 id="NodeJs下载与环境配置"><a href="#NodeJs下载与环境配置" class="headerlink" title="NodeJs下载与环境配置"></a>NodeJs下载与环境配置</h2><p>&emsp;&emsp;在官网上下载NodeJs，一路next,选择安装地址时为D:\kit\node.js，完成后在cmd控制台中输入node -version提示node不是命令，这是因为在系统变量path中没有将D:\kit\node.js路径加进去，添加好之后再次输入还是无效，重新启动后成功，想来我自己的电脑是win7是不用重新启动的，而新电脑是win10，必须要重新启动。控制台中输入node -v显示如下信息说明安装成功。<br> <img src="/2019/01/09/更换电脑的博客问题/node安装成功.jpg" alt="node安装成功"></p><h2 id="Git下载与配置"><a href="#Git下载与配置" class="headerlink" title="Git下载与配置"></a>Git下载与配置</h2><p>&emsp;&emsp;在官网上下载Git工具，安装步骤网上有很多，安装结束后，桌面点击鼠标右键，看到有下图说明安装成功。<br> <img src="/2019/01/09/更换电脑的博客问题/Git安装成功.jpg" alt="Git安装成功"></p><h2 id="hexo安装"><a href="#hexo安装" class="headerlink" title="hexo安装"></a>hexo安装</h2><p>&emsp;&emsp;在cmd窗口中输入<code>npm install hexo-cli -g</code>来安装hexo，结束后输入hexo -v可以查看安装是否成功。<br><img src="/2019/01/09/更换电脑的博客问题/hexo安装.jpg" alt="hexo安装"></p><h1 id="在GitHub官网上添加新电脑产生的秘钥"><a href="#在GitHub官网上添加新电脑产生的秘钥" class="headerlink" title="在GitHub官网上添加新电脑产生的秘钥"></a>在GitHub官网上添加新电脑产生的秘钥</h1><ul><li>1.首先配置Git的用户名和邮箱。<br><img src="/2019/01/09/更换电脑的博客问题/配置Git用户名和邮箱.jpg" alt="配置Git用户名和邮箱"><br>2.输入命令在电脑上生成新的SSH KEY。连续点击三次“enter”键。如果电脑上之前已经生成过SSH KEY，那么新的会覆盖旧的。<br><img src="/2019/01/09/更换电脑的博客问题/给电脑上生成SSH KEY.jpg" alt="给电脑上生成SSH KEY"></li></ul><ol start="3"><li>打开电脑，可以看到电脑上生成了两个秘钥，秘钥生成算法为RSA算法，第一个文件是私钥，自己保留，不能给旁人知道，下面一个pub文件是公钥，大家都可以知晓。<br><img src="/2019/01/09/更换电脑的博客问题/电脑生成公私钥.jpg" alt="电脑生成公私钥"></li><li>打开公钥文件，复制添加到GitHub官网上。<br><img src="/2019/01/09/更换电脑的博客问题/github官网上添加新的SSH KEY.jpg" alt="github官网上添加新的SSH KEY"></li><li>配置结束后，测试配置是否成功。<br><img src="/2019/01/09/更换电脑的博客问题/测试新的SSH KEY配置是否成功.jpg" alt="测试新的SSH KEY配置是否成功"><h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1>&emsp;&emsp;当能够看到这篇博客时说明我已经成功了，在我打字时刻内心依然非常欣喜，在这不断探索不断修改直至看到效果的过程中，我备受鼓舞，想起一年多前一位大神学长曾经教导的话，做技术做学问要脚踏实地，我走着他经历过的路，遵循着他说过的话，不断去踩坑。很多事情其实很明了，坑都是自己挖的却还未看透继续在捯饬着，比如，在做完这一切配置后，我这篇博客在首次发布的时候图片不显示了，检查好几遍都没什么问题，最后的最后发现图片前面的感叹号!是中文模式下输入的……</li></ol>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;&amp;emsp;&amp;emsp;公司新发了一台笔记本，以往我还是使用自己的笔记本，某天，钟老师说：“你怎么不带公司发的笔记本，是不是嫌弃它比你的重？
-      
-    
-    </summary>
-    
-    
-      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
     
   </entry>
   
