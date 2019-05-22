@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-05-21T09:05:06.200Z</updated>
+  <updated>2019-05-22T01:29:00.696Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>大侦探皮卡丘</title>
+    <link href="http://yoursite.com/2019/05/22/%E5%A4%A7%E4%BE%A6%E6%8E%A2%E7%9A%AE%E5%8D%A1%E4%B8%98/"/>
+    <id>http://yoursite.com/2019/05/22/大侦探皮卡丘/</id>
+    <published>2019-05-22T01:10:48.000Z</published>
+    <updated>2019-05-22T01:29:00.696Z</updated>
+    
+    <content type="html"><![CDATA[<p>&emsp;&emsp;上周五忽然想起好久没看电影了，买了《大侦探皮卡丘》的电影票，全程被皮卡丘萌到，周日又买了张去二刷。电影剧情跌宕，很感人，我们的皮卡丘又萌又正义。<br>&emsp;&emsp;它可以是这样的~<br><img src="/2019/05/22/大侦探皮卡丘/皮卡丘1.jpg" alt="皮卡丘"><br>&emsp;&emsp;也可以是这样的~<br><img src="/2019/05/22/大侦探皮卡丘/皮卡丘2.jpg" alt="皮卡丘"><br>&emsp;&emsp;也可以是这样的~<br><img src="/2019/05/22/大侦探皮卡丘/皮卡丘3.jpg" alt="皮卡丘"><br>&emsp;&emsp;哈哈哈，其实我就是想刷一波萌萌的皮卡丘。<br>&emsp;&emsp;但是，电影快结束时，男主和爸爸一起走回家，说猜到爸爸想去喝咖啡了，爸爸回复，你怎么知道？这时皮卡丘在他们身边一蹦一跳。这一幕看着挺难过的，对于父亲和皮卡丘来说，他们好像都忘记了这一段经历，忘记了父亲灵魂在皮卡丘身上时，男主曾总结它是一只“有咖啡瘾的皮卡丘”，而皮卡丘也不再会说人话了，只一声“皮卡皮卡”。再见了，那只话痨又贱贱的皮卡丘。<br><img src="/2019/05/22/大侦探皮卡丘/皮卡丘5.jpg" alt="皮卡丘"><br><img src="/2019/05/22/大侦探皮卡丘/皮卡丘6.jpg" alt="皮卡丘"> </p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&amp;emsp;&amp;emsp;上周五忽然想起好久没看电影了，买了《大侦探皮卡丘》的电影票，全程被皮卡丘萌到，周日又买了张去二刷。电影剧情跌宕，很感人，我们的皮卡丘又萌又正义。&lt;br&gt;&amp;emsp;&amp;emsp;它可以是这样的~&lt;br&gt;&lt;img src=&quot;/2019/05/22/大侦探
+      
+    
+    </summary>
+    
+    
+      <category term="电影" scheme="http://yoursite.com/tags/%E7%94%B5%E5%BD%B1/"/>
+    
+  </entry>
   
   <entry>
     <title>等级保护-测评项理解</title>
@@ -427,30 +450,6 @@
     
     
       <category term="burpsuite" scheme="http://yoursite.com/tags/burpsuite/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ubuntu系统搭建php环境</title>
-    <link href="http://yoursite.com/2019/01/23/ubuntu%E7%B3%BB%E7%BB%9F%E6%90%AD%E5%BB%BAphp%E7%8E%AF%E5%A2%83/"/>
-    <id>http://yoursite.com/2019/01/23/ubuntu系统搭建php环境/</id>
-    <published>2019-01-23T11:55:50.000Z</published>
-    <updated>2019-01-24T02:34:07.523Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="ubuntu"><a href="#ubuntu" class="headerlink" title="ubuntu"></a>ubuntu</h1><p> sudo apt-get install openssh-server</p><h1 id="安装php"><a href="#安装php" class="headerlink" title="安装php"></a>安装php</h1><p>安装php5.6<br>sudo apt-get update<br>sudo apt-get install php5.6</p><p>安装扩展<br>sudo apt-get install php5.6-gd<br>sudo apt-get install php5.6-mysql</p><h1 id="安装Apache2"><a href="#安装Apache2" class="headerlink" title="安装Apache2"></a>安装Apache2</h1><p>安装Apache2<br>sudo apt install apache2<br>sudo apt-get install libapache2-mod-php5.6</p><p>启动apache服务器<br>service apache2 start<br>验证apache安装成功，在本地电脑上浏览器中输入虚拟机IP地址，可以看到apache的默认界面</p><h1 id="安装MySQL"><a href="#安装MySQL" class="headerlink" title="安装MySQL"></a>安装MySQL</h1><p>sudo apt install mysql-server php5.6-mysql<br>这里输入两次密码<br>sudo apt-get install mysql-client<br>启动mysql服务： systemctl start mysql.service，输出结果如下</p><p>查看mysql服务是否已经启动：<br>查看mysql进程，输入命令 ps -aux | grep mysql，可以看到存在mysql进程。</p><h1 id="配色方案"><a href="#配色方案" class="headerlink" title="配色方案"></a>配色方案</h1><p>xshell终端中的配色不好看，在修改过程中误删了.bashrc文件，后面不管如何导入配色方案都不能有预期的效果，只能先恢复此文件，在linux中/etc/skel目录下是Linux的各种初始化配置文件存放目录。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;ubuntu&quot;&gt;&lt;a href=&quot;#ubuntu&quot; class=&quot;headerlink&quot; title=&quot;ubuntu&quot;&gt;&lt;/a&gt;ubuntu&lt;/h1&gt;&lt;p&gt; sudo apt-get install openssh-server&lt;/p&gt;
-&lt;h1 id=&quot;安装php
-      
-    
-    </summary>
-    
-    
-      <category term="php" scheme="http://yoursite.com/tags/php/"/>
     
   </entry>
   
