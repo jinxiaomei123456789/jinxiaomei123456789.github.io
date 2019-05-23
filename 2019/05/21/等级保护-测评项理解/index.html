@@ -19,7 +19,7 @@
 <meta property="og:site_name" content="小生の博客">
 <meta property="og:description" content="前言&amp;emsp;&amp;emsp;上个星期开会领导展示了一份测评记录模板，确实写的非常好，有理有据。某天和所里面负责网络的同事聊天，发现此人虽不做等级测评，但是对于网络、主机或者是操作系统方面熟悉得很。由此引发自己的反省和检讨，总结来说一句话“比你优秀的人还比你努力”这样，以下，是自己做等级保护大半年来对于测评项的理解，或者是需要重点关注的问题，基于等保1.0，分别从物理安全、网络安全、主机安全、应用安">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-21T09:05:06.200Z">
+<meta property="og:updated_time" content="2019-05-23T02:35:38.841Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="等级保护-测评项理解">
 <meta name="twitter:description" content="前言&amp;emsp;&amp;emsp;上个星期开会领导展示了一份测评记录模板，确实写的非常好，有理有据。某天和所里面负责网络的同事聊天，发现此人虽不做等级测评，但是对于网络、主机或者是操作系统方面熟悉得很。由此引发自己的反省和检讨，总结来说一句话“比你优秀的人还比你努力”这样，以下，是自己做等级保护大半年来对于测评项的理解，或者是需要重点关注的问题，基于等保1.0，分别从物理安全、网络安全、主机安全、应用安">
@@ -98,7 +98,7 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#物理安全"><span class="toc-number">2.</span> <span class="toc-text">物理安全</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#网络安全"><span class="toc-number">3.</span> <span class="toc-text">网络安全</span></a></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#物理安全"><span class="toc-number">2.</span> <span class="toc-text">物理安全</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#网络安全"><span class="toc-number">3.</span> <span class="toc-text">网络安全</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#网络结构"><span class="toc-number">3.1.</span> <span class="toc-text">网络结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#网络、安全设备"><span class="toc-number">3.2.</span> <span class="toc-text">网络、安全设备</span></a></li></ol></li></ol>
 		
 		</div>
 		
@@ -107,7 +107,10 @@
 <hr>
 <p>&emsp;&emsp;手有点酸，以上就是关于物理方面的要点，都是一些文档要求类的，后面关于网络、主机以及应用方面技术要求就高了很多。个人认为，做等级保护，做的很好很深的那种人都是很让人敬佩的，因为他不止熟悉某一模块，是对整个体系都了解，包括一些交换机，如何使用，应用方面的配置，代码，一言概之，是个厉害的人了。   </p>
 <hr>
-<h1 id="网络安全"><a href="#网络安全" class="headerlink" title="网络安全"></a>网络安全</h1>  
+<h1 id="网络安全"><a href="#网络安全" class="headerlink" title="网络安全"></a>网络安全</h1><p>&emsp;&emsp;在物理安全弄清楚客户系统是自建机房还是云上系统后，就可以去完成网络部分的测评了。<br>&emsp;&emsp;如果客户使用的是云上系统，那么测评时需询问客户是否购买了安全设备，如，客户使用阿里云，那么是否有安骑士企业版进行入侵防范，若客户部署了深信服上网行为管理，那么安全设备这一块就需要填写并选择进行测评。<br>&emsp;&emsp;如果客户使用的是自建机房，网络设备构成需询问有哪些，如交换机，负载均衡等。安全设备如防火墙，抗DDOS设备，态势感知等。   </p>
+<h2 id="网络结构"><a href="#网络结构" class="headerlink" title="网络结构"></a>网络结构</h2><p>&emsp;&emsp;三级系统无论是云上系统还是自建机房，网络模板都需要对网络拓扑进行测评，即网络结构，网络结构测评项如下。<br>&emsp;&emsp;<strong>结构安全</strong><br>&emsp;&emsp;<code>a)应保证主要网络设备的业务处理能力具备冗余空间，满足业务高峰期需要。</code><br>&emsp;&emsp;检查内容：1、访谈主要网络设备的业务处理能力情况；2、通过监控平台查看主要网络设备的业务处理能力。<br>&emsp;&emsp;推荐值：1、根据访谈结果，未发现由于设备存在性能瓶颈而导致网络发生拥堵、阻断等情况；2、系统的主要网络设备（如核心交换机、汇聚交换机、防火墙等）的业务处理能力（正常业务情况下，CPU、内存不超过90%）可基本满足业务需要。<br>&emsp;&emsp;判断标准：1、2都符合时结果为符合。<br>&emsp;&emsp;结果记录：已配置多监控平台网络对设备使用情况进行监控，网络部通过zabbix平台监控，主要网络设备业务处理能力足够充裕，如DMZ核心交换机的平均利用率CPU20%，内存40%；专门设立有监控团队使用OCC监控平台对全网进行监控。<br>&emsp;&emsp;<code>b)应保证网络各个部分的带宽满足业务高峰期需要。</code><br>&emsp;&emsp;检查内容：1、访谈接入网络和核心网络的带宽使用情况；2、通过监控平台查看接入网络和核心网络的使用情况（带宽是出口和入口）。<br>&emsp;&emsp;记录：目前出口配置了两个出口，联通出口总500M，查看zabbix监控平台一个月平均带宽使用量为出口300M，进口100M；电信出口总500M，查看zabbix监控平台一个月平均带宽使用量为出口20M，进口50M；设备接口流量使用率较为平稳，无突发的高峰情况。<br>&emsp;&emsp;每条线路都有出口和入口带宽，使用监控平台查看。双出口带宽类似双线机房，BGP路由，提升带宽速度，并不是主备方式。<br>&emsp;&emsp;<code>c)应在业务终端和业务服务器之间进行路由控制建立安全的访问路径。</code><br>&emsp;&emsp;检查方法：使用show run命令查看路由配置.<br>&emsp;&emsp;OSPF协议：<br>&emsp;&emsp;ip ospf message-digest-key key-id(1-255) md5 key<br>&emsp;&emsp;RIP v2协议：<br>&emsp;&emsp;ip rip authentication mode md5<br>&emsp;&emsp;ip rip authentication key-chain mykeychainname<br>&emsp;&emsp;passive-interface:<br>&emsp;&emsp;passive-interface eth0/3<br>&emsp;&emsp;静态路由<br>&emsp;&emsp;ip route 192.168.3.0 255.255.255.0  172.16.0.110<br>&emsp;&emsp;ip route 192.168.4.0 255.255.255.0 172.16.0.112<br>&emsp;&emsp;推荐值：1、使用静态路由；2、使用动态路由并设置路由认证功能；<br>&emsp;&emsp;判断标准：使用静态路由则符合，使用动态路由并设置路由认证功能也符合。静态和动态路由混合使用则1、2都需要满足才能符合。<br>&emsp;&emsp;记录：DMZ采用ip router静态路由，内网则采用OSPF动态路由，已配置ip ospf authentication-key认证。<br>&emsp;&emsp;<code>d)应绘制与当前运行情况相符的网络拓扑结构图。</code><br>&emsp;&emsp;推荐值：应绘制完整的网络拓扑结构图，需明确系统网络边界，粒度到设备级，包含IP地址、设备主要信息，与当前运行情况相符，并有相应的配置表。<br>&emsp;&emsp;记录：已绘制与当前运行情况相符的网络拓扑结构图。<br>&emsp;&emsp;<code>e)应根据各部门的工作职能、重要性和所涉及信息的重要程度等因素，划分不同的子网或网段，并按照方便管理和控制的原则为各子网或网段分配地址段。</code><br>&emsp;&emsp;推荐值：1、按工作职能合理划分网络，如数据中心、总公司、XX分公司、IT部门、业务部门等；2、按重要性合理划分网络，如管理区域、生产区域、办公区域等。3、按所涉及信息的重要程度进行合理划分，如服务器区域、前置区域、DMZ区域、NAS存储区域等；4、以上划分方式合理混合，不违背网络地址的划分原则。<br>&emsp;&emsp;VLAN区域划分明显，在核心交换机上划分了DMZ、运维管理、内网、测试等大区，再根据不同机房不同业务细分，查看列表共有200个左右的VLAN区域。<br>&emsp;&emsp;<code>f)应避免将重要网段部署在网络边界处且直接连接外部信息系统，重要网段与其他网段之间采取可靠的技术隔离手段。</code><br>&emsp;&emsp;检查方法：1、查看重要网段是否部署在网络边界处；2、查看网络设备、安全设备上对重要网段采取的访问控制策略。<br>&emsp;&emsp;判断标准：1、2都符合时结果为符合。<br>&emsp;&emsp;结果记录：专门划分了DMZ区用于部署对外业务服务器，重要服务器部署在内网中，通过防火墙配置访问控制策略来控制不同区域之间的隔离。<br>&emsp;&emsp;<code>g)应按照对业务服务的重要次序来指定带宽分配优先级别，保证网络在发生拥堵时优先保护重要主机。</code><br>&emsp;&emsp;由深信服上网行为管理进行QoS分配，网络堵塞时，业务服务器带宽优先。<br>&emsp;&emsp;<strong>访问控制</strong><br>&emsp;&emsp;<code>a)应在网络边界部署访问控制设备，启用访问控制功能。</code><br>&emsp;&emsp;检查方法：1、访谈网络管理员是否在网络边界处部署了访问控制设备，是否启用访问控制功能；2、登录访问控制设备，查看是否启用访问控制功能。<br>&emsp;&emsp;记录：访问控制功能主要通过核心交换机、互联网边界防火墙、区域防火墙实现。<br>&emsp;&emsp;<code>b)应能根据会话状态信息为数据流提供明确的允许/拒绝访问的能力，控制粒度为端口级。</code><br>&emsp;&emsp;检查内容1、检查边界网络设备，查看其是否根据会话状态信息对数据流进行控制，控制粒度达到端口级；2、网络边界的设备是否关闭了不必要的服务。<br>&emsp;&emsp;检查方法：在防火墙等网络控制设备中进行访问控制，粒度达到端口级。针对Cisco网络设备，关闭不必要的服务，包括CDP、WINS等。<br>&emsp;&emsp;记录：检查核心交换机、互联网边界防火墙、区域防火墙的访问控制列表配置情况，控制粒度达到区域-IP/IP段-端口/协议、IP/IP段-IP/IP段-端口/协议，端口如8080、9090、80、8081等，协议如www、https、sunrpc等。<br>&emsp;&emsp;<code>c)应对进出网络的信息内容进行过滤，实现对应用层http、ftp、TELNET、SMTP、POP3等协议命令集的控制。</code><br>&emsp;&emsp;记录：通过互联网边界防火墙、区域防火墙、web防火墙实现对进出网络的信息内容进行过滤。<br>&emsp;&emsp;<code>d)应在会话处于非活跃一定时间或会话结束后终止网络连接。</code><br>&emsp;&emsp;检查方法：查看防火墙等网络访问控制设备，是否配置了对非活跃会话进行自动终止。<br>&emsp;&emsp;推荐值：根据业务需求配置非活跃会话自动终止功能，TCP连接超时时间不宜超过30分钟，UDP连接超时时间不宜超过5分钟（具体视情况而定）。<br>&emsp;&emsp;记录：在互联网边界防火墙限制了会话处于非活跃一定时间（时间为1h）后终止网络连接。<br>&emsp;&emsp;<code>e)应限制网络最大流量数及网络连接数；</code><br>&emsp;&emsp; 检查方法：1、查看网络设备、安全设备是否定义了网络最大带宽、网络连接数。2、在Cisco网络设备中：限制最大连接数为200：<br>&emsp;&emsp;ip nat translation max-entries host 192.169.1.123 200<br>&emsp;&emsp;限制某网段的流量带宽为100kbps：<br>&emsp;&emsp;class-map match-all list123<br>&emsp;&emsp;bandwidth 100<br>&emsp;&emsp;记录：在互联网边界防火墙上限制了最大网络连接数及流量数为10000和500。<br>&emsp;&emsp;<code>f)重要网段应采取技术手段防止地址欺骗。</code><br>&emsp;&emsp;推荐值：网络层可采用IP+MAC+端口绑定方式防止地址欺骗；主机层可通过安装防病毒软件、补丁更新、ARP防火墙、主机防火墙等措施防止地址欺骗攻击。<br>&emsp;&emsp;判断标准：在重要网段的网关设备上对接入设备的IP地址与MAC地址、端口进行绑定，或重要网段所在交换机开启ARP欺骗功能，或在重要网段内所有主机安装地址欺骗防护软件等。<br>&emsp;&emsp;记录：部署了NIPS，提供对关键服务器、设备之间的防地址欺骗防护。<br>&emsp;&emsp;<code>应按照用户和系统之间的允许访问规则，决定允许或拒绝用户对受控系统进行资源访问，控制粒度为单个用户。</code><br>&emsp;&emsp;检查方法：如有VPN等拨号用户接入网络的情况，是否对每个用户的网络访问范围进行控制。<br>&emsp;&emsp;判断标准：对拨号用户设置具体的访问控制策略，控制粒度达到单个用户。无VPN等拨号上网此项不适用。<br>&emsp;&emsp;记录：查看VPN防火墙策略，根据用户组（VPN[办公]、guest[运维]、TMP[临时]）配置访问控制，具体到IP地址、IP段，动作为允许或拒绝。<br>&emsp;&emsp;<code>h)应限制具有拨号访问权限的用户数量。</code><br>&emsp;&emsp; 判断标准：拨号用户需经授权审批，有审批记录，确保授权用户为必要用户，不存在共享账户、过期账户。<br>&emsp;&emsp;记录：通过集团的门户系统进行申请，经过审批后方可拥有VPN访问权限，与域控账号联动。<br>&emsp;&emsp;<strong>边界完整性检查</strong><br>&emsp;&emsp;<code>a)应能够对非授权设备私自联到内部网络的行为进行检查，准确定位，并对其进行有效阻断。</code><br>&emsp;&emsp;记录：部署了联软终端安全管理系统进行同一管理，通过“准入控制”功能进行控制，如入网身份验证。<br>&emsp;&emsp;b)应能够对内部网络用户私自联到外部网络的行为进行检查，准确定位，并对其进行有效阻断。<br>&emsp;&emsp; 备注：采用域控方式，禁止改变IP、安装软件、驱动等，可判定为部分符合。<br>&emsp;&emsp;记录:部署了联软终端安全管理系统进行同一管理，通过“非授权外联策略”配置了智能设备控制策略，通过“数据防泄露”-“非授权外联信息”页面检查非授权连接情况。<br>&emsp;&emsp;<strong>入侵防范</strong><br>&emsp;&emsp;<code>a)应在网络边界处监视以下攻击行为：端口扫描、强力攻击、木马后门攻击、拒绝服务攻击、缓冲区溢出攻击、IP碎片攻击和网络蠕虫攻击等。</code><br>&emsp;&emsp;检查内容：系统在网络边界安装的入侵检测设备。<br>&emsp;&emsp;备注：若防火墙上带有入侵检测模块，但不能升级模块，判定部分符合；若使用带有入侵检测模块的防火墙设备，应提供相应的入侵检测模块的产品认证证书，确保其入侵检测模块符合国家相关产品检测要求。<br>&emsp;&emsp;记录：通过在边界部署IPS、WAF、防DDOS（防护容量5G）、防火墙等安全设备来监视和防护网络攻击，并通过安全大数据分析平台对安全日志收集和分析。<br>&emsp;&emsp;什么是IPS，IPS与IDS的区别？<br>&emsp;&emsp;IDS是入侵检测系统，IDS的主要目标是检测入侵，让网络管理员采取适当的缓解和补救措施，IDS不会阻止这些攻击，但会让用户知道什么时候发生了攻击。IDS对网络信息进行分析，发现恶意活动时就立即报警。<br>&emsp;&emsp;IPS是入侵防御系统，具有检测已知和未知攻击并具有成功阻止攻击的能力。<br>&emsp;&emsp;<code>b)当检测到攻击行为时，记录攻击源IP，攻击类型，攻击目的，攻击时间，在发生严重入侵事件时提供报警。</code><br>&emsp;&emsp;检查内容：入侵日志及报警机制。<br>&emsp;&emsp;记录：查看“网络安全态势感知”大屏展示页面，详细记录了攻击列表的时间、攻击源IP、攻击目标IP、攻击目标国家、类别、等级等内容。（未说明报警方式）<br>&emsp;&emsp;<strong>恶意代码防范</strong><br>&emsp;&emsp;<code>a)应在网络边界处对恶意代码进行检测和清除。</code><br>&emsp;&emsp;检查内容：网络中安装的恶意代码防范产品。<br>&emsp;&emsp;推荐值：在网络边界及核心业务网段采取相关防范恶意代码措施（如安装防病毒网关等）<br>&emsp;&emsp;记录（部分符合）：网络边界部署了WAF来防护web层面的一些恶意代码情况，防火墙未启用防病毒模块，无专门的防毒墙等设备；主机层面Linux服务器统一部署了网络版Symantec防病毒，Windows办公终端统一部署了网络版趋势防病毒。<br>&emsp;&emsp;<code>b)应维护恶意代码库的升级和检测系统的更新。</code><br>&emsp;&emsp;检查方法：1、查看防恶意代码产品是否为正规厂商生产，运行是否正常，恶意代码库是否为最新版本；2、询问恶意代码库的更新策略，查看恶意代码库以及扫描引擎更新情况。<br>&emsp;&emsp;推荐值：1、应采用正规生产厂商的防恶意代码产品；2、定期、按需更新恶意代码库。   </p>
+<h2 id="网络、安全设备"><a href="#网络、安全设备" class="headerlink" title="网络、安全设备"></a>网络、安全设备</h2><p>&emsp;&emsp;<strong>安全审计</strong><br>&emsp;&emsp;<code>a)应对网络系统中的网络设备运行状况、网络流量、用户行为等进行日志记录。</code><br>&emsp;&emsp;<code>b)审计记录应包括：事件的日期和时间、用户、事件类型、事件是否成功及其他与审计相关的信息。</code><br>&emsp;&emsp;<code>c)应能够根据记录数据进行分析，并生成审计报表。</code><br>&emsp;&emsp;<code>d)应对审计记录进行保护，避免受到未预期的删除、修改或覆盖等。</code><br>&emsp;&emsp;推荐值：设有专门的日志服务器，并由专人来保证日志的完整性。<br>&emsp;&emsp;<strong>网络设备防护</strong><br>&emsp;&emsp;<code>a)应对登录网络设备的用户进行身份鉴别。</code><br>&emsp;&emsp;<code>b)应对网络设备的管理员登录地址进行限制。</code><br>&emsp;&emsp;<code>c)网络设备用户的标识应唯一。</code><br>&emsp;&emsp;<code>d)主要网络设备应对同一用户采取两种或两种以上组合的鉴别技术来进行身份鉴别。</code><br>&emsp;&emsp;<code>e)身份鉴别信息应具有不易被冒用的特点，口令应具有复杂度要求并定期更换。</code><br>&emsp;&emsp;<code>f)应具有登录失败处理功能，可采取结束会话，限制非法登录次数和当网络连接超时时自动退出等措施。</code><br>&emsp;&emsp;<code>g)当对网络设备进行远程管理时，应采取必要措施防止鉴别信息在网络传输过程中被窃听。</code><br>&emsp;&emsp;推荐值：关闭telnet服务和http。<br>&emsp;&emsp;<code>h)应实现设备特权用户的权限分离。</code></p>
+  
 	</div>
 		<footer class="article-footer clearfix">
 <div class="article-catetags">
@@ -166,7 +169,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#物理安全"><span class="toc-number">2.</span> <span class="toc-text">物理安全</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#网络安全"><span class="toc-number">3.</span> <span class="toc-text">网络安全</span></a></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#物理安全"><span class="toc-number">2.</span> <span class="toc-text">物理安全</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#网络安全"><span class="toc-number">3.</span> <span class="toc-text">网络安全</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#网络结构"><span class="toc-number">3.1.</span> <span class="toc-text">网络结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#网络、安全设备"><span class="toc-number">3.2.</span> <span class="toc-text">网络、安全设备</span></a></li></ol></li></ol>
  
   </div>
 
@@ -189,11 +192,11 @@
 			
 		
 			
-				<li><a href="/tags/java/" title="java">java<sup>4</sup></a></li>
+				<li><a href="/tags/ssm/" title="ssm">ssm<sup>4</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/ssm/" title="ssm">ssm<sup>4</sup></a></li>
+				<li><a href="/tags/java/" title="java">java<sup>4</sup></a></li>
 			
 		
 			
@@ -229,11 +232,11 @@
 			
 		
 			
-				<li><a href="/tags/kali/" title="kali">kali<sup>1</sup></a></li>
+				<li><a href="/tags/mybatis/" title="mybatis">mybatis<sup>1</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/mybatis/" title="mybatis">mybatis<sup>1</sup></a></li>
+				<li><a href="/tags/kali/" title="kali">kali<sup>1</sup></a></li>
 			
 		
 			
@@ -253,7 +256,7 @@
 			
 		
 			
-				<li><a href="/tags/windows/" title="windows">windows<sup>1</sup></a></li>
+				<li><a href="/tags/xss/" title="xss">xss<sup>1</sup></a></li>
 			
 		
 			
@@ -261,7 +264,7 @@
 			
 		
 			
-				<li><a href="/tags/burpsuite/" title="burpsuite">burpsuite<sup>1</sup></a></li>
+				<li><a href="/tags/js/" title="js">js<sup>1</sup></a></li>
 			
 		
 		</ul>
