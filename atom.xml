@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-05-22T01:34:46.510Z</updated>
+  <updated>2019-12-24T02:05:24.587Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,66 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2019/12/24/%E5%B7%A5%E4%BD%9C%E4%B8%80%E5%B9%B4%E6%9D%A5/"/>
+    <id>http://yoursite.com/2019/12/24/工作一年来/</id>
+    <published>2019-12-24T01:54:08.525Z</published>
+    <updated>2019-12-24T02:05:24.587Z</updated>
+    
+    <content type="html"><![CDATA[<hr><p>title: 工作一年来<br>date: 2019-12-24 09:54:08</p><h2 id="tags-闲聊"><a href="#tags-闲聊" class="headerlink" title="tags: 闲聊"></a>tags: 闲聊</h2><p>&emsp;&emsp;忽然想起来很久没有来自己的博客逛逛了，最近一直很忙，直到今天。刚刚打开毕业之前的一个项目，发现都是17年夏天的事情了，时间过的真的很快。<br>&emsp;&emsp;从6月份以来我想想自己都做了什么呢？(⊙o⊙)…一直在不停的进场、复核、写报告，可其实也并没有忙到手脚起飞，忙到时间都需要挤出来。<br>&emsp;&emsp;这段时间工作上很用心，可私下里真的没学到什么哦。<br>&emsp;&emsp;很羞愧，类似闲暇时每每玩手机、看电视、无所事事而萌发出的惶恐。<br>&emsp;&emsp;仔细想想，这段时间除了考一个初级证，好像没什么收获了。<br>&emsp;&emsp;接下来，好好看我组长的那本书吧。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;hr&gt;
+&lt;p&gt;title: 工作一年来&lt;br&gt;date: 2019-12-24 09:54:08&lt;/p&gt;
+&lt;h2 id=&quot;tags-闲聊&quot;&gt;&lt;a href=&quot;#tags-闲聊&quot; class=&quot;headerlink&quot; title=&quot;tags: 闲聊&quot;&gt;&lt;/a&gt;tags: 闲聊&lt;/
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>等级保护初级考试复习</title>
+    <link href="http://yoursite.com/2019/06/18/%E7%AD%89%E7%BA%A7%E4%BF%9D%E6%8A%A4%E5%88%9D%E7%BA%A7%E8%80%83%E8%AF%95%E5%A4%8D%E4%B9%A0/"/>
+    <id>http://yoursite.com/2019/06/18/等级保护初级考试复习/</id>
+    <published>2019-06-18T03:10:11.000Z</published>
+    <updated>2019-06-18T03:10:11.115Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>等级保护-测评项</title>
+    <link href="http://yoursite.com/2019/05/23/%E7%AD%89%E7%BA%A7%E4%BF%9D%E6%8A%A4-%E6%B5%8B%E8%AF%84%E9%A1%B9/"/>
+    <id>http://yoursite.com/2019/05/23/等级保护-测评项/</id>
+    <published>2019-05-23T07:03:29.000Z</published>
+    <updated>2019-05-24T06:16:05.257Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>&emsp;&emsp;技术方面除了前面的物理安全和网络，还有主机、应用以及数据。新建一篇文章写吧，接着头一篇文章写都有一本书那么多了。<br>&emsp;&emsp;# 主机安全-linux #<br>&emsp;&emsp;<strong>身份鉴别</strong><br>&emsp;&emsp;<code>a)应对登录操作系统和数据库系统的用户进行身份标识和鉴别。</code><br>&emsp;&emsp;检查内容：1、密码文件中的口令字段是否不为空；2、检查各个用户主目录下的.rhosts文件；3、查看/etc/hosts.equiv。<br>&emsp;&emsp;检查方法：1、查看/etc/passwd文件中各用户的第二字段处是否不为空；2、输入：find / -name “.hists”，查看各个.rhosts文件；3、查看/etc/hosts.equive。<br>&emsp;&emsp;推荐值：1、第二字段是否不为空；2、应删除.rhosts和/etc/hosts.equiv中的用户或主机。<br>&emsp;&emsp;判断标准：1、2都符合结果才能符合。<br>&emsp;&emsp;<code>b)操作系统和数据库系统管理用户身份标识应具有不易被冒用的特点，口令应有复杂度要求并定期更换；</code><br>&emsp;&emsp;检查内容：1、密码最长有效期PASS_MAX_DAYS;2、密码最短存留期PASS_MIN_DAYS;3、密码长度最小值PASS_MIN_LENS;4、密码有效期警告PASS_WARE_AGE;5、密码须包含大写字母个数ucredit；6、密码须包含小写字母个数lcredit;7、密码须包含的数字字符个数dcredit;8、密码须包含的特殊符号个数ocredit。<br>&emsp;&emsp;检查方法：1、查看/etc/login.defs,访谈询问当前所设置的密码长度及更换周期；2、查看/etc/pam.d/system-auth，确认密码复杂度要求。<br>&emsp;&emsp;推荐值：1、PASS_MAX_DAYS:90;PASS_MIN_DAYS:2;PASS_MIN_LENS:8;PASS_WARN_AGE:7;2、password requisite pam_cracklib.so minlen=8 ucredit=-1 lcredit=-1 dcredit=-1 ocredit=-1；3、当前所设置的密码长度应不少于8位，具有一定的复杂度并定期更换。<br>&emsp;&emsp;c)应启用登录失败处理功能，可采取结束会话、限制非法登录次数和自动退出等措施。<br>&emsp;&emsp;检查内容：查看是否使用pam_tally.so模块跟踪不成功的登录次数。<br>&emsp;&emsp;检查方法：1、查看/etc/pam.d/system-auth文件。<br>&emsp;&emsp;推荐值：1、是否有如下参数（X为锁定次数，该参数需手动添加）account required /lib/security/pam tally.so deny=X no_magic_root reset。<br>&emsp;&emsp;<code>d)当对服务器进行远程管理时，应采取必要措施，防止鉴别信息在网络传输过程中被窃听。</code><br>&emsp;&emsp;检查方法：1、询问并验证服务器是否关闭了Telnet、FTP等服务，是否使用SSH加密协议进行远程登录和管理（telnet服务查看/etc/xinetd/krd5-telnet文件，较低版本为inetd;rpm -aq|grep ssh查看是否安装了SSH相应的包）；2、输入netstat -an或lsof -i:21、lsof -i:22、lsof -i:23等命令查看21（FTP）、22（SSH）、23（Telnet）端口的运行情况。<br>&emsp;&emsp;推荐值：1、disable=yes未开启Telnet服务；2、显示所安装的SSH包，采用SSH进行远程管理。<br>&emsp;&emsp;判断标准：1、2均需符合。<br>&emsp;&emsp;<code>e)应为操作系统和数据库系统的不同用户分配不同的用户名，确保用户名具有唯一性。</code><br>&emsp;&emsp;检查内容：查看是否存在用户名相同的帐户，是否存在同UID的用户。<br>&emsp;&emsp;检查方法：查看/etc/passwd文件中是否有用户名相同、UID（第三字段相同的帐号）。<br>&emsp;&emsp;推荐值：1、无同名帐号；2、UID具有唯一性；3、UID=0只能为root用户。<br>&emsp;&emsp;判断标准：1、2、3均需符合。<br>&emsp;&emsp;<code>f)应采用两种或两种以上组合的鉴别技术对管理用户进行身份鉴别。</code><br>&emsp;&emsp;检查内容：操作系统是否采用口令+令牌、USB、KEY等方式进行身份鉴别。<br>&emsp;&emsp; <strong>访问控制</strong><br>&emsp;&emsp;<code>a)应启用访问控制功能，依据安全策略控制用户对资源的访问。</code><br>&emsp;&emsp;检查方法：询问系统管理员是否建立用户权限对照表，所设置的用户权限是否与权限表中一致。<br>&emsp;&emsp;<code>b)应根据管理用户的角色分配权限，实现管理用户的权限分离，仅授予管理用户所需的最小权限。</code><br>&emsp;&emsp;检查内容：1、应在操作系统内建立下述几类帐户：管理员、审计员、操作员；2、有各类帐户对应的用户权限分配表。<br>&emsp;&emsp;检查方法：1、查看/etc/passwd文件中各帐户并询问其用途、类别；2、检查用户权限分配表。<br>&emsp;&emsp;1、按最小授权原则分配，不授予一般用户管理员权限。建立了权限分离的用户，如管理员、审计员、操作员等；2、建有各类帐户的用户权限分配表。<br>&emsp;&emsp;<code>c)应实现操作系统和数据库系统特权用户的权限分离。</code><br>&emsp;&emsp;检查内容：操作系统和数据库系统管理员是否为同一自然人。<br>&emsp;&emsp;<code>d)应严格限制默认帐户的访问权限，重命名默认帐户，修改这些帐户的默认口令。</code><br>检查方法：查看是否对系统默认帐户进行重命名，询问并结合操作系统扫描结果确认是否存在默认口令帐户。<br>&emsp;&emsp;推荐值：1、重命名默认帐户；2、修改默认帐户的口令。<br>&emsp;&emsp;<code>e)应及时删除多余的、过期的账户，避免共享帐户的存在。</code><br>&emsp;&emsp;检查内容：是否删除多余过期的帐户。<br>&emsp;&emsp;检查方法：查看/etc/shadow文件，询问相应帐户是否为过期、多余帐户（已锁定帐户其所在行第一个和第二个冒号之间的口令字段为“！！或<em>”）<br>&emsp;&emsp;经查看/etc/passwd配置文件和访谈，系统中不存在多余、过期账户。<br>&emsp;&emsp;<code>f)应对重要信息资源设置敏感标记。</code><br>&emsp;&emsp;推荐值：1、定义了主机中的重要信息资源；2、为主机内的重要信息设置额敏感标记。<br>&emsp;&emsp;g)应依据安全策略严格控制用户对有敏感标记信息资源的操作。<br>&emsp;&emsp;推荐值：1、定义了敏感标记资源的访问策略；2、依据访问策略控制用户对有敏感标记重要信息资源的操作。<br>&emsp;&emsp;<code>安全审计</code><br>&emsp;&emsp;<code>a)审计范围应覆盖到服务器和重要客户端上的每个操作系统用户和数据库用户。</code><br>&emsp;&emsp;检查内容：查看操作系统审计进程是否开启，如采用了第三方审计系统则查看系统运行是否正常。<br>&emsp;&emsp;检查方法：输入service syslog status;service auditd status。<br>&emsp;&emsp;审计进程运行正常。<br>&emsp;&emsp;<code>b)审计内容包括重要用户行为、系统资源的异常使用和重要系统命令的使用等系统内重要的安全相关事件。</code><br>&emsp;&emsp;检查方法：1、输入cat /etc/syslog.conf;2、输入auditctl -s查看audit运行状态；auditctl -l查看audit规则。<br>&emsp;&emsp;推荐值：1、syslog.conf应包含类似于如下值：<br>&emsp;&emsp;</em>.info;mail.none;news.none;authpriv.none;cron.none 2、/var/log/messages;AUDIT_STATUS:enabled=1,如配置规则，应有类似如下返回值：LIST_RULES:exit,always watch=/etc/hosts perm=rwa key=host-file。<br>&emsp;&emsp;<code>c)审计记录应包括事件的日期、时间、类型、主体标识、客体标识和结果等。</code><br>&emsp;&emsp; 检查方法：Linux系统审计默认符合，如使用第三方审计系统则查看审计日志是否包含前述信息。<br>&emsp;&emsp;<code>d)应能够根据记录数据进行分析，并生成审计报表。</code><br>&emsp;&emsp;检查方法：询问并检查是否对审计日志进行定期查看、分析，生成审计分析报表。<br>&emsp;&emsp;推荐值：1、应人工分析；2、数据制定日志记录表，且能生成审计报表。<br>&emsp;&emsp;判断标准：1、2均符合结果为符合。<br>&emsp;&emsp;e)应保护审计进程，避免受到未预期的中断。<br>&emsp;&emsp;检查内容：询问是否安装额外的审计进程保护软件，确保审计进程不会受到未预期的中断。<br>&emsp;&emsp;f)应保护审计记录，避免受到未预期的删除、修改或覆盖等。<br>&emsp;&emsp;检查方法：1、查看syslog.conf\audit.conf文件中日志信息所在文件的访问权限，如:ls -l /var/log/messages;ls -l /var/log/secure;ls -l /var/log/audit/audit.log；2、访谈并询问是否对审计日志进行保护。<br>&emsp;&emsp;推荐值：1、日志文件读写权限的推荐值可参考如下所示： ls -l /var/log/messages:640;ls -l /var/log/secure:640;ls -l /var/log/audit/audit.log:640;文件属主必须为审计类型帐户，且删除、修改或覆盖等操作会进行记录；2、采取如部署日志服务器、第三方行为审计系统、堡垒机保存操作日志或其他相应手段。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;&amp;emsp;&amp;emsp;技术方面除了前面的物理安全和网络，还有主机、应用以及数据。新建一篇文章写吧，接着头一篇文章写都有一本书那么多了。&lt;b
+      
+    
+    </summary>
+    
+    
+      <category term="等级保护" scheme="http://yoursite.com/tags/%E7%AD%89%E7%BA%A7%E4%BF%9D%E6%8A%A4/"/>
+    
+  </entry>
   
   <entry>
     <title>大侦探皮卡丘</title>
@@ -380,76 +440,6 @@
     
     
       <category term="记录" scheme="http://yoursite.com/tags/%E8%AE%B0%E5%BD%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>初级考试-应用</title>
-    <link href="http://yoursite.com/2019/02/11/%E5%88%9D%E7%BA%A7%E8%80%83%E8%AF%95-%E5%BA%94%E7%94%A8/"/>
-    <id>http://yoursite.com/2019/02/11/初级考试-应用/</id>
-    <published>2019-02-11T07:04:55.000Z</published>
-    <updated>2019-02-11T09:30:34.304Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>  应用安全包括：身份鉴别、访问控制、安全审计、剩余信息保护、通信完整性、通信保密性、抗抵赖、软件容错和资源控制。</p><h2 id="身份鉴别"><a href="#身份鉴别" class="headerlink" title="身份鉴别"></a>身份鉴别</h2><p>1.应提供专用的登录控制模块对登录用户进行身份标识和鉴别。<br>2.应对同一用户采用两种或两种以上组合的鉴别技术实现用户身份鉴别。<br>3.应提供用户身份标识唯一和鉴别信息复杂度检查功能，保证应用系统中不存在重复用户身份标识，身份鉴别信息不易被冒用。<br>4.应提供登录失败处理功能，可采取结束会话、限制非法登录次数和自动退出等措施。<br>5.应启用身份鉴别、用户身份标识唯一性检查、用户身份鉴别信息复杂度检查，以及登录失败处理功能，并根据安全策略配置相关参数。</p><h2 id="访问控制"><a href="#访问控制" class="headerlink" title="访问控制"></a>访问控制</h2><p>1.应提供访问控制功能，依据安全策略控制用户对文件、数据库表等客体的访问。<br>2.访问控制的覆盖范围应包括与资源访问相关的主体、客体及它们之间的操作。<br>3.应由授权主体配置访问控制策略，并严格限制默认账户的访问权限。<br>4.应授予不同账户为完成各自承担任务所需的最小权限，并在它们之间形成相互制约关系。<br>5.应具有对重要信息资源设置敏感标记的功能。<br>6.应依据安全策略严格控制用户对有敏感标记重要信息资源的操作。</p><h2 id="安全审计"><a href="#安全审计" class="headerlink" title="安全审计"></a>安全审计</h2><p>1.应提供覆盖到每个用户的安全审计功能，对应用系统重要安全事件进行审计。<br>2.应保证无法单独中断审计进程，无法删除、修改或覆盖审计记录。<br>3.审计记录的内容至少应包括事件的日期、时间、发起者信息、类型、描述和结果等。<br>4.应提供对审计记录数据进行统计、查询、分析及生成审计报表的功能。</p><h2 id="剩余信息保护"><a href="#剩余信息保护" class="headerlink" title="剩余信息保护"></a>剩余信息保护</h2><p>1.应保证用户鉴别信息所在的存储空间被释放或再分配给其他用户前被完全清除，无论这些信息是存放在硬盘上还是在内存中。<br>2.应保证系统内的文件、目录和数据库记录等资源所在的存储空间被释放或重新分配给其他用户前得到完全清除。</p><h2 id="通信完整性"><a href="#通信完整性" class="headerlink" title="通信完整性"></a>通信完整性</h2><p>1.应采用密码技术保证通信过程中数据的完整性。</p><h2 id="通信保密性"><a href="#通信保密性" class="headerlink" title="通信保密性"></a>通信保密性</h2><p>1.在通信双方建立连接之前，应用系统应利用密码技术进行会话初始化验证。<br>2.应对通信过程中的整个报文或会话过程进行加密。</p><h2 id="抗抵赖"><a href="#抗抵赖" class="headerlink" title="抗抵赖"></a>抗抵赖</h2><p>1.应具有在请求的情况下为数据原发者或接受者提供数据原发证据的功能。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;  应用安全包括：身份鉴别、访问控制、安全审计、剩余信息保护、通信完整性、通信保密性、抗抵赖、软件容错和资源控制。&lt;/p&gt;
-&lt;h2 id=&quot;
-      
-    
-    </summary>
-    
-    
-      <category term="考试" scheme="http://yoursite.com/tags/%E8%80%83%E8%AF%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>初级考试</title>
-    <link href="http://yoursite.com/2019/02/11/%E5%88%9D%E7%BA%A7%E8%80%83%E8%AF%95-%E4%B8%BB%E6%9C%BA/"/>
-    <id>http://yoursite.com/2019/02/11/初级考试-主机/</id>
-    <published>2019-02-11T02:40:58.000Z</published>
-    <updated>2019-03-27T06:55:12.427Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>   学生时代虽然讨厌考试，但是每次考试基本上如鱼得水，大概我就是所谓的擅长考试的那一类人了。工作了依然是要考试的，考试时间在3月份，之前上网搜查了一下考试内容，除了一些操作性较强的，很多关于指导书上的考的都是一些测评指标的具体测评项，现在就来大致总结一下，方便日后回顾，以下内容皆是1.0标准的三级系统。</p><h1 id="主机安全"><a href="#主机安全" class="headerlink" title="主机安全"></a>主机安全</h1><p> 主机安全测评分为两个部分:操作系统测评和数据库系统测评。</p><h2 id="操作系统测评"><a href="#操作系统测评" class="headerlink" title="操作系统测评"></a>操作系统测评</h2><p>操作系统安全测评包含7个方面的内容：身份鉴别、访问控制、安全审计、剩余信息保护、入侵防范、恶意代码防范、资源控制。</p><h3 id="身份鉴别"><a href="#身份鉴别" class="headerlink" title="身份鉴别"></a>身份鉴别</h3><p>1.应对登录操作系统和数据库系统的用户进行身份标识和鉴别<br>2.操作系统和数据库系统管理用户身份鉴别信息应具有不易被冒用的特点，口令应有复杂度要求并定期更换。<br>3.应启用登录失败处理功能，可采取结束会话、限制非法登录次数和自动退出等措施。<br>4.当对服务器进行远程管理时，应采取必要措施，防止鉴别信息在网络传输过程中被窃听。<br>5.应为操作系统和数据库系统的不同用户分配不同的用户名，确保用户名具有唯一性。<br>6.应采用两种或两种以上组合的鉴别技术对管理用户进行身份鉴别。</p><h3 id="访问控制"><a href="#访问控制" class="headerlink" title="访问控制"></a>访问控制</h3><p>1.应启用访问控制功能，依据安全策略控制用户对资源的访问。<br>2.应根据管理用户的角色分配权限，实现管理用户的权限分离，仅授予管理用户所需的最小权限。<br>3.应实现操作系统和数据库系统特权用户的权限分离。<br>4.应严格限制默认账户的访问权限，重命名系统默认账户，修改这些账户的默认口令。<br>5.应及时删除多余的、过期的账户，避免共享账户的存在。<br>6.应对重要信息资源设置敏感标记。<br>7.应依据安全策略严格控制用户对有敏感标记重要信息资源的操作。</p><h3 id="安全审计"><a href="#安全审计" class="headerlink" title="安全审计"></a>安全审计</h3><p>1.审计范围应覆盖到服务器和重要客户端上的每个操作系统用户和数据库用户。<br>2.审计内容应包括重要用户行为、系统资源的异常使用和重要系统命令的使用等系统内重要的安全相关事件。<br>3.审计记录应包括事件的日期、时间、类型、主体标识、客体标识和结果等。<br>4.应能够根据记录数据进行分析，并生成审计报表。<br>5.应保护审计进程，避免受到未预期的中断。<br>6.应保护审计记录，避免受到未预期的删除、修改或覆盖等。</p><h3 id="剩余信息保护"><a href="#剩余信息保护" class="headerlink" title="剩余信息保护"></a>剩余信息保护</h3><p>1.应保证操作系统和数据库系统用户的鉴别信息所在的存储空间，被释放或再分配给其他用户前得到完全清除，无论这些信息是存放在硬盘上还是内存中。<br>2.应确保系统内的文件、目录和数据库记录等资源所在的存储空间，被释放或重新分配给其他用户前得到完全清除。</p><h3 id="入侵防范"><a href="#入侵防范" class="headerlink" title="入侵防范"></a>入侵防范</h3><p>1.应能够检测到对重要服务器进行入侵的行为，能够记录入侵的源IP，攻击的类型、目的、时间，并在发生严重入侵事件时提供报警。<br>2.应能够对重要程序的完整性进行检测，并在检测到完整性受到破坏后具有恢复的措施。<br>3.操作系统应遵循最小安装的原则，仅安装需要的组件和应用程序，并通过设置升级服务器等方式保持系统补丁及时得到更新。</p><h3 id="恶意代码防范"><a href="#恶意代码防范" class="headerlink" title="恶意代码防范"></a>恶意代码防范</h3><p>1.应安装防恶意代码软件，并及时更新防恶意代码软件版本和恶意代码库。<br>2.主机防恶意代码产品应具有与网络防恶意代码产品不同的恶意代码库。<br>3.应支持防恶意代码的统一管理。</p><h3 id="资源控制"><a href="#资源控制" class="headerlink" title="资源控制"></a>资源控制</h3><p>1.应通过设定终端接入方式、网络地址范围等条件限制终端登录。<br>2.应根据安全策略设置登录终端的操作超时锁定。<br>3.应对重要服务器进行监视，包括监视服务器的CPU、硬盘、内存、网络等资源的使用情况。<br>4.应限制单个用户对系统资源的最大或最小使用限度。<br>5.应能够对系统的服务水平降低到预先规定的最小值进行检测和报警。</p><h2 id="数据库系统测评"><a href="#数据库系统测评" class="headerlink" title="数据库系统测评"></a>数据库系统测评</h2><h3 id="身份鉴别-1"><a href="#身份鉴别-1" class="headerlink" title="身份鉴别"></a>身份鉴别</h3><p>1.应对登录操作系统和数据库系统的用户进行身份标识和鉴别。<br>2.操作系统和数据库系统管理用户身份标识应具有不易被冒用的特点，口令应具有复杂度要求并定期更换。<br>3.应启用登录失败处理功能，可采取结束会话、限制非法登录次数和自动退出等措施。<br>4.当对服务器进行远程管理时，应采取必要措施，防止鉴别信息在网络传输过程中被窃听。<br>5.应为操作系统和数据库系统的不同用户分配不同的用户名，确保用户名具有唯一性。<br>6.应采用两种或两种以上组合的鉴别技术对管理用户进行身份鉴别。</p><h3 id="访问控制-1"><a href="#访问控制-1" class="headerlink" title="访问控制"></a>访问控制</h3><p>1.应启用访问控制功能，依据安全策略控制用户对资源的访问。<br>2.应根据管理用户的角色分配权限，实现管理用户的权限分离，仅授予管理用户所需的最小权限。<br>3.应实现操作系统和数据库系统特权用户的权限分离。<br>4.应严格限制默认账户的访问权限，重命名默认账户，修改这些账户的默认口令。<br>5.应及时删除多余的、过期的账户，避免共享账户的存在。<br>6.应对重要信息资源设置敏感标记。<br>7.应依据安全策略严格控制用户对有敏感标记重要资源的操作。</p><h3 id="安全审计-1"><a href="#安全审计-1" class="headerlink" title="安全审计"></a>安全审计</h3><p>1.审计范围应覆盖到服务器和重要客户端上的每个操作系统用户的数据库用户。<br>2.审计内容应包括重要用户行为、系统资源的异常使用和重要系统命令的使用等系统内重要的安全相关事件。<br>3.审计记录应包括事件的日期、事件、类型、主体标识、客体标识和结果等。<br>4.应能够根据记录数据进行分析，并生成审计报表。<br>5.应保护审计进程，避免受到未预期的中断。<br>6.应保护审计记录，避免受到未预期的删除、修改或覆盖等。</p><h3 id="资源控制-1"><a href="#资源控制-1" class="headerlink" title="资源控制"></a>资源控制</h3><p>1.应通过设定终端登录方式、网络地址范围等条件限制终端登录。<br>2.应根据安全策略设置登录终端的超时锁定。<br>3.应限制单个用户对系统资源的最大或最小使用限度。</p><h2 id="主机测评总结"><a href="#主机测评总结" class="headerlink" title="主机测评总结"></a>主机测评总结</h2><p>&emsp;&emsp;1.Linux服务器下，身份鉴别模块测评项：操作系统和数据库系统管理用户身份鉴别信息应具有不易被冒用的特点，口令应具有复杂度要求并定期更换。<br>&emsp;&emsp;查看/etc/login.defs文件，记录密码周期PASS_MAX_DAYS、PASS_MIN_DAYS<br>&emsp;&emsp;查看/etc/pam.d/system-auth文件，此文件涉及到Linux服务器的密码复杂度，记录minlen=x(最小密码长度) ucredit=-x(最少x个大写字母) lcredit=-x(最少x个小写字母) dcredit=-x(最少x个数字)<br>&emsp;&emsp;2.Linux服务器下，身份鉴别模块测评项：应启用登录失败处理功能，可采取结束会话、限制非法登录次数和自动退出等措施。<br>&emsp;&emsp;查看/etc/pam.d/system-auth文件，记录deny=X unlock_time=x，X次登录失败后账户锁定x秒。<br>&emsp;&emsp;3.Linux服务器下，安全审计模块测评项：审计范围应覆盖到服务器上的每个操作系统用户和数据库用户。<br>&emsp;&emsp;先查看Linux的日志和审计工具是否开启：<br>service rsyslog status、service auditd status，其次访问是否有第三方的审计工具。   </p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;   学生时代虽然讨厌考试，但是每次考试基本上如鱼得水，大概我就是所谓的擅长考试的那一类人了。工作了依然是要考试的，考试时间在3月份，之前上
-      
-    
-    </summary>
-    
-    
-      <category term="考试" scheme="http://yoursite.com/tags/%E8%80%83%E8%AF%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>burpsuite与web安全基础</title>
-    <link href="http://yoursite.com/2019/01/24/burpsuite%E4%B8%8Eweb%E5%AE%89%E5%85%A8%E5%9F%BA%E7%A1%80/"/>
-    <id>http://yoursite.com/2019/01/24/burpsuite与web安全基础/</id>
-    <published>2019-01-24T02:38:59.000Z</published>
-    <updated>2019-03-19T13:12:29.781Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>  已在本地电脑虚拟机上配置好Java环境，运行burpsuite命令：java -Xbootclasspath/p:burp-loader-keygen.jar -jar burpsuite_pro_v1.7.11.jar 或者先启动buro-loader-keygen.jar然后直接点击run就可以运行burpsuite的主程序。</p><h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>  1.burpsuite是由Java语言编写而成，它的可执行程序是Java文件类型的jar文件。<br>2.burpsuite代理工具是以拦截代理的方式，拦截所有通过代理的网络流量，如客户端的请求数据、服务器端的返回信息等。burpsuite主要拦截http和https协议的流量。<br>  浏览器将数据请求发给burpsuite，burpsuite发给web服务器，web服务器返回的数据被burpsuite拦截后返回给浏览器。<br>3.安装好burpsuite之后，设置了本地代理也安装了证书，但是依然无法拦截https请求，这是因为在设置本地代理时，下面的ssl代理没有打开，应设置成如下：<br>  <img src="burpsuite与web安全基础/拦截https协议.jpg" alt="拦截https"><br>4.抓取数据包时，先关闭intercept，然后打开intercept，输入网址。<br>5.http返回码<br>1XX  提供信息<br>200 请求成功提交了<br>3XX 客户端被服务器把资源定位于其他 301浏览器永久重定向到其他位置，302临时重定向<br>4XX 请求是有错误的，客户端提交了一个无效的http<br>请求，比如请求了一个不存在的资源，如404错误<br>5XX 服务器出问题。</p><p>6.https加密流程</p><h1 id="安装DVWA"><a href="#安装DVWA" class="headerlink" title="安装DVWA"></a>安装DVWA</h1><p>详细过程百度，DVWA复制到了html文件夹下。</p><h1 id="命令攻击"><a href="#命令攻击" class="headerlink" title="命令攻击"></a>命令攻击</h1><h2 id="常见命令符"><a href="#常见命令符" class="headerlink" title="常见命令符"></a>常见命令符</h2><p>  常见命令符”|”,”;”,”&amp;&amp;”。ping 127.0.0.1本地回环地址时，在后面输入命令符跟上命令后浏览器将两条一起执行。<br> 在shell中,”;”标识先执行前面的命令后执行后面的命令。<br>  验证发现，漏洞等级为低时，三个命令符均生效，漏洞等级为中等或高时，只有”|”命令符生效。</p><h2 id="命令攻击漏洞危害"><a href="#命令攻击漏洞危害" class="headerlink" title="命令攻击漏洞危害"></a>命令攻击漏洞危害</h2><p>  举例：在Linux系统中，浏览器中输入127.0.0.1|cat /etc/passwd，会直接看到Linux系统的用户表，知晓用户表可被用来做SSH爆破，猜测邮箱等，非常不安全。其他命令如下载、安装、新建文件等都可以被执行。</p><h1 id="文件包含"><a href="#文件包含" class="headerlink" title="文件包含"></a>文件包含</h1><h2 id="防御文件包含"><a href="#防御文件包含" class="headerlink" title="防御文件包含"></a>防御文件包含</h2><p>1.避免由外界指定文件名。<br>2.文件名中不可包含目录名。<br>3.限定文件名中仅包含字母和数字。<br>4.指定可以访问的白名单。</p><h1 id="文件上传"><a href="#文件上传" class="headerlink" title="文件上传"></a>文件上传</h1><h1 id="一句话木马"><a href="#一句话木马" class="headerlink" title="一句话木马"></a>一句话木马</h1><h1 id="nmap"><a href="#nmap" class="headerlink" title="nmap"></a>nmap</h1><p>网络发现和安全审计的网络安全工具<br>官方站点：<a href="http://nmap.org/" target="_blank" rel="noopener">http://nmap.org/</a><br>nmap的主要功能如下：<br>1.检测活在网络上的主机（主机发现）<br>2.检测主机上开放的端口（端口发现或枚举）<br>3.检测相应的端口（服务发现）的软件和版本<br>4.检测操作系统，硬件地址，以及软件版本。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;  已在本地电脑虚拟机上配置好Java环境，运行burpsuite命令：java -Xbootclasspath/p:burp-loader
-      
-    
-    </summary>
-    
-    
-      <category term="burpsuite" scheme="http://yoursite.com/tags/burpsuite/"/>
     
   </entry>
   
